@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#0D0D0D;--blanc:#FAF8F4;--gris:#8A8880;}
+:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#0D0D0D;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
 html{scroll-behavior:smooth;}
 body{font-family:'Montserrat',sans-serif;background:var(--blanc);color:var(--noir);overflow-x:hidden;}
 
@@ -15,18 +15,18 @@ body{font-family:'Montserrat',sans-serif;background:var(--blanc);color:var(--noi
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;transition:all 0.4s;}
 nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,0.15);padding:0.8rem 3rem;}
 .nav-logo{display:flex;align-items:center;gap:0.8rem;text-decoration:none;}
-.nav-logo-mark{width:42px;height:42px;border:2px solid rgba(201,168,76,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);}
-.nav-logo-name{font-family:'Cinzel',serif;font-size:0.95rem;letter-spacing:0.3em;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.8);}
+.nav-logo-mark{width:44px;height:44px;border:2px solid rgba(201,168,76,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(4px);}
+.nav-logo-name{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:0.3em;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.8);}
 .nav-logo-name span{color:var(--gold);}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
-.nav-links a{color:rgba(255,255,255,0.9);text-decoration:none;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;transition:color 0.3s;text-shadow:0 1px 4px rgba(0,0,0,0.6);}
+.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;transition:color 0.3s;text-shadow:0 1px 4px rgba(0,0,0,0.6);}
 .nav-links a:hover{color:var(--gold);}
-.nav-cta{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:0.45rem 1.2rem;text-shadow:none!important;}
+.nav-cta{border:1px solid var(--gold);color:var(--gold)!important;padding:0.45rem 1.2rem;text-shadow:none!important;}
 .nav-cta:hover{background:var(--gold)!important;color:var(--noir)!important;}
-.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.8);padding:0.3rem 0.7rem;font-size:0.58rem;letter-spacing:0.15em;font-family:'Montserrat',sans-serif;cursor:pointer;transition:all 0.3s;}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.7);padding:0.3rem 0.7rem;font-size:0.58rem;letter-spacing:0.15em;font-family:'Montserrat',sans-serif;cursor:pointer;transition:all 0.3s;}
 .lang-btn:hover{border-color:var(--gold);color:var(--gold);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
-.hamburger span{display:block;width:24px;height:2px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.5);}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:all 0.3s;box-shadow:0 1px 3px rgba(0,0,0,0.5);}
 .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.99);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:1.3rem;letter-spacing:0.2em;font-family:'Cormorant Garamond',serif;font-style:italic;}
@@ -37,27 +37,30 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 #hero{height:100vh;min-height:620px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .hero-bg{position:absolute;inset:0;background-image:url('fond-mer.jpg');background-size:cover;background-position:center 40%;animation:hZoom 20s ease-in-out infinite alternate;}
 @keyframes hZoom{from{transform:scale(1);}to{transform:scale(1.07);}}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 35%,rgba(0,0,0,0.6) 70%,rgba(0,0,0,0.9) 100%);}
-.hero-content{position:relative;z-index:2;text-align:center;padding:0 1.5rem;max-width:860px;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.25) 35%,rgba(0,0,0,0.55) 70%,rgba(0,0,0,0.88) 100%);}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 1.5rem;max-width:860px;animation:fadeUp 1.4s cubic-bezier(0.16,1,0.3,1) forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(35px);}to{opacity:1;transform:translateY(0);}}
+
+/* LOGO HERO */
 .hero-logo{margin-bottom:1.5rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;}
-.hero-logo-circle{width:75px;height:75px;border:2px solid rgba(201,168,76,0.8);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);}
-.hero-logo-name{font-family:'Cinzel',serif;font-size:1.4rem;letter-spacing:0.4em;color:#fff;text-shadow:0 2px 15px rgba(0,0,0,0.9);}
+.hero-logo-circle{width:80px;height:80px;border:2px solid rgba(201,168,76,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);margin-bottom:0.3rem;}
+.hero-logo-name{font-family:'Cinzel',serif;font-size:1.4rem;letter-spacing:0.4em;color:#fff;text-shadow:0 2px 15px rgba(0,0,0,0.8);}
 .hero-logo-name span{color:var(--gold);}
-.hero-logo-tag{font-size:0.48rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(255,255,255,0.7);text-shadow:0 1px 6px rgba(0,0,0,0.8);}
-.hero-div{display:flex;align-items:center;gap:1rem;justify-content:center;margin:1rem 0;}
-.hero-div::before,.hero-div::after{content:'';width:35px;height:1px;background:rgba(201,168,76,0.6);}
-.hero-diam{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,6.5rem);font-weight:300;line-height:0.92;color:#fff;margin-bottom:0.8rem;text-shadow:0 3px 25px rgba(0,0,0,0.7);}
+.hero-logo-sub{font-size:0.5rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(255,255,255,0.6);text-shadow:0 1px 6px rgba(0,0,0,0.8);}
+
+.hero-divider{display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:1.5rem;}
+.hero-divider::before,.hero-divider::after{content:'';width:40px;height:1px;background:rgba(201,168,76,0.6);}
+.hero-diamond{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
+
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,6.5rem);font-weight:300;line-height:0.92;color:#fff;margin-bottom:1rem;text-shadow:0 3px 25px rgba(0,0,0,0.6);}
 .hero-title em{font-style:italic;color:var(--gold-l);}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.2vw,1.3rem);font-style:italic;color:rgba(255,255,255,0.9);margin-bottom:2rem;text-shadow:0 2px 10px rgba(0,0,0,0.7);}
-.hero-teaser{background:rgba(0,0,0,0.45);border:1px solid rgba(201,168,76,0.4);backdrop-filter:blur(8px);padding:1rem 1.5rem;margin-bottom:2rem;display:inline-block;min-width:320px;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.2vw,1.3rem);font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:2.5rem;text-shadow:0 2px 10px rgba(0,0,0,0.6);}
+
+/* TEASER BIENTOT — avant les boutons */
+.hero-teaser{background:rgba(0,0,0,0.35);border:1px solid rgba(201,168,76,0.35);backdrop-filter:blur(8px);padding:1rem 2rem;margin-bottom:2rem;display:inline-block;}
 .hero-teaser-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;}
-.hero-teaser-txt{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:#fff;margin-bottom:0.8rem;}
-.teaser-form{display:flex;}
-.teaser-input{flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(201,168,76,0.4);border-right:none;color:#fff;font-family:'Montserrat',sans-serif;font-size:0.65rem;padding:0.6rem 0.9rem;outline:none;}
-.teaser-input::placeholder{color:rgba(255,255,255,0.5);}
-.teaser-btn{background:var(--gold);color:var(--noir);border:none;padding:0.6rem 1rem;font-family:'Montserrat',sans-serif;font-size:0.55rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;white-space:nowrap;}
-.teaser-btn:hover{background:var(--gold-l);}
+.hero-teaser-txt{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#fff;}
+
 .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 .btn-gold{background:var(--gold);color:var(--noir);border:none;padding:0.9rem 2.5rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
 .btn-gold:hover{background:var(--gold-l);transform:translateY(-2px);}
@@ -65,29 +68,29 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .btn-white:hover{border-color:#fff;background:rgba(255,255,255,0.22);}
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;animation:pulse 2.5s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
-.scroll-line{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);}
+.scroll-line{width:1px;height:45px;background:linear-gradient(180deg,var(--gold),transparent);}
 .scroll-txt{font-size:0.45rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
 
-/* CACHEROUT */
-#cacherout{background:#111;border-bottom:1px solid rgba(201,168,76,0.15);padding:0.9rem 2rem;}
-.cacherout-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;}
-.c-item{display:flex;align-items:center;gap:0.5rem;font-size:0.58rem;letter-spacing:0.1em;color:rgba(255,255,255,0.6);}
-.c-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
-.c-sep{color:rgba(201,168,76,0.3);}
+/* CACHEROUT BANNER */
+#cacherout{background:var(--noir2);border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:1rem 2rem;}
+.cacherout-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;}
+.cacherout-item{display:flex;align-items:center;gap:0.6rem;font-size:0.6rem;letter-spacing:0.1em;color:rgba(255,255,255,0.6);}
+.cacherout-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.cacherout-sep{color:rgba(201,168,76,0.3);font-size:0.8rem;}
 
-/* TYPES */
+/* 3 TYPES */
 #types{padding:6rem 2rem;max-width:1200px;margin:0 auto;}
+.divider{display:flex;align-items:center;gap:1rem;max-width:160px;margin:0 auto 1.5rem;}
+.divider::before{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);}
+.diamond{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
 .sec-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;text-align:center;}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;line-height:1.05;margin-bottom:3rem;color:var(--noir);}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;line-height:1.05;margin-bottom:0.8rem;color:var(--noir);}
 .sec-title em{font-style:italic;color:var(--gold);}
-.div-gold{display:flex;align-items:center;gap:1rem;max-width:160px;margin:0 auto 1.5rem;}
-.div-gold::before{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
-.div-gold::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);}
-.diam{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
-.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.type-card{position:relative;overflow:hidden;height:460px;cursor:pointer;transition:transform 0.5s;text-decoration:none;display:block;}
+.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem;}
+.type-card{position:relative;overflow:hidden;height:480px;cursor:pointer;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);text-decoration:none;display:block;}
 .type-card:hover{transform:translateY(-8px);}
-.type-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.7s;}
+.type-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1);}
 .type-card:hover .type-bg{transform:scale(1.08);}
 .type-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.2) 40%,rgba(0,0,0,0.85) 80%,rgba(0,0,0,0.96) 100%);}
 .type-body{position:absolute;bottom:0;left:0;right:0;padding:2rem 1.8rem;}
@@ -95,24 +98,27 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .type-line{width:28px;height:1px;background:var(--gold);margin-bottom:0.7rem;}
 .type-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;font-style:italic;color:#fff;line-height:1;margin-bottom:0.5rem;}
 .type-dest{font-size:0.6rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;}
-.type-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.type-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);transition:gap 0.3s;}
+.type-card:hover .type-link{gap:0.7rem;}
 .type-link::after{content:'→';}
 
 /* CHIFFRES */
-#chiffres{background:var(--noir);padding:5rem 2rem;}
-.chiffres-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;}
+#chiffres{background:var(--noir);padding:5rem 2rem;position:relative;overflow:hidden;}
+#chiffres::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
+.chiffres-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;}
 .chiffre-num{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--gold);line-height:1;display:block;}
 .chiffre-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.5rem;display:block;}
+.chiffre-sep{width:1px;background:rgba(201,168,76,0.15);}
 
-/* AVIS */
+/* AVIS CARROUSEL */
 #avis{padding:6rem 2rem;background:#f8f6f2;}
-.avis-wrap{max-width:1100px;margin:0 auto;}
-.avis-carousel{overflow:hidden;margin-top:3rem;}
+.avis-wrapper{max-width:1100px;margin:0 auto;}
+.avis-carousel{position:relative;margin-top:3.5rem;overflow:hidden;}
 .avis-track{display:flex;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);}
 .avis-slide{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;min-width:100%;flex-shrink:0;}
 .avis-card{background:#fff;padding:2rem;border:1px solid rgba(0,0,0,0.06);position:relative;}
 .avis-quote{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;color:rgba(201,168,76,0.15);line-height:1;position:absolute;top:0.5rem;left:1.2rem;}
-.avis-stars{color:var(--gold);font-size:0.6rem;padding-top:1.5rem;margin-bottom:0.5rem;}
+.avis-stars{color:var(--gold);font-size:0.6rem;margin-bottom:0.5rem;padding-top:1.5rem;}
 .avis-txt{font-size:0.75rem;color:#555;line-height:1.85;font-style:italic;margin-bottom:1.5rem;}
 .avis-author{display:flex;align-items:center;gap:0.8rem;}
 .avis-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-d));display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:var(--noir);flex-shrink:0;}
@@ -122,20 +128,21 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .avis-arrow{background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(--gold);width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;transition:all 0.3s;}
 .avis-arrow:hover{background:var(--gold);color:var(--noir);}
 .avis-dots{display:flex;gap:0.5rem;}
-.avis-dot{width:7px;height:7px;border-radius:50%;background:rgba(201,168,76,0.3);cursor:pointer;transition:all 0.3s;}
-.avis-dot.active{background:var(--gold);}
+.avis-dot{width:6px;height:6px;border-radius:50%;background:rgba(201,168,76,0.3);cursor:pointer;transition:all 0.3s;}
+.avis-dot.active{background:var(--gold);transform:scale(1.3);}
 
-/* CONTACT */
-#contact{padding:6rem 2rem;background:var(--noir);}
-.contact-wrap{max-width:760px;margin:0 auto;}
-.contact-wrap .sec-title{color:#fff;}
+/* FORMULAIRE */
+#contact{padding:6rem 2rem;background:var(--noir);position:relative;overflow:hidden;}
+#contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
+.contact-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
+.contact-inner .sec-title{color:#fff;}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;}
 .f-field{display:flex;flex-direction:column;gap:0.4rem;}
 .f-field.full{grid-column:1/-1;}
 .f-label{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gris);}
-.f-input,.f-select,.f-textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);color:#fff;font-family:'Montserrat',sans-serif;font-size:0.72rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;}
+.f-input,.f-select,.f-textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.12);color:#fff;font-family:'Montserrat',sans-serif;font-size:0.72rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;}
 .f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--gold);}
-.f-input::placeholder,.f-textarea::placeholder{color:rgba(255,255,255,0.25);}
+.f-input::placeholder,.f-textarea::placeholder{color:rgba(255,255,255,0.2);}
 .f-select option{background:#1a1a1a;}
 .f-textarea{min-height:100px;resize:vertical;}
 .f-rgpd{grid-column:1/-1;display:flex;align-items:flex-start;gap:0.6rem;font-size:0.58rem;color:var(--gris);}
@@ -144,40 +151,54 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .f-submit:hover{background:var(--gold-l);}
 
 /* FOOTER */
-#footer{background:#000;border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
-.footer-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
-.footer-brand{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.25em;color:#fff;margin-bottom:0.3rem;}
+#footer{background:rgba(0,0,0,0.7);border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
+.footer-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
+.footer-brand{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.25em;color:#fff;margin-bottom:0.4rem;}
 .footer-brand span{color:var(--gold);}
-.footer-tag{font-size:0.58rem;color:var(--gris);margin-bottom:0.4rem;}
+.footer-tag{font-size:0.58rem;color:var(--gris);margin-bottom:0.5rem;letter-spacing:0.1em;}
 .footer-kashrut{font-size:0.6rem;color:rgba(201,168,76,0.7);margin-bottom:1.2rem;font-style:italic;}
-.footer-ci{display:flex;align-items:center;gap:0.6rem;font-size:0.68rem;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;}
-.fdot{width:4px;height:4px;border-radius:50%;background:var(--gold);}
+.footer-contact-item{display:flex;align-items:center;gap:0.6rem;font-size:0.68rem;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;}
+.fdot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 .footer-col-title{font-size:0.52rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
 .footer-link{display:block;font-size:0.68rem;color:rgba(255,255,255,0.4);text-decoration:none;margin-bottom:0.5rem;transition:color 0.3s;}
 .footer-link:hover{color:var(--gold);}
 .footer-copy{max-width:1000px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(201,168,76,0.08);text-align:center;font-size:0.58rem;color:rgba(255,255,255,0.2);}
 .footer-copy strong{color:var(--gold);font-weight:400;}
 
-/* WA */
-.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;transition:all 0.3s;}
+/* WHATSAPP */
+.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s;text-decoration:none;}
 .wa-btn:hover{background:#20b859;transform:scale(1.1);}
 .wa-btn svg{width:28px;height:28px;fill:#fff;}
+.wa-tooltip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.85);color:#fff;font-size:0.6rem;white-space:nowrap;padding:0.45rem 0.8rem;border-radius:2px;opacity:0;pointer-events:none;transition:opacity 0.3s;font-family:'Montserrat',sans-serif;}
+.wa-btn:hover .wa-tooltip{opacity:1;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(25px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1);}
+.reveal.d1{transition-delay:0.1s;}.reveal.d2{transition-delay:0.2s;}.reveal.d3{transition-delay:0.3s;}
+.reveal.on{opacity:1;transform:translateY(0);}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  nav{padding:0.9rem 1.2rem;}.nav-links{display:none;}.hamburger{display:flex;}.lang-btn{display:none;}
+  nav{padding:0.9rem 1.2rem;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .lang-btn{display:none;}
   #hero{height:100svh;}
-  .hero-title{font-size:2.8rem;}
+  .hero-title{font-size:clamp(2.5rem,10vw,4rem);}
   .hero-btns{flex-direction:column;align-items:center;}
   .btn-gold,.btn-white{width:100%;max-width:280px;text-align:center;}
-  .types-grid{grid-template-columns:1fr;}.type-card{height:280px;}
-  .chiffres-grid{grid-template-columns:1fr 1fr;}
+  .types-grid{grid-template-columns:1fr;}
+  .type-card{height:300px;}
+  .chiffres-inner{grid-template-columns:1fr 1fr;}
+  .chiffre-sep{display:none;}
   .avis-slide{grid-template-columns:1fr;}
-  .form-grid{grid-template-columns:1fr;}.f-field.full,.f-submit,.f-rgpd{grid-column:1;}
-  .footer-grid{grid-template-columns:1fr;}
-  #types,#avis,#contact,#footer{padding-left:1.2rem;padding-right:1.2rem;}
-  .cacherout-inner{gap:0.8rem;}
-  .hero-teaser{min-width:280px;}
+  .form-grid{grid-template-columns:1fr;}
+  .f-field.full,.f-submit,.f-rgpd{grid-column:1;}
+  .footer-inner{grid-template-columns:1fr;}
+  #types,#chiffres,#avis,#contact,#footer{padding-left:1.2rem;padding-right:1.2rem;}
+  .cacherout-inner{gap:1rem;}
+  .hero-logo-circle{width:60px;height:60px;}
+  .hero-logo-name{font-size:1.1rem;}
 }
 </style>
 </head>
@@ -200,18 +221,20 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <span class="nav-logo-name">ODEM <span>EVENT</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="portfolio.html">Nos séjours</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="classes-de-neige.html">Classes de neige</a></li>
     <li><a href="#avis">Avis</a></li>
     <li><a href="#contact" class="nav-cta">Réserver</a></li>
     <li><button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMenu()">✕</button>
-  <a href="portfolio.html" onclick="toggleMenu()">Nos séjours</a>
+  <a href="portfolio.html" onclick="toggleMenu()">Portfolio</a>
   <a href="classes-de-neige.html" onclick="toggleMenu()">Classes de neige</a>
   <a href="#avis" onclick="toggleMenu()">Avis</a>
   <a href="#contact" onclick="toggleMenu()">Réserver</a>
@@ -235,79 +258,88 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         </svg>
       </div>
       <div class="hero-logo-name">ODEM <span>EVENT</span></div>
-      <div class="hero-logo-tag">Séjours d'exception depuis 2018</div>
+      <div class="hero-logo-sub" id="h-tag">Séjours d'exception depuis 2018</div>
     </div>
-    <div class="hero-div"><div class="hero-diam"></div></div>
-    <h1 class="hero-title">L'art de voyager<br><em>ensemble</em></h1>
-    <p class="hero-sub">Pessah en Europe · Séjours d'été · Classes de neige</p>
+    <div class="hero-divider"><div class="hero-diamond"></div></div>
+    <h1 class="hero-title">
+      <span id="h-t1">L'art de voyager</span><br>
+      <em id="h-t2">ensemble</em>
+    </h1>
+    <p class="hero-sub" id="h-sub">Pessah en Europe · Séjours d'été · Classes de neige</p>
+
+    <!-- TEASER BIENTOT avant les boutons -->
     <div class="hero-teaser">
-      <div class="hero-teaser-label">Prochain séjour</div>
-      <div class="hero-teaser-txt">Destination en cours de sélection — Été 2026</div>
-      <div class="teaser-form">
-        <input type="email" class="teaser-input" id="t-email" placeholder="votre@email.com">
-        <button class="teaser-btn" id="t-btn" onclick="notifyMe()">M'alerter</button>
+      <div class="hero-teaser-label" id="ht-label">Prochain séjour</div>
+      <div class="hero-teaser-txt" id="ht-txt">Destination en cours de sélection — Été 2026</div>
+      <div style="display:flex;margin-top:0.8rem;max-width:340px;margin-left:auto;margin-right:auto;">
+        <input type="email" id="hero-notify-email" placeholder="votre@email.com" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(201,168,76,0.4);border-right:none;color:#fff;font-family:Montserrat,sans-serif;font-size:0.65rem;padding:0.6rem 0.9rem;outline:none;">
+        <button onclick="heroNotify()" style="background:var(--gold);color:var(--noir);border:none;padding:0.6rem 1rem;font-family:Montserrat,sans-serif;font-size:0.55rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;white-space:nowrap;" id="hero-notify-btn">M'alerter</button>
       </div>
     </div>
+
     <div class="hero-btns">
-      <a href="portfolio.html" class="btn-gold">Découvrir nos séjours</a>
-      <a href="#contact" class="btn-white">Nous contacter</a>
+      <a href="portfolio.html" class="btn-gold" id="h-b1">Découvrir nos séjours</a>
+      <a href="#contact" class="btn-white" id="h-b2">Nous contacter</a>
     </div>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span class="scroll-txt">Découvrir</span></div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-txt" id="h-scroll">Découvrir</span>
+  </div>
 </section>
 
-<!-- CACHEROUT -->
+<!-- CACHEROUTE BANNER -->
 <div id="cacherout">
   <div class="cacherout-inner">
-    <div class="c-item"><div class="c-dot"></div>Glatt Cacher Laméhadrin</div>
-    <span class="c-sep">·</span>
-    <div class="c-item"><div class="c-dot"></div>Sous la surveillance du Rav Ephraim Cremisi</div>
-    <span class="c-sep">·</span>
-    <div class="c-item"><div class="c-dot"></div>Sans Kitniot</div>
-    <span class="c-sep">·</span>
-    <div class="c-item"><div class="c-dot"></div>Matsa Chrouya</div>
+    <div class="cacherout-item"><div class="cacherout-dot"></div><span>Glatt Cacher Laméhadrin</span></div>
+    <span class="cacherout-sep">·</span>
+    <div class="cacherout-item"><div class="cacherout-dot"></div><span>Sous la surveillance du Rav Ephraim Cremisi</span></div>
+    <span class="cacherout-sep">·</span>
+    <div class="cacherout-item"><div class="cacherout-dot"></div><span>Sans Kitniot</span></div>
+    <span class="cacherout-sep">·</span>
+    <div class="cacherout-item"><div class="cacherout-dot"></div><span>Matsa Chrouya</span></div>
   </div>
 </div>
 
 <!-- 3 TYPES -->
 <section id="types">
-  <div style="text-align:center;">
-    <div class="div-gold"><div class="diam"></div></div>
-    <p class="sec-label">Ce que nous organisons</p>
-    <h2 class="sec-title">Nos <em>séjours</em></h2>
+  <div class="reveal" style="text-align:center;">
+    <div class="divider"><div class="diamond"></div></div>
+    <p class="sec-label" id="tp-label">Ce que nous organisons</p>
+    <h2 class="sec-title" id="tp-title">Nos <em>séjours</em></h2>
   </div>
-  <div class="types-grid" style="margin-top:3rem;">
-    <a class="type-card" href="portfolio.html">
+  <div class="types-grid">
+    <a class="type-card reveal d1" href="portfolio.html?type=pessah">
       <div class="type-bg" style="background-image:url('fond-mer.jpg');background-position:center 60%;"></div>
       <div class="type-ov"></div>
       <div class="type-body">
-        <div class="type-tag">Pessah en Europe</div>
+        <div class="type-tag" id="tt1">Pessah en Europe</div>
         <div class="type-line"></div>
         <div class="type-name">Séjours<br>Pessah</div>
-        <div class="type-dest">Espagne · Chypre · Grèce · Crète</div>
-        <span class="type-link">Voir les séjours</span>
+        <div class="type-dest" id="td1">Espagne · Chypre · Grèce · Crète</div>
+        <span class="type-link" id="tl1">Voir les séjours</span>
       </div>
     </a>
-    <a class="type-card" href="portfolio.html">
+    <a class="type-card reveal d2" href="portfolio.html?type=ete">
       <div class="type-bg" style="background-image:url('fond-tignes.jpg');"></div>
       <div class="type-ov"></div>
       <div class="type-body">
-        <div class="type-tag">Été en montagne</div>
+        <div class="type-tag" id="tt2">Été en montagne</div>
         <div class="type-line"></div>
         <div class="type-name">Séjours<br>d'été</div>
-        <div class="type-dest">Tignes · Les Arcs 2000</div>
-        <span class="type-link">Voir les séjours</span>
+        <div class="type-dest" id="td2">Tignes · Les Arcs 2000</div>
+        <span class="type-link" id="tl2">Voir les séjours</span>
       </div>
     </a>
-    <a class="type-card" href="classes-de-neige.html">
-      <div class="type-bg" style="background-image:url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=900&q=85');"></div>
+    <a class="type-card reveal d3" href="classes-de-neige.html">
+      <div class="type-bg" style="background-image:url('fond-neige-enfant.jpg');"></div>
       <div class="type-ov"></div>
       <div class="type-body">
-        <div class="type-tag">Groupes & écoles</div>
+        <div class="type-tag" id="tt3">Groupes & écoles</div>
         <div class="type-line"></div>
         <div class="type-name">Classes<br>de neige</div>
-        <div class="type-dest">Tignes · Les Arcs 2000</div>
-        <span class="type-link">En savoir plus</span>
+        <div class="type-dest" id="td3">Tignes · Les Arcs 2000</div>
+        <span class="type-link" id="tl3">En savoir plus</span>
       </div>
     </a>
   </div>
@@ -315,33 +347,68 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <!-- CHIFFRES -->
 <section id="chiffres">
-  <div class="chiffres-grid">
-    <div style="text-align:center;"><span class="chiffre-num">7</span><span class="chiffre-label">Séjours organisés</span></div>
-    <div style="text-align:center;"><span class="chiffre-num">500+</span><span class="chiffre-label">Familles accompagnées</span></div>
-    <div style="text-align:center;"><span class="chiffre-num">5</span><span class="chiffre-label">Pays visités</span></div>
-    <div style="text-align:center;"><span class="chiffre-num">★★★★★</span><span class="chiffre-label">Hôtels partenaires</span></div>
+  <div class="chiffres-inner">
+    <div class="chiffre-item reveal"><span class="chiffre-num">7</span><span class="chiffre-label" id="c1">Séjours organisés</span></div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal d1"><span class="chiffre-num">500+</span><span class="chiffre-label" id="c2">Familles accompagnées</span></div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal d2"><span class="chiffre-num">5</span><span class="chiffre-label" id="c3">Pays visités</span></div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal d3"><span class="chiffre-num">★★★★★</span><span class="chiffre-label" id="c4">Hôtels partenaires</span></div>
   </div>
 </section>
 
-<!-- AVIS -->
+<!-- AVIS CARROUSEL -->
 <section id="avis">
-  <div class="avis-wrap">
-    <div style="text-align:center;">
-      <div class="div-gold"><div class="diam"></div></div>
-      <p class="sec-label">Ce qu'ils disent</p>
-      <h2 class="sec-title">Avis de nos <em>familles</em></h2>
+  <div class="avis-wrapper">
+    <div class="reveal" style="text-align:center;">
+      <div class="divider"><div class="diamond"></div></div>
+      <p class="sec-label" id="av-label">Ce qu'ils disent</p>
+      <h2 class="sec-title" id="av-title">Avis de nos <em>familles</em></h2>
     </div>
     <div class="avis-carousel">
       <div class="avis-track" id="avisTrack">
+        <!-- Slide 1 -->
         <div class="avis-slide">
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Un séjour Pessah absolument magnifique à Chypre ! Tout était parfaitement organisé, la cuisine était exceptionnelle et l'ambiance chaleureuse. On revient sans hésiter.</p><div class="avis-author"><div class="avis-av">SL</div><div><div class="avis-name">Sarah L.</div><div class="avis-trip">Pessah 2024 · Chypre</div></div></div></div>
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Tignes avec ODEM EVENT c'était incroyable. Les enfants ont adoré, les activités parfaites et l'hôtel superbe. Une organisation au top du début à la fin !</p><div class="avis-author"><div class="avis-av">DK</div><div><div class="avis-name">David K.</div><div class="avis-trip">Été 2023 · Tignes</div></div></div></div>
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Pessah en Espagne, une réussite totale ! Le Rav présent, repas gastronomiques délicieux, piscine magnifique. Organisation irréprochable.</p><div class="avis-author"><div class="avis-av">MR</div><div><div class="avis-name">Muriel R.</div><div class="avis-trip">Pessah 2023 · Espagne</div></div></div></div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Un séjour Pessah absolument magnifique à Chypre ! Tout était parfaitement organisé, la cuisine était exceptionnelle et l'ambiance chaleureuse. On revient sans hésiter.</p>
+            <div class="avis-author"><div class="avis-av">SL</div><div><div class="avis-name">Sarah L.</div><div class="avis-trip">Pessah 2024 · Chypre</div></div></div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Tignes avec ODEM EVENT c'était incroyable. Les enfants ont adoré, les activités parfaites et l'hôtel superbe. Une organisation au top du début à la fin !</p>
+            <div class="avis-author"><div class="avis-av">DK</div><div><div class="avis-name">David K.</div><div class="avis-trip">Été 2023 · Tignes</div></div></div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Pessah en Espagne, une réussite totale ! Le Rav présent, repas gastronomiques délicieux, piscine magnifique. Organisation irréprochable.</p>
+            <div class="avis-author"><div class="avis-av">MR</div><div><div class="avis-name">Muriel R.</div><div class="avis-trip">Pessah 2023 · Espagne</div></div></div>
+          </div>
         </div>
+        <!-- Slide 2 — à remplir avec vos vrais avis -->
         <div class="avis-slide">
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Les Arcs 2000 en famille, un souvenir inoubliable. Les enfants ont skié tous les jours, l'hôtel était magnifique et la cuisine casher excellente.</p><div class="avis-author"><div class="avis-av">YB</div><div><div class="avis-name">Yael B.</div><div class="avis-trip">Été 2024 · Arcs 2000</div></div></div></div>
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Pessah en Grèce au Dion Palace, un cadre somptueux ! Le Seder était émouvant, les conférences enrichissantes. Merci ODEM EVENT pour ce moment unique.</p><div class="avis-author"><div class="avis-av">RM</div><div><div class="avis-name">Rachel M.</div><div class="avis-trip">Pessah 2025 · Grèce</div></div></div></div>
-          <div class="avis-card"><div class="avis-quote">"</div><div class="avis-stars">★★★★★</div><p class="avis-txt">Troisième année consécutive avec ODEM EVENT — on ne change pas ce qui fonctionne ! Professionnalisme, convivialité et qualité toujours au rendez-vous.</p><div class="avis-author"><div class="avis-av">AB</div><div><div class="avis-name">Alain B.</div><div class="avis-trip">Fidèle depuis 2023</div></div></div></div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Les Arcs 2000 en famille, un souvenir inoubliable. Les enfants ont pu skier tous les jours, l'hôtel était magnifique et la cuisine casher excellente.</p>
+            <div class="avis-author"><div class="avis-av">YB</div><div><div class="avis-name">Yael B.</div><div class="avis-trip">Été 2024 · Arcs 2000</div></div></div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Pessah en Grèce au Dion Palace, un cadre somptueux ! Le Seder était émouvant, les conférences enrichissantes. Merci ODEM EVENT pour ce moment unique.</p>
+            <div class="avis-author"><div class="avis-av">RM</div><div><div class="avis-name">Rachel M.</div><div class="avis-trip">Pessah 2025 · Grèce</div></div></div>
+          </div>
+          <div class="avis-card">
+            <div class="avis-quote">"</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-txt">Troisième année consécutive avec ODEM EVENT — on ne change pas ce qui fonctionne ! Professionnalisme, convivialité et qualité sont toujours au rendez-vous.</p>
+            <div class="avis-author"><div class="avis-av">AB</div><div><div class="avis-name">Alain B.</div><div class="avis-trip">Fidèle depuis 2023</div></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -356,21 +423,21 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- FORMULAIRE -->
 <section id="contact">
-  <div class="contact-wrap">
-    <div style="text-align:center;">
-      <div class="div-gold"><div class="diam"></div></div>
-      <p class="sec-label">Réservez votre place</p>
-      <h2 class="sec-title">Pré-<em>réservation</em></h2>
-      <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">Notre équipe vous contacte sous 48h.</p>
+  <div class="contact-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="divider"><div class="diamond"></div></div>
+      <p class="sec-label" id="f-label">Réservez votre place</p>
+      <h2 class="sec-title" id="f-title">Pré-<em>réservation</em></h2>
+      <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;" id="f-desc">Notre équipe vous contacte sous 48h.</p>
     </div>
-    <form class="form-grid" onsubmit="submitForm(event)">
-      <div class="f-field"><label class="f-label">Prénom</label><input type="text" class="f-input" placeholder="Votre prénom" required></div>
-      <div class="f-field"><label class="f-label">Nom</label><input type="text" class="f-input" placeholder="Votre nom" required></div>
-      <div class="f-field"><label class="f-label">Email</label><input type="email" class="f-input" placeholder="votre@email.com" required></div>
-      <div class="f-field"><label class="f-label">Téléphone</label><input type="tel" class="f-input" placeholder="+33 6 XX XX XX XX" required></div>
-      <div class="f-field"><label class="f-label">Séjour souhaité</label>
+    <form class="form-grid reveal" onsubmit="submitForm(event)">
+      <div class="f-field"><label class="f-label" id="fl1">Prénom</label><input type="text" class="f-input" placeholder="Votre prénom" required></div>
+      <div class="f-field"><label class="f-label" id="fl2">Nom</label><input type="text" class="f-input" placeholder="Votre nom" required></div>
+      <div class="f-field"><label class="f-label" id="fl3">Email</label><input type="email" class="f-input" placeholder="votre@email.com" required></div>
+      <div class="f-field"><label class="f-label" id="fl4">Téléphone</label><input type="tel" class="f-input" placeholder="+33 6 XX XX XX XX" required></div>
+      <div class="f-field"><label class="f-label" id="fl5">Séjour souhaité</label>
         <select class="f-select" required>
           <option value="" disabled selected>Choisir</option>
           <option>Prochain séjour Pessah</option>
@@ -379,9 +446,9 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
           <option>M'informer de tous les séjours</option>
         </select>
       </div>
-      <div class="f-field"><label class="f-label">Nombre de personnes</label><input type="number" class="f-input" placeholder="Ex: 4" min="1" required></div>
-      <div class="f-field full"><label class="f-label">Message (optionnel)</label><textarea class="f-textarea" placeholder="Chambre souhaitée, besoins particuliers..."></textarea></div>
-      <div class="f-rgpd full"><input type="checkbox" required><label>J'accepte que mes données soient utilisées pour traiter ma demande et m'informer des prochains séjours ODEM EVENT.</label></div>
+      <div class="f-field"><label class="f-label" id="fl6">Nombre de personnes</label><input type="number" class="f-input" placeholder="Ex: 4" min="1" required></div>
+      <div class="f-field full"><label class="f-label" id="fl7">Message (optionnel)</label><textarea class="f-textarea" placeholder="Chambre souhaitée, besoins particuliers..."></textarea></div>
+      <div class="f-rgpd full"><input type="checkbox" required><label id="fl8">J'accepte que mes données soient utilisées pour traiter ma demande et m'informer des prochains séjours ODEM EVENT.</label></div>
       <button type="submit" class="f-submit" id="f-sub">Envoyer ma pré-réservation →</button>
     </form>
   </div>
@@ -389,14 +456,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <!-- FOOTER -->
 <div id="footer">
-  <div class="footer-grid">
+  <div class="footer-inner">
     <div>
       <div class="footer-brand">ODEM <span>EVENT</span></div>
       <div class="footer-tag">Séjours d'exception depuis 2018</div>
-      <div class="footer-kashrut">✡ Glatt Cacher · Rav Ephraim Cremisi</div>
-      <div class="footer-ci"><div class="fdot"></div>07 66 03 63 80</div>
-      <div class="footer-ci"><div class="fdot"></div>odemevent@gmail.com</div>
-      <div class="footer-ci"><div class="fdot"></div>+44 7 48 88 67 126</div>
+      <div class="footer-kashrut">✡ Glatt Cacher · Sous la surveillance du Rav Ephraim Cremisi</div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>07 66 03 63 80</span></div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>odemevent@gmail.com</span></div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>+44 7 48 88 67 126</span></div>
     </div>
     <div>
       <div class="footer-col-title">Séjours</div>
@@ -418,25 +485,95 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés</div>
 </div>
 
-<!-- WA -->
+<!-- WHATSAPP -->
 <a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20vos%20s%C3%A9jours" target="_blank" rel="noopener">
+  <div class="wa-tooltip">WhatsApp</div>
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
+// NAV
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>80);});
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const el=document.getElementById(a.getAttribute('href').slice(1));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}});});
-function toggleMenu(){const m=document.getElementById('mobileMenu');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
-function notifyMe(){const el=document.getElementById('t-email');const btn=document.getElementById('t-btn');if(!el.value||!el.value.includes('@')){el.style.borderColor='rgba(255,100,100,0.6)';return;}btn.textContent='✓';btn.style.background='#3a7a50';el.value='';el.style.borderColor='';setTimeout(()=>{btn.textContent='M\'alerter';btn.style.background='';},3000);}
-function submitForm(e){e.preventDefault();const btn=document.getElementById('f-sub');btn.textContent='✓ Envoyé !';btn.style.background='#3a7a50';btn.style.color='#fff';setTimeout(()=>{btn.textContent='Envoyer ma pré-réservation →';btn.style.background='';btn.style.color='';e.target.reset();},4000);}
-let cur=0;
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1);
+    const el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+  });
+});
+
+// MOBILE MENU
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+
+// REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});
+},{threshold:0.05, rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+
+// Force show all reveals after 1 second as fallback
+setTimeout(()=>{
+  document.querySelectorAll('.reveal').forEach(r=>r.classList.add('on'));
+},800);
+
+// CARROUSEL AVIS
+let currentSlide=0;
 const slides=document.querySelectorAll('.avis-slide');
 const dots=document.querySelectorAll('.avis-dot');
-function goSlide(n){cur=n;document.getElementById('avisTrack').style.transform=`translateX(-${n*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===n));}
-function nextSlide(){goSlide((cur+1)%slides.length);}
-function prevSlide(){goSlide((cur-1+slides.length)%slides.length);}
+function goSlide(n){
+  currentSlide=n;
+  document.getElementById('avisTrack').style.transform=`translateX(-${n*100}%)`;
+  dots.forEach((d,i)=>d.classList.toggle('active',i===n));
+}
+function nextSlide(){goSlide((currentSlide+1)%slides.length);}
+function prevSlide(){goSlide((currentSlide-1+slides.length)%slides.length);}
+
+// FORM
+function submitForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('f-sub');
+  btn.textContent='✓ Envoyé !';btn.style.background='#3a7a50';btn.style.color='#fff';
+  setTimeout(()=>{btn.textContent='Envoyer ma pré-réservation →';btn.style.background='';btn.style.color='';e.target.reset();},4000);
+}
+
+// HERO NOTIFY
+function heroNotify(){
+  const el=document.getElementById('hero-notify-email');
+  const btn=document.getElementById('hero-notify-btn');
+  if(!el.value||!el.value.includes('@')){el.style.borderColor='rgba(255,100,100,0.5)';return;}
+  btn.textContent='✓';btn.style.background='#3a7a50';
+  el.value='';el.style.borderColor='';
+  setTimeout(()=>{btn.textContent='M'alerter';btn.style.background='';},3000);
+}
+
+// PORTFOLIO FILTER via URL
+// portfolio.html gère le filtre via ?type=pessah ou ?type=ete
+
+// LANG
 let lang='fr';
-function toggleLang(){lang=lang==='fr'?'en':'fr';document.getElementById('langBtn').textContent=lang==='fr'?'EN':'FR';document.getElementById('langBtnM').textContent=lang==='fr'?'EN':'FR';}
+const tr={
+  fr:{'h-tag':'Séjours d\'exception depuis 2018','h-t1':'L\'art de voyager','h-t2':'ensemble','h-sub':'Pessah en Europe · Séjours d\'été · Classes de neige','ht-label':'Prochain séjour','ht-txt':'Destination en cours de sélection — Été 2026','h-b1':'Découvrir nos séjours','h-b2':'Nous contacter','h-scroll':'Découvrir','tp-label':'Ce que nous organisons','tp-title':'Nos <em>séjours</em>','tt1':'Pessah en Europe','td1':'Espagne · Chypre · Grèce · Crète','tl1':'Voir les séjours','tt2':'Été en montagne','td2':'Tignes · Les Arcs 2000','tl2':'Voir les séjours','tt3':'Groupes & écoles','td3':'Tignes · Les Arcs 2000','tl3':'En savoir plus','c1':'Séjours organisés','c2':'Familles accompagnées','c3':'Pays visités','c4':'Hôtels partenaires','av-label':'Ce qu\'ils disent','av-title':'Avis de nos <em>familles</em>','f-label':'Réservez votre place','f-title':'Pré-<em>réservation</em>','f-desc':'Notre équipe vous contacte sous 48h.','fl1':'Prénom','fl2':'Nom','fl3':'Email','fl4':'Téléphone','fl5':'Séjour souhaité','fl6':'Nombre de personnes','fl7':'Message (optionnel)','fl8':'J\'accepte que mes données soient utilisées pour traiter ma demande.','f-sub':'Envoyer ma pré-réservation →'},
+  en:{'h-tag':'Exceptional trips since 2018','h-t1':'The art of traveling','h-t2':'together','h-sub':'Passover in Europe · Summer trips · Snow classes','ht-label':'Next trip','ht-txt':'Destination being selected — Summer 2026','h-b1':'Discover our trips','h-b2':'Contact us','h-scroll':'Discover','tp-label':'What we organise','tp-title':'Our <em>trips</em>','tt1':'Passover in Europe','td1':'Spain · Cyprus · Greece · Crete','tl1':'View trips','tt2':'Summer in the mountains','td2':'Tignes · Les Arcs 2000','tl2':'View trips','tt3':'Groups & schools','td3':'Tignes · Les Arcs 2000','tl3':'Learn more','c1':'Trips organised','c2':'Families accompanied','c3':'Countries visited','c4':'Partner hotels','av-label':'What they say','av-title':'Reviews from our <em>families</em>','f-label':'Book your place','f-title':'<em>Pre-booking</em>','f-desc':'Our team contacts you within 48h.','fl1':'First name','fl2':'Last name','fl3':'Email','fl4':'Phone','fl5':'Desired trip','fl6':'Number of people','fl7':'Message (optional)','fl8':'I agree that my data will be used to process my request.','f-sub':'Send my pre-booking →'}
+};
+function toggleLang(){
+  lang=lang==='fr'?'en':'fr';
+  document.getElementById('langBtn').textContent=lang==='fr'?'EN':'FR';
+  document.getElementById('langBtnM').textContent=lang==='fr'?'EN':'FR';
+  document.documentElement.lang=lang;
+  Object.keys(tr[lang]).forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    const tag=el.tagName;
+    if(['BUTTON','A','SPAN','P','H1','H2','DIV','LABEL'].includes(tag))el.innerHTML=tr[lang][id];
+    else if(tag==='OPTION')el.textContent=tr[lang][id];
+  });
+}
 </script>
 </body>
 </html>
