@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pessah 2023 — Espagne — ODEM EVENT</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* SHARED STYLES — ODEM EVENT */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#0D0D0D;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:var(--blanc);color:var(--noir);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;transition:all 0.4s;}
+nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,0.15);padding:0.8rem 3rem;}
+.nav-logo{display:flex;align-items:center;gap:0.7rem;text-decoration:none;}
+.nav-logo-mark{width:38px;height:38px;border:1.5px solid rgba(201,168,76,0.6);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);}
+.nav-logo-name{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.25em;color:#fff;}
+.nav-logo-name span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-back{border:1px solid rgba(201,168,76,0.4);color:var(--gold)!important;padding:0.4rem 1.1rem;}
+#hero{height:100vh;min-height:600px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start;padding:5rem;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:hzoom 20s ease-in-out infinite alternate;}
+@keyframes hzoom{from{transform:scale(1);}to{transform:scale(1.07);}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.5) 100%);}
+.hero-content{position:relative;z-index:2;max-width:650px;animation:fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.hero-type{font-size:0.55rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+.hero-type::before{content:'';width:40px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:300;line-height:0.9;color:#fff;margin-bottom:0.8rem;text-shadow:0 4px 30px rgba(0,0,0,0.4);}
+.hero-title em{font-style:italic;color:var(--gold-l);}
+.hero-hotel{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;}
+.hero-dates{font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:0.6rem;}
+.hero-stars{color:var(--gold);font-size:0.7rem;margin-bottom:1.8rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--noir);border:none;padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px);}
+.btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
+.status-bar{padding:0.9rem 3rem;display:flex;align-items:center;gap:1rem;}
+.status-archived-bar{background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.06);}
+.status-cancelled-bar{background:rgba(150,0,0,0.1);border-bottom:1px solid rgba(200,0,0,0.15);}
+.status-dot{width:7px;height:7px;border-radius:50%;}
+.dot-archived{background:var(--gris);}
+.dot-cancelled{background:#cc4444;}
+.status-txt{font-size:0.62rem;letter-spacing:0.12em;color:rgba(255,255,255,0.5);}
+.cancelled-txt{color:rgba(255,160,160,0.8);}
+.highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
+.hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
+.hl-title em{font-style:italic;color:var(--gold);}
+.hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:2rem;}
+.hl-feats{display:flex;flex-direction:column;gap:0.9rem;}
+.hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
+.fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
+.affiche-side{position:sticky;top:6rem;}
+.affiche-frame{border:1px solid rgba(201,168,76,0.25);padding:6px;background:#fff;box-shadow:0 10px 50px rgba(0,0,0,0.15);}
+.affiche-frame img{width:100%;display:block;}
+.gallery{padding:0 5rem 5rem;max-width:1100px;margin:0 auto;}
+.gallery-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
+.gal-item{overflow:hidden;cursor:pointer;}
+.gal-item.r1{aspect-ratio:4/3;}
+.gal-item.r2{aspect-ratio:1/1;}
+.gal-item.large{grid-column:span 2;aspect-ratio:16/9;}
+.gal-img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
+.gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
+.gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
+.gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
+.tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
+.tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
+.tarifs-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;text-align:center;}
+.tarifs-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#fff;text-align:center;margin-bottom:3rem;}
+.tarifs-title em{font-style:italic;color:var(--gold);}
+.t-table{width:100%;border-collapse:collapse;}
+.t-table th{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gris);text-align:left;padding:0.5rem 0;border-bottom:1px solid rgba(201,168,76,0.15);}
+.t-table td{padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.72rem;}
+.t-name{color:rgba(255,255,255,0.8);}
+.t-size{color:var(--gris);font-size:0.6rem;margin-top:0.2rem;}
+.t-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;text-align:right;white-space:nowrap;}
+.t-price.dem{color:rgba(255,255,255,0.35);font-size:0.65rem;font-family:'Montserrat',sans-serif;font-style:italic;}
+.tarifs-note{font-size:0.62rem;color:var(--gris);text-align:center;margin-top:2rem;font-style:italic;}
+.cancelled-notice{background:rgba(0,0,0,0.9);border-top:2px solid rgba(180,0,0,0.4);border-bottom:2px solid rgba(180,0,0,0.4);padding:3rem 5rem;text-align:center;}
+.cn-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#cc4444;margin-bottom:1rem;}
+.cn-msg{font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.9;max-width:550px;margin:0 auto;}
+.waitlist-sec{background:#f8f6f2;padding:4rem 5rem;text-align:center;}
+.wl-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--noir);margin-bottom:0.8rem;}
+.wl-title em{font-style:italic;color:var(--gold);}
+.wl-sub{font-size:0.72rem;color:var(--gris);margin-bottom:2rem;}
+.wl-form{display:flex;max-width:420px;margin:0 auto;}
+.wl-input{flex:1;background:#fff;border:1px solid rgba(0,0,0,0.12);border-right:none;color:var(--noir);font-family:'Montserrat',sans-serif;font-size:0.7rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;}
+.wl-input:focus{border-color:var(--gold);}
+.wl-btn{background:var(--noir);color:#fff;border:none;padding:0.85rem 1.4rem;font-family:'Montserrat',sans-serif;font-size:0.58rem;font-weight:600;letter-spacing:0.15em;cursor:pointer;transition:all 0.3s;}
+.wl-btn:hover{background:var(--gold);color:var(--noir);}
+.res-sec{padding:5rem;max-width:720px;margin:0 auto;}
+.res-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;text-align:center;}
+.res-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--noir);text-align:center;margin-bottom:0.8rem;}
+.res-title em{font-style:italic;color:var(--gold);}
+.res-sub{font-size:0.72rem;color:var(--gris);text-align:center;margin-bottom:2.5rem;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.f-field{display:flex;flex-direction:column;gap:0.4rem;}
+.f-field.full{grid-column:1/-1;}
+.f-label{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gris);}
+.f-input,.f-select,.f-textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);color:var(--noir);font-family:'Montserrat',sans-serif;font-size:0.72rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;}
+.f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--gold);}
+.f-textarea{min-height:90px;resize:vertical;}
+.f-rgpd{grid-column:1/-1;display:flex;align-items:flex-start;gap:0.6rem;font-size:0.58rem;color:var(--gris);}
+.f-rgpd input{margin-top:2px;accent-color:var(--gold);}
+.f-submit{grid-column:1/-1;background:var(--noir);color:#fff;border:none;padding:1rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
+.f-submit:hover{background:var(--gold);color:var(--noir);}
+.ft-bar{background:rgba(0,0,0,0.95);border-top:1px solid rgba(201,168,76,0.1);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
+.ft-brand{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:#fff;}
+.ft-brand span{color:var(--gold);}
+.ft-copy{font-size:0.58rem;color:rgba(255,255,255,0.25);}
+.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.wa-btn:hover{background:#20b859;transform:scale(1.1);}
+.wa-btn svg{width:28px;height:28px;fill:#fff;}
+@media(max-width:900px){
+  nav{padding:0.9rem 1.5rem;}.nav-links{display:none;}
+  #hero{padding:2rem 1.5rem;}
+  .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
+  .highlights{grid-template-columns:1fr;}
+  .affiche-side{position:static;}
+  .gal-grid{grid-template-columns:1fr 1fr;}
+  .gal-item.large{grid-column:span 2;}
+  .form-grid{grid-template-columns:1fr;}
+  .f-field.full,.f-submit,.f-rgpd{grid-column:1;}
+  .ft-bar{flex-direction:column;gap:0.5rem;text-align:center;}
+}
+
+.hero-bg{background-image:url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1800&q=85');background-position:center 35%;}
+.gal-ph1{background:linear-gradient(135deg,#e8a44a33,#2e8b6e44);}
+.gal-ph2{background:linear-gradient(135deg,#2e8b6e33,#e8a44a22);}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 50 50" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="25" r="22" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
+        <line x1="25" y1="6" x2="25" y2="44" stroke="#C9A84C" stroke-width="1"/>
+        <line x1="20" y1="6" x2="20" y2="44" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
+        <line x1="30" y1="6" x2="30" y2="44" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
+        <line x1="17" y1="27" x2="33" y2="27" stroke="#C9A84C" stroke-width="1"/>
+        <circle cx="25" cy="4" r="1.8" fill="#C9A84C"/>
+      </svg>
+    </div>
+    <span class="nav-logo-name">ODEM <span>EVENT</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#portfolio">Tous les séjours</a></li>
+    <li><a href="index.html" class="nav-back">← Accueil</a></li>
+  </ul>
+</nav>
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="hero-type">Pessah · 2023</div>
+    <h1 class="hero-title"><em>Espagne</em></h1>
+    <div class="hero-hotel">Luna Club Hôtel Yoga & Spa</div>
+    <div class="hero-dates">Du 5 au 14 avril 2023 · Malgrat de Mar, Barcelone</div>
+    <div class="hero-stars">★★★★</div>
+    <div class="hero-btns">
+      <a href="index.html" class="btn-outline-w">← Tous les séjours</a>
+    </div>
+  </div>
+</section>
+
+<div class="status-bar status-archived-bar">
+  <div class="status-dot dot-archived"></div>
+  <span class="status-txt">Séjour terminé — Ce séjour est désormais archivé. Rejoignez la liste d'attente pour les prochains séjours.</span>
+</div>
+
+<div style="background:var(--blanc);">
+  <div class="highlights">
+    <div>
+      <div class="hl-label">Pessah 2023 · Espagne</div>
+      <h2 class="hl-title">Un Pessah <em>ensoleillé</em><br>à Barcelone</h2>
+      <p class="hl-desc">Un séjour Pessah d'exception dans l'écrin méditerranéen de Malgrat de Mar, à seulement 45 minutes de Barcelone. Le Luna Club Hôtel Yoga & Spa a accueilli nos familles dans un cadre luxuriant, entre piscines, soins et repas gastronomiques Glatt Cacher.</p>
+      <div class="hl-feats">
+        <div class="hl-feat"><div class="fdot"></div><span>Luna Club Hôtel Yoga & Spa ⭐⭐⭐⭐ · All inclusive · Pension complète</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>2 piscines extérieures · 1 piscine intérieure chauffée · SPA · Jacuzzi · Sauna</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Glatt Cacher Laméadrin · Sans Kitniot · Matsa Chrouya</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Sous la surveillance du Rav Cremisi · Avec la présence du Rav Loria</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Hazan d'exception Yohai Chetrit · Congrès médical et juridique</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Mini-club · Baby club · Ping-pong · VTT · Excursions · Plage à 400m</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Restauration gastronomique · Seder privatif · Animations pour tous</span></div>
+      </div>
+    </div>
+    <div class="affiche-side">
+      <div class="affiche-frame">
+        <img src="affiches/affiche-espagne-2023.jpg" alt="Affiche officielle du séjour" style="width:100%;display:block;border-radius:1px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-label">Galerie photos</div>
+    <div class="gal-grid">
+      <div class="gal-item large"><div class="gal-ph gal-ph1" style="background-image:url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80');background-size:cover;background-position:center;"><span class="gal-ph-txt" style="display:none;"></span></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+    </div>
+    <p style="font-size:0.6rem;color:var(--gris);margin-top:1rem;font-style:italic;">Photos à remplacer par vos photos personnelles du séjour</p>
+  </div>
+</div>
+
+<div class="tarifs-sec">
+  <div class="tarifs-inner">
+    <div class="tarifs-label">Tarifs indicatifs</div>
+    <h2 class="tarifs-title">Grille <em>tarifaire</em></h2>
+    <table class="t-table">
+      <tr><th>Formule</th><th style="text-align:right;">Tarif / pers.</th></tr>
+      <tr><td><div class="t-name">Pension complète All inclusive</div><div class="t-size">Adulte · chambre double</div></td><td class="t-price">1 550 €</td></tr>
+      <tr><td><div class="t-name">Bébé (0–2 ans)</div><div class="t-size">Dans la chambre des parents</div></td><td class="t-price">Inclus</td></tr>
+      <tr><td><div class="t-name">Enfant (tarif dégressif)</div><div class="t-size">Selon âge</div></td><td class="t-price">Sur devis</td></tr>
+    </table>
+    <p class="tarifs-note">* Tarifs indicatifs 2023. Contactez-nous pour les tarifs de nos prochains séjours.</p>
+  </div>
+</div>
+
+<div class="waitlist-sec">
+  <h2 class="wl-title">Rejoindre la <em>liste d'attente</em></h2>
+  <p class="wl-sub">Ce séjour est terminé. Laissez votre email pour être informé en priorité des prochains séjours similaires.</p>
+  <div class="wl-form">
+    <input type="email" class="wl-input" id="wl-i" placeholder="votre@email.com">
+    <button class="wl-btn" id="wl-b" onclick="joinWaitlist()">M'inscrire</button>
+  </div>
+</div>
+<div class="ft-bar">
+  <div class="ft-brand">ODEM <span>EVENT</span></div>
+  <div class="ft-copy">© 2026 ODEM EVENT — Tous droits réservés</div>
+</div>
+<a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Espagne%202023" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>80);});
+function submitForm(e){e.preventDefault();const btn=e.target.querySelector('.f-submit');btn.textContent='✓ Envoyé !';btn.style.background='var(--gold)';btn.style.color='var(--noir)';setTimeout(()=>{btn.textContent='Envoyer ma pré-réservation →';btn.style.background='';btn.style.color='';e.target.reset();},4000);}
+function joinWaitlist(){const i=document.getElementById('wl-i');if(!i||!i.value.includes('@'))return;const b=document.getElementById('wl-b');b.textContent='✓ Inscrit !';b.style.background='#3a7a50';i.value='';setTimeout(()=>{b.textContent="M'inscrire";b.style.background='';},3000);}
+</script>
+</body>
+</html>
