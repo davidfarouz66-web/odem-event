@@ -84,6 +84,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1);}
 .reveal.d1{transition-delay:0.1s;}.reveal.d2{transition-delay:0.2s;}.reveal.d3{transition-delay:0.3s;}
 .reveal.on{opacity:1;transform:translateY(0);}
+.port-card.hide{display:none!important;}
 
 @media(max-width:900px){
   nav{padding:0.9rem 1.2rem;}
@@ -271,12 +272,14 @@ function filter(type,btn){
   if(btn) btn.classList.add('active');
   else document.querySelectorAll('.filter-btn').forEach(b=>{if(b.dataset.filter===type)b.classList.add('active');});
   document.querySelectorAll('.port-card').forEach(card=>{
-    card.style.display=(type==='all'||card.dataset.type===type)?'block':'none';
+    card.classList.toggle('hide', type!=='all' && card.dataset.type!==type);
   });
 }
-const urlType=new URLSearchParams(location.search).get('type');
-if(urlType==='pessah'||urlType==='ete') filter(urlType,null);
-else filter('all',document.querySelector('.filter-btn'));
+window.addEventListener('DOMContentLoaded',function(){
+  const urlType=new URLSearchParams(location.search).get('type');
+  if(urlType==='pessah'||urlType==='ete') filter(urlType,null);
+  else filter('all',document.querySelector('[data-filter="all"]'));
+});
 </script>
 </body>
 </html>
