@@ -140,9 +140,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     <h1 class="port-hero-title">Tous nos <em>séjours</em></h1>
     <p class="port-hero-sub">6 séjours d'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.</p>
     <div class="filters">
-      <button class="filter-btn active" onclick="filter('all',this)">Tous</button>
-      <button class="filter-btn" onclick="filter('pessah',this)">Pessah</button>
-      <button class="filter-btn" onclick="filter('ete',this)">Été</button>
+      <button class="filter-btn active" data-filter="all" onclick="filter('all',this)">Tous</button>
+      <button class="filter-btn" data-filter="pessah" onclick="filter('pessah',this)">Pessah</button>
+      <button class="filter-btn" data-filter="ete" onclick="filter('ete',this)">Été</button>
     </div>
   </div>
 </div>
@@ -268,15 +268,15 @@ const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.t
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
 function filter(type,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
+  if(btn) btn.classList.add('active');
+  else document.querySelectorAll('.filter-btn').forEach(b=>{if(b.dataset.filter===type)b.classList.add('active');});
   document.querySelectorAll('.port-card').forEach(card=>{
-    if(type==='all'||card.dataset.type===type){
-      card.style.display='block';
-    } else {
-      card.style.display='none';
-    }
+    card.style.display=(type==='all'||card.dataset.type===type)?'block':'none';
   });
 }
+const urlType=new URLSearchParams(location.search).get('type');
+if(urlType==='pessah'||urlType==='ete') filter(urlType,null);
+else filter('all',document.querySelector('.filter-btn'));
 </script>
 </body>
 </html>
