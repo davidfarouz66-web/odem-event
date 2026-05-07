@@ -2,10 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Été 2024 — Arcs 2000 — ODEM EVENT</title>
+<title>Été 2025 — Tignes le Lac — ODEM EVENT</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* SHARED STYLES — ODEM EVENT */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#0D0D0D;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
 html{scroll-behavior:smooth;}
@@ -34,24 +33,19 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .hero-dates{font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:0.6rem;}
 .hero-stars{color:var(--gold);font-size:0.7rem;margin-bottom:1.8rem;}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-gold{background:var(--gold);color:var(--noir);border:none;padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
-.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px);}
 .btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
 .btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
 .status-bar{padding:0.9rem 3rem;display:flex;align-items:center;gap:1rem;}
 .status-archived-bar{background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.06);}
-.status-cancelled-bar{background:rgba(150,0,0,0.1);border-bottom:1px solid rgba(200,0,0,0.15);}
 .status-dot{width:7px;height:7px;border-radius:50%;}
 .dot-archived{background:var(--gris);}
-.dot-cancelled{background:#cc4444;}
 .status-txt{font-size:0.62rem;letter-spacing:0.12em;color:rgba(255,255,255,0.5);}
-.cancelled-txt{color:rgba(255,160,160,0.8);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
 .hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
 .hl-title em{font-style:italic;color:var(--gold);}
-.hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:2rem;}
-.hl-feats{display:flex;flex-direction:column;gap:0.9rem;}
+.hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:1.2rem;}
+.hl-feats{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.5rem;}
 .hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
 .fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
 .affiche-side{position:sticky;top:6rem;}
@@ -60,14 +54,11 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gallery{padding:0 5rem 5rem;max-width:1100px;margin:0 auto;}
 .gallery-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
-.gal-item{overflow:hidden;cursor:pointer;}
+.gal-item{overflow:hidden;cursor:pointer;border-radius:32px;}
 .gal-item.r1{aspect-ratio:4/3;}
-.gal-item.r2{aspect-ratio:1/1;}
 .gal-item.large{grid-column:span 2;aspect-ratio:16/9;}
-.gal-img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
-.gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
-.gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
-.gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.gal-ph{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
+.gal-item:hover .gal-ph{transform:scale(1.07);}
 .info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
 .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
 .info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
@@ -76,7 +67,6 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .info-list{display:flex;flex-direction:column;gap:0.6rem;}
 .info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
 .info-list li .fdot{flex-shrink:0;margin-top:7px;}
-@media(max-width:900px){.info-sec{padding-left:1.5rem;padding-right:1.5rem;}.info-grid{grid-template-columns:1fr;}}
 .tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
 .tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
@@ -89,11 +79,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .t-name{color:rgba(255,255,255,0.8);}
 .t-size{color:var(--gris);font-size:0.6rem;margin-top:0.2rem;}
 .t-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;text-align:right;white-space:nowrap;}
-.t-price.dem{color:rgba(255,255,255,0.35);font-size:0.65rem;font-family:'Montserrat',sans-serif;font-style:italic;}
 .tarifs-note{font-size:0.62rem;color:var(--gris);text-align:center;margin-top:2rem;font-style:italic;}
-.cancelled-notice{background:rgba(0,0,0,0.9);border-top:2px solid rgba(180,0,0,0.4);border-bottom:2px solid rgba(180,0,0,0.4);padding:3rem 5rem;text-align:center;}
-.cn-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#cc4444;margin-bottom:1rem;}
-.cn-msg{font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.9;max-width:550px;margin:0 auto;}
 .waitlist-sec{background:#f8f6f2;padding:4rem 5rem;text-align:center;}
 .wl-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--noir);margin-bottom:0.8rem;}
 .wl-title em{font-style:italic;color:var(--gold);}
@@ -103,22 +89,6 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .wl-input:focus{border-color:var(--gold);}
 .wl-btn{background:var(--noir);color:#fff;border:none;padding:0.85rem 1.4rem;font-family:'Montserrat',sans-serif;font-size:0.58rem;font-weight:600;letter-spacing:0.15em;cursor:pointer;transition:all 0.3s;}
 .wl-btn:hover{background:var(--gold);color:var(--noir);}
-.res-sec{padding:5rem;max-width:720px;margin:0 auto;}
-.res-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;text-align:center;}
-.res-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--noir);text-align:center;margin-bottom:0.8rem;}
-.res-title em{font-style:italic;color:var(--gold);}
-.res-sub{font-size:0.72rem;color:var(--gris);text-align:center;margin-bottom:2.5rem;}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.f-field{display:flex;flex-direction:column;gap:0.4rem;}
-.f-field.full{grid-column:1/-1;}
-.f-label{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gris);}
-.f-input,.f-select,.f-textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);color:var(--noir);font-family:'Montserrat',sans-serif;font-size:0.72rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;}
-.f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--gold);}
-.f-textarea{min-height:90px;resize:vertical;}
-.f-rgpd{grid-column:1/-1;display:flex;align-items:flex-start;gap:0.6rem;font-size:0.58rem;color:var(--gris);}
-.f-rgpd input{margin-top:2px;accent-color:var(--gold);}
-.f-submit{grid-column:1/-1;background:var(--noir);color:#fff;border:none;padding:1rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
-.f-submit:hover{background:var(--gold);color:var(--noir);}
 .ft-bar{background:rgba(0,0,0,0.95);border-top:1px solid rgba(201,168,76,0.1);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
 .ft-brand{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:#fff;}
 .ft-brand span{color:var(--gold);}
@@ -129,17 +99,17 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 @media(max-width:900px){
   nav{padding:0.9rem 1.5rem;}.nav-links{display:none;}
   #hero{padding:2rem 1.5rem;}
-  .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
+  .highlights,.gallery,.info-sec,.tarifs-sec,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
   .affiche-side{position:static;}
   .gal-grid{grid-template-columns:1fr 1fr;}
   .gal-item.large{grid-column:span 2;}
-  .form-grid{grid-template-columns:1fr;}
-  .f-field.full,.f-submit,.f-rgpd{grid-column:1;}
+  .info-grid{grid-template-columns:1fr;}
   .ft-bar{flex-direction:column;gap:0.5rem;text-align:center;}
+  .gal-item{border-radius:16px;}
+  .video-wrap{border-radius:16px!important;}
 }
-
-.hero-bg{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1800&q=85');background-position:center 30%;}
+.hero-bg{background-image:url('fond-tignes.jpg');background-position:center 40%;}
 </style>
 </head>
 <body>
@@ -158,59 +128,81 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <span class="nav-logo-name">ODEM <span>EVENT</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html#portfolio">Tous les séjours</a></li>
+    <li><a href="portfolio.html">Tous les séjours</a></li>
     <li><a href="index.html" class="nav-back">← Accueil</a></li>
   </ul>
 </nav>
+
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-ov" style="background:linear-gradient(135deg,rgba(10,40,15,0.75) 0%,rgba(20,80,30,0.15) 60%,rgba(10,30,15,0.65) 100%);"></div>
+  <div class="hero-ov"></div>
   <div class="hero-content">
-    <div class="hero-type">Été · 2024</div>
-    <h1 class="hero-title"><em>Arcs 2000</em></h1>
-    <div class="hero-hotel">Les Mélèzes Hôtel Club</div>
-    <div class="hero-dates">Du 4 au 28 août · Savoie, Alpes françaises</div>
-    <div class="hero-stars">★★★★</div>
-    <div class="hero-btns"><a href="index.html" class="btn-outline-w">← Tous les séjours</a></div>
+    <div class="hero-type">Été · 2025</div>
+    <h1 class="hero-title"><em>Tignes</em><br>le Lac</h1>
+    <div class="hero-hotel">Diamond Rock Lodge</div>
+    <div class="hero-dates">Du 4 août au 31 août 2025 · Tignes, Savoie</div>
+    <div class="hero-stars">★★★★★</div>
+    <div class="hero-btns">
+      <a href="portfolio.html" class="btn-outline-w">← Tous les séjours</a>
+    </div>
   </div>
 </section>
+
 <div class="status-bar status-archived-bar">
   <div class="status-dot dot-archived"></div>
-  <span class="status-txt">Séjour terminé — Ce séjour est désormais archivé.</span>
+  <span class="status-txt">Séjour terminé — Ce séjour est désormais archivé. Rejoignez la liste d'attente pour les prochains séjours.</span>
 </div>
+
 <div style="background:var(--blanc);">
+
+  <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
   <div class="highlights">
     <div>
-      <div class="hl-label">Été 2024 · Arcs 2000</div>
-      <h2 class="hl-title">Les Mélèzes<br><em>Hôtel Club</em></h2>
-      <p class="hl-desc">Niché à 2 000m d'altitude dans le domaine des Arcs, Les Mélèzes Hôtel Club offre un cadre alpin exceptionnel pour un séjour d'été en famille. Entre randonnées, lacs de montagne et animations, chaque journée devient un souvenir inoubliable.</p>
-      <p class="hl-desc" style="color:var(--gold);font-style:italic;">Sous la surveillance du Rav Ephraim Cremisi · Présence du Rav David Ichay du 8 au 18 août</p>
-      <div class="hl-feats" style="margin-top:1.5rem;">
-        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐ · Arcs 2000 · 2 000m d'altitude</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Espace détente SPA · Piscine · Jacuzzi</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Synagogue et offices sur place</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Du 4 au 28 août 2024</span></div>
+      <div class="hl-label">Été 2025 · Tignes le Lac</div>
+      <h2 class="hl-title">Diamond Rock<br><em>Lodge</em></h2>
+      <p class="hl-desc">Niché au cœur de Tignes en Savoie, le Diamond Rock Lodge incarne parfaitement l'esprit montagnard contemporain. Cette nouvelle adresse de prestige, fruit de la vision créative de la décoratrice Reyhana Tamboura, marie avec brio l'élégance moderne et l'authenticité alpine.</p>
+      <p class="hl-desc">Un hébergement d'exception au sommet des Alpes, où l'art de vivre à la montagne se conjugue avec des expériences uniques sous un même toit.</p>
+      <div class="hl-feats">
+        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐⭐ · Hôtel de prestige · Design contemporain alpin</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Chambres & Suites : Standard · Supérieure · Luxe · Familiale · Familiale Supérieure · Suite Luxe · Suite Premium · Suite VIP</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Sous la surveillance du Rav Ephraim Cremisi · Halak Bet Yossef Laméhadrine</span></div>
       </div>
     </div>
     <div class="affiche-side">
       <div class="affiche-frame">
-        <img src="affiches/affiche-arcs-2024.jpg" alt="Affiche officielle du séjour" style="width:100%;display:block;border-radius:1px;">
+        <img src="affiches/affiche-tignes-2025.jpg" alt="Affiche officielle du séjour" style="width:100%;display:block;border-radius:1px;">
       </div>
     </div>
   </div>
+
+  <!-- 2. PHOTOS DE L'HÔTEL -->
   <div class="gallery">
     <div class="gallery-label">Photos de l'hôtel</div>
     <div class="gal-grid">
-      <div class="gal-item large"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1440186347098-386b7459ad6b?w=900&q=80');background-size:cover;background-position:center;"></div></div>
-      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1502784444187-359ac186c5bb?w=600&q=80');background-size:cover;background-position:center;"></div></div>
-      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80');background-size:cover;background-position:center;"></div></div>
-      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item large"><div class="gal-ph" style="background-image:url('photos/tignes-2025/bar.jpg');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/tignes-2025/chambre-suite.jpg');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/tignes-2025/chambre-vue.jpg');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/tignes-2025/cinema.jpg');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/tignes-2025/salon.jpg');background-size:cover;background-position:center;"></div></div>
     </div>
   </div>
+
+  <!-- 3. VIDÉO -->
+  <div class="gallery" style="padding-top:0;">
+    <div class="gallery-label">Vidéo</div>
+    <div class="video-wrap" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:32px;overflow:hidden;border:1px solid rgba(201,168,76,0.2);">
+      <video controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;" poster="photos/tignes-2025/chambre-vue.jpg">
+        <source src="videos/tignes-2025/tignes-2025.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- 4. INFOS DU SÉJOUR -->
   <div class="info-sec">
     <div class="hl-label">Le séjour en détail</div>
     <h2 class="hl-title">Tout ce qui est <em>inclus</em></h2>
     <div class="info-grid">
+
       <div class="info-card">
         <div class="info-card-label">Kashrout</div>
         <div class="info-card-title">Halak Bet Yossef</div>
@@ -219,37 +211,74 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
           <li><div class="fdot"></div>Sous la surveillance du Rav Ephraim Cremisi</li>
         </ul>
       </div>
+
       <div class="info-card">
         <div class="info-card-label">Restauration</div>
         <div class="info-card-title">Pension complète</div>
         <ul class="info-list">
-          <li><div class="fdot"></div>Cuisine gastronomique Halak Bet Yossef</li>
-          <li><div class="fdot"></div>Petit-déjeuner · Déjeuner · Dîner</li>
-          <li><div class="fdot"></div>Panier repas midi inclus</li>
+          <li><div class="fdot"></div>Pension complète · Halak Bet Yossef Laméhadrine</li>
+          <li><div class="fdot"></div>Repas servis sous la supervision du Rav Ephraim Cremisi</li>
         </ul>
       </div>
+
       <div class="info-card">
         <div class="info-card-label">Vie juive</div>
         <div class="info-card-title">Chabbat & Offices</div>
         <ul class="info-list">
-          <li><div class="fdot"></div>Synagogue et offices sur place</li>
-          <li><div class="fdot"></div>Présence du Rav David Ichay du 8 au 18 août</li>
-          <li><div class="fdot"></div>Cours et conférences</li>
+          <li><div class="fdot"></div>Chabbat · Kiddouch · Repas de Chabbat</li>
+          <li><div class="fdot"></div>3 offices par jour</li>
         </ul>
       </div>
+
       <div class="info-card">
         <div class="info-card-label">Animations</div>
-        <div class="info-card-title">Toute la famille</div>
+        <div class="info-card-title">Soirées & Loisirs</div>
         <ul class="info-list">
-          <li><div class="fdot"></div>Animation by Lévy Bellaiche</li>
-          <li><div class="fdot"></div>Mini-club · Baby-club</li>
-          <li><div class="fdot"></div>Randonnées alpines · Lacs de montagne · VTT</li>
-          <li><div class="fdot"></div>SPA · Piscine · Jacuzzi</li>
+          <li><div class="fdot"></div>Animations tout au long du séjour</li>
+          <li><div class="fdot"></div>Soirées organisées</li>
         </ul>
       </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Activités</div>
+        <div class="info-card-title">Pour grands et petits</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Salle de jeux : baby foot, jeux d'arcades, billard</li>
+          <li><div class="fdot"></div>Bowling · Kid's Club · Salle de sport équipée</li>
+          <li><div class="fdot"></div>Simulateur de ski · Course de voiture GT Duo · Jeu de palet</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Services</div>
+        <div class="info-card-title">Mini Club enfants</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Prise en charge des enfants à partir de 9h</li>
+          <li><div class="fdot"></div>Mini Club : 9h – 17h</li>
+          <li><div class="fdot"></div>Possibilité de garde 19h – 21h30</li>
+          <li><div class="fdot"></div>Repos garanti pour les parents</li>
+        </ul>
+      </div>
+
     </div>
   </div>
+
 </div>
+
+<div class="tarifs-sec">
+  <div class="tarifs-inner">
+    <div class="tarifs-label">Tarifs indicatifs</div>
+    <h2 class="tarifs-title">Grille <em>tarifaire</em></h2>
+    <table class="t-table">
+      <tr><th>Formule</th><th style="text-align:right;">Tarif / pers.</th></tr>
+      <tr><td><div class="t-name">Pension complète</div><div class="t-size">Adulte · chambre double</div></td><td class="t-price">Sur devis</td></tr>
+      <tr><td><div class="t-name">Bébé (0–2 ans)</div><div class="t-size">Dans la chambre des parents</div></td><td class="t-price">Sur devis</td></tr>
+      <tr><td><div class="t-name">Enfant (tarif dégressif)</div><div class="t-size">Selon âge</div></td><td class="t-price">Sur devis</td></tr>
+    </table>
+    <p class="tarifs-note">* Contactez-nous pour obtenir les tarifs de ce séjour.</p>
+  </div>
+</div>
+
 <div class="waitlist-sec">
   <h2 class="wl-title">Rejoindre la <em>liste d'attente</em></h2>
   <p class="wl-sub">Ce séjour est terminé. Laissez votre email pour être informé en priorité des prochains séjours similaires.</p>
@@ -258,11 +287,19 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <button class="wl-btn" id="wl-b" onclick="joinWaitlist()">M'inscrire</button>
   </div>
 </div>
-<div class="ft-bar"><div class="ft-brand">ODEM <span>EVENT</span></div><div class="ft-copy">© 2026 ODEM EVENT — Tous droits réservés</div></div>
-<a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Arcs 2000%202024" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<div class="ft-bar">
+  <div class="ft-brand">ODEM <span>EVENT</span></div>
+  <div class="ft-copy">© 2026 ODEM EVENT — Tous droits réservés</div>
+</div>
+
+<a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Tignes%202025" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>80);});
-function submitForm(e){e.preventDefault();const btn=e.target.querySelector('.f-submit');btn.textContent='✓ Envoyé !';btn.style.background='var(--gold)';btn.style.color='var(--noir)';setTimeout(()=>{btn.textContent='Envoyer ma pré-réservation →';btn.style.background='';btn.style.color='';e.target.reset();},4000);}
 function joinWaitlist(){const i=document.getElementById('wl-i');if(!i||!i.value.includes('@'))return;const b=document.getElementById('wl-b');b.textContent='✓ Inscrit !';b.style.background='#3a7a50';i.value='';setTimeout(()=>{b.textContent="M'inscrire";b.style.background='';},3000);}
 </script>
-</body></html>
+</body>
+</html>

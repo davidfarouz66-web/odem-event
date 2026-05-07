@@ -68,6 +68,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
 .gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
 .gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
+.info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
+.info-card-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--noir);margin-bottom:1.2rem;}
+.info-list{display:flex;flex-direction:column;gap:0.6rem;}
+.info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
+.info-list li .fdot{flex-shrink:0;margin-top:7px;}
+@media(max-width:900px){.info-sec{padding-left:1.5rem;padding-right:1.5rem;}.info-grid{grid-template-columns:1fr;}}
 .tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
 .tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
@@ -173,14 +182,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <div class="highlights">
     <div>
       <div class="hl-label">Pessah 2025 · Grèce</div>
-      <h2 class="hl-title">Pessah au pays<br><em>des dieux grecs</em></h2>
-      <p class="hl-desc">Un Pessah somptueux au Dion Palace Resort & Spa 5 étoiles, niché entre la mer Égée et le Mont Olympe. Un cadre mythique pour une fête mémorable, alliant spiritualité, gastronomie et luxe absolu.</p>
-      <div class="hl-feats">
-        <div class="hl-feat"><div class="fdot"></div><span>Dion Palace Resort & Spa ⭐⭐⭐⭐⭐ · Thessalonique · Aéroport direct</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>4 piscines extérieures · Plage privée · Salle de sport</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Spa · Chambres et suites de luxe</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Sans kitniot · Repas gastronomiques · Seder privatif</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Excursions · Animations · Mini et baby club</span></div>
+      <h2 class="hl-title">Dion Palace<br><em>Resort & Spa</em></h2>
+      <p class="hl-desc">Le Dion Palace Resort & Spa 5 étoiles est niché entre la mer Égée et le Mont Olympe, dans un cadre mythique alliant nature préservée et luxe absolu. Un établissement d'exception pour un Pessah inoubliable en famille.</p>
+      <p class="hl-desc" style="color:var(--gold);font-style:italic;">Sous la surveillance du Rav Ephraim Cremisi</p>
+      <div class="hl-feats" style="margin-top:1.5rem;">
+        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐⭐ · Entre mer Égée et Mont Olympe</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>4 piscines extérieures · Plage privée · Salle de sport · Spa</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Chambres et suites de luxe</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Aéroport de Thessalonique en accès direct</span></div>
       </div>
     </div>
     <div class="affiche-side">
@@ -190,12 +199,55 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     </div>
   </div>
   <div class="gallery">
-    <div class="gallery-label">Galerie photos</div>
+    <div class="gallery-label">Photos de l'hôtel</div>
     <div class="gal-grid">
       <div class="gal-item large"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1469796466635-455ede028aca?w=900&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=600&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1602088113235-229c19758e9f?w=600&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+    </div>
+  </div>
+  <div class="info-sec">
+    <div class="hl-label">Le séjour en détail</div>
+    <h2 class="hl-title">Tout ce qui est <em>inclus</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-label">Kashrout</div>
+        <div class="info-card-title">Halak Bet Yossef</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Halak Bet Yossef Laméhadrine</li>
+          <li><div class="fdot"></div>Sous la surveillance du Rav Ephraim Cremisi</li>
+          <li><div class="fdot"></div>Sans Kitniot · Sans Matsa Chrouya</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Restauration</div>
+        <div class="info-card-title">Gastronomie Casher</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Repas gastronomiques Halak Bet Yossef</li>
+          <li><div class="fdot"></div>Sédarim privatifs · Kidouch royal</li>
+          <li><div class="fdot"></div>Sans Kitniot · Sans Matsa Chrouya</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Vie juive</div>
+        <div class="info-card-title">Chabbat & Fêtes</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Sédarim · Chabbat · Hol Hamoed</li>
+          <li><div class="fdot"></div>Offices · Cours et conférences</li>
+          <li><div class="fdot"></div>Mimouna</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Activités & Services</div>
+        <div class="info-card-title">Pour toute la famille</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>4 piscines extérieures · Plage privée</li>
+          <li><div class="fdot"></div>Spa · Salle de sport</li>
+          <li><div class="fdot"></div>Mini-club · Baby-club</li>
+          <li><div class="fdot"></div>Excursions · Animations</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

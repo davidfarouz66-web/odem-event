@@ -68,6 +68,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
 .gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
 .gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
+.info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
+.info-card-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--noir);margin-bottom:1.2rem;}
+.info-list{display:flex;flex-direction:column;gap:0.6rem;}
+.info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
+.info-list li .fdot{flex-shrink:0;margin-top:7px;}
+@media(max-width:900px){.info-sec{padding-left:1.5rem;padding-right:1.5rem;}.info-grid{grid-template-columns:1fr;}}
 .tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
 .tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
@@ -170,19 +179,20 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <span class="status-txt">Séjour terminé — Ce séjour est désormais archivé.</span>
 </div>
 <div style="background:var(--blanc);">
+
+  <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
   <div class="highlights">
     <div>
       <div class="hl-label">Pessah 2024 · Chypre</div>
-      <h2 class="hl-title">Pessah sur l'île<br><em>d'Aphrodite</em></h2>
-      <p class="hl-desc">Un Pessah de rêve à Protaras, sur les rives de la Méditerranée orientale. L'AT Herbal Hotel 5 étoiles a offert à nos familles un cadre exceptionnel entre plages de sable fin, piscines extérieures et spa de luxe.</p>
-      <div class="hl-feats">
-        <div class="hl-feat"><div class="fdot"></div><span>AT Herbal Hotel ⭐⭐⭐⭐⭐ · Protaras · Chypre</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Piscines extérieures · Piscine pour enfants · Plage de sable à 200m</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Piscine intérieure chauffée · Hammam · Jacuzzi · Sauna</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Sous le contrôle du Rav Ephraim Cremisi · Avec le Rav David Ichay</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Synagogue et offices sur place · Mini-club · Baby club</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Cuisine gastronomique sans kitniot et matsa chrouya</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Conférences et activités organisées · Excursions île de Chypre</span></div>
+      <h2 class="hl-title">AT Herbal<br><em>Hotel & Spa</em></h2>
+      <p class="hl-desc">L'hôtel Herbal 5 étoiles est situé à quelques pas de la plage de Fig Tree Bay, labellisée Pavillon Bleu pour la qualité exceptionnelle de ses eaux et de ses infrastructures. Tout au long de l'année, nos clients peuvent profiter du soleil et se détendre en admirant une vue magnifique sur la Méditerranée.</p>
+      <p class="hl-desc">L'Herbal Boutique Hotel & Spa, situé à Protaras, propose un restaurant, une piscine extérieure, un bassin pour enfants, une piscine intérieure chauffée et 6 salles de soins.</p>
+      <p class="hl-desc" style="color:var(--gold);font-style:italic;">Sous le contrôle du Rav Ephraim Cremisi · Avec le Rav David Ichay</p>
+      <div class="hl-feats" style="margin-top:1.5rem;">
+        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐⭐ · Protaras, Chypre · Fig Tree Bay (Pavillon Bleu)</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>1 piscine extérieure · 1 piscine extérieure enfants · 1 piscine intérieure chauffée</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>6 salles de soins · Plage de sable à 200 mètres</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Chambres : Chambre haute · Familiale de luxe · Suite vue mer · Suite junior · Suite junior jacuzzi vue mer</span></div>
       </div>
     </div>
     <div class="affiche-side">
@@ -191,8 +201,10 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       </div>
     </div>
   </div>
+
+  <!-- 2. PHOTOS DE L'HÔTEL -->
   <div class="gallery">
-    <div class="gallery-label">Galerie photos</div>
+    <div class="gallery-label">Photos de l'hôtel</div>
     <div class="gal-grid">
       <div class="gal-item large"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80');background-size:cover;background-position:center;"></div></div>
@@ -200,6 +212,87 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80');background-size:cover;background-position:center;"></div></div>
     </div>
   </div>
+
+  <!-- 3. INFOS DU SÉJOUR -->
+  <div class="info-sec">
+    <div class="hl-label">Le séjour en détail</div>
+    <h2 class="hl-title">Tout ce qui est <em>inclus</em></h2>
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card-label">Kashrout</div>
+        <div class="info-card-title">Halak Bet Yossef</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Halak Bet Yossef Laméhadrine</li>
+          <li><div class="fdot"></div>Sous le contrôle du Rav Ephraim Cremisi (Montréal)</li>
+          <li><div class="fdot"></div>Sans Kitniot · Sans Matsa Chrouya</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Restauration</div>
+        <div class="info-card-title">Pension complète</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Cuisine gastronomique Halak Bet Yossef</li>
+          <li><div class="fdot"></div>Sans Kitniot · Sans Matsa Chrouya</li>
+          <li><div class="fdot"></div>Sous la supervision du Rav Ephraim Cremisi</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Vie juive</div>
+        <div class="info-card-title">Chabbat & Fêtes</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Synagogue et bureaux sur place</li>
+          <li><div class="fdot"></div>Cours et conférences Torah par le Rav David Ichay</li>
+          <li><div class="fdot"></div>Sedarim · possibilité de Sedarim privés sur demande</li>
+          <li><div class="fdot"></div>Kiddouch (Yom Tov et Chabbat)</li>
+          <li><div class="fdot"></div>Soirée de Mimouna exceptionnelle dans le respect des traditions</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Animations</div>
+        <div class="info-card-title">Soirées & Divertissements</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Soirées et divertissements non-stop pendant toute la durée du séjour</li>
+          <li><div class="fdot"></div>Fée Mimouna</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Activités</div>
+        <div class="info-card-title">Sport & Détente</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>1 piscine extérieure · 1 piscine extérieure pour enfants</li>
+          <li><div class="fdot"></div>1 piscine intérieure chauffée</li>
+          <li><div class="fdot"></div>Plage de sable à 200 mètres (Pavillon Bleu)</li>
+          <li><div class="fdot"></div>6 salles de soins</li>
+          <li><div class="fdot"></div>Activités sportives sur terrains ultramodernes · Espaces de gymnastique</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Services</div>
+        <div class="info-card-title">Enfants</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Mini Club inclus · Enfants de 3 à 12 ans</li>
+          <li><div class="fdot"></div>Club des bébés</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Transport</div>
+        <div class="info-card-title">Accès</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Vols non inclus</li>
+          <li><div class="fdot"></div>Aéroport international de Larnaca à 40 km</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 <div class="waitlist-sec">
   <h2 class="wl-title">Rejoindre la <em>liste d'attente</em></h2>

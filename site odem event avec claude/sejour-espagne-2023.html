@@ -68,6 +68,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
 .gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
 .gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
+.info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
+.info-card-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--noir);margin-bottom:1.2rem;}
+.info-list{display:flex;flex-direction:column;gap:0.6rem;}
+.info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
+.info-list li .fdot{flex-shrink:0;margin-top:7px;}
 .tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
 .tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
@@ -176,19 +184,21 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 </div>
 
 <div style="background:var(--blanc);">
+
+  <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
   <div class="highlights">
     <div>
       <div class="hl-label">Pessah 2023 · Espagne</div>
-      <h2 class="hl-title">Un Pessah <em>ensoleillé</em><br>à Barcelone</h2>
-      <p class="hl-desc">Un séjour Pessah d'exception dans l'écrin méditerranéen de Malgrat de Mar, à seulement 45 minutes de Barcelone. Le Luna Club Hôtel Yoga & Spa a accueilli nos familles dans un cadre luxuriant, entre piscines, soins et repas gastronomiques Glatt Cacher.</p>
-      <div class="hl-feats">
-        <div class="hl-feat"><div class="fdot"></div><span>Luna Club Hôtel Yoga & Spa ⭐⭐⭐⭐ · All inclusive · Pension complète</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>2 piscines extérieures · 1 piscine intérieure chauffée · SPA · Jacuzzi · Sauna</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Glatt Cacher Laméadrin · Sans Kitniot · Matsa Chrouya</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Sous la surveillance du Rav Cremisi · Avec la présence du Rav Loria</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Hazan d'exception Yohai Chetrit · Congrès médical et juridique</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Mini-club · Baby club · Ping-pong · VTT · Excursions · Plage à 400m</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Restauration gastronomique · Seder privatif · Animations pour tous</span></div>
+      <h2 class="hl-title">Luna Club Hôtel<br><em>Yoga & Spa</em></h2>
+      <p class="hl-desc">Malgrat de Mar se trouve dans la partie la plus méridionale de la Costa Brava, dans la province de Gérone. Bordée de somptueuses plages de sable, elle bénéficie d'un climat typiquement méditerranéen ensoleillé toute l'année. L'hôtel est situé à proximité de la plage de Fenals et à 5 minutes à pied du centre-ville et du Casino.</p>
+      <p class="hl-desc">L'hôtel dispose de 2 piscines extérieures adultes, d'une grande terrasse ensoleillée, d'une piscine pour enfants, d'un Thalasso & Spa (sauna, hammam, jacuzzi), d'une piscine couverte chauffée, d'une salle de gym et de salles de massages. Une aire de jeux extérieure avec trampoline, ping-pong, baby-foot, châteaux gonflables et toboggans complète les équipements.</p>
+      <p class="hl-desc" style="color:var(--gold);font-style:italic;">Hôtel entièrement sécurisé et privatisé dans le cadre de notre séjour. Parking disponible.</p>
+      <div class="hl-feats" style="margin-top:1.5rem;">
+        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐ · All Inclusive · Pension complète</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>2 piscines extérieures · Piscine couverte chauffée · Thalasso & Spa gratuit</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Sauna · Hammam · Jacuzzi · Salle de gym Technogym</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Chambres : Individuelle · Double · Triple · Double Premium · Premium Plus · Supérieure</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Toutes les chambres avec balcon ou terrasse vue mer ou piscine</span></div>
       </div>
     </div>
     <div class="affiche-side">
@@ -198,16 +208,122 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     </div>
   </div>
 
+  <!-- 2. PHOTOS DE L'HÔTEL -->
   <div class="gallery">
-    <div class="gallery-label">Galerie photos</div>
+    <div class="gallery-label">Photos de l'hôtel</div>
     <div class="gal-grid">
-      <div class="gal-item large"><div class="gal-ph gal-ph1" style="background-image:url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80');background-size:cover;background-position:center;"><span class="gal-ph-txt" style="display:none;"></span></div></div>
+      <div class="gal-item large"><div class="gal-ph" style="background-image:url('affiches/fond-espagne-1.jpg');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80');background-size:cover;background-position:center;"></div></div>
-      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('affiches/fond-espagne-3.jpg');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');background-size:cover;background-position:center;"></div></div>
     </div>
-    <p style="font-size:0.6rem;color:var(--gris);margin-top:1rem;font-style:italic;">Photos à remplacer par vos photos personnelles du séjour</p>
   </div>
+
+  <!-- 3. INFOS DU SÉJOUR -->
+  <div class="info-sec">
+    <div class="hl-label">Le séjour en détail</div>
+    <h2 class="hl-title">Tout ce qui est <em>inclus</em></h2>
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card-label">Kashrout</div>
+        <div class="info-card-title">Halak Bet Yossef</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Halak Bet Yossef Laméhadrine</li>
+          <li><div class="fdot"></div>Sans Kitniot · Sans Matsa Chrouya</li>
+          <li><div class="fdot"></div>Sous la Hachgaha du Rav Ephraïm Cremisi Chlita (Dayan à Montréal)</li>
+          <li><div class="fdot"></div>Matsa Chemoura (faite main) pour les jours de Séder</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Restauration</div>
+        <div class="info-card-title">3 repas par jour</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Petit-déjeuner généreux à l'israélienne</li>
+          <li><div class="fdot"></div>Plats et salades servis à table · Boissons et vins à tous les repas</li>
+          <li><div class="fdot"></div>Kidouch royal les jours de fête</li>
+          <li><div class="fdot"></div>Goûters et friandises l'après-midi · Chef pâtissier</li>
+          <li><div class="fdot"></div>Bar ouvert de 8h à minuit</li>
+          <li><div class="fdot"></div>Paniers repas pour les excursions de Hol Hamoed</li>
+          <li><div class="fdot"></div>Repas spécial bébés et enfants, servis avant les adultes</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Vie juive</div>
+        <div class="info-card-title">Chabbat & Fêtes</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Hazan d'exception : Yohai Chetrit d'Israël</li>
+          <li><div class="fdot"></div>Sedarim · Chabbat · Hol Hamoed</li>
+          <li><div class="fdot"></div>Mimouna féérique</li>
+          <li><div class="fdot"></div>Cours et conférences tout au long du séjour</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Animations</div>
+        <div class="info-card-title">Soirées & Loisirs</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Soirées musicales · Soirées pendant tout Hol Hamoed</li>
+          <li><div class="fdot"></div>Aire de jeux : trampoline, ping-pong, baby-foot, châteaux gonflables, toboggans</li>
+          <li><div class="fdot"></div>Aire de jeux intérieure</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Excursions & Activités</div>
+        <div class="info-card-title">À découvrir</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Barcelone — La Rambla · Cité Olympique · Montjuïc</li>
+          <li><div class="fdot"></div>Port Aventura — jeux et attractions</li>
+          <li><div class="fdot"></div>Gérone — quartier juif et synagogue</li>
+          <li><div class="fdot"></div>La Roca Village Outlet — shopping jusqu'à -60%</li>
+          <li><div class="fdot"></div>Camp Nou — le plus grand stade d'Europe</li>
+          <li><div class="fdot"></div>Grand Casino Costa Brava</li>
+          <li><div class="fdot"></div>Jet ski · Tennis · Bowling · Karting · Voile · Mini-golf · Kayak de mer · Excursions maritimes</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Transport</div>
+        <div class="info-card-title">Accès</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Vols non inclus</li>
+          <li><div class="fdot"></div>Aéroport de Gérone – Costa Brava : 30 km</li>
+          <li><div class="fdot"></div>Aéroport de Barcelone – El Prat : 66 km</li>
+          <li><div class="fdot"></div>Transferts aller-retour depuis l'aéroport disponibles en supplément</li>
+          <li><div class="fdot"></div>Parking gratuit à l'hôtel</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Services</div>
+        <div class="info-card-title">Thalasso & SPA ⭐⭐⭐⭐</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Accès à la zone SPA entièrement gratuit</li>
+          <li><div class="fdot"></div>Piscine intérieure chauffée</li>
+          <li><div class="fdot"></div>Salle de gym équipée Technogym</li>
+          <li><div class="fdot"></div>Hammam · Sauna · Jacuzzi · Douches bi-thermiques · Zone relax</li>
+          <li><div class="fdot"></div>Traitements esthétiques et massages (supplément)</li>
+          <li><div class="fdot"></div>3 salles de massage avec douche privée</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label">Pratique</div>
+        <div class="info-card-title">Infos utiles</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Possibilité d'arrivée le 4 avril et de départ le 16 avril</li>
+          <li><div class="fdot"></div>Hôtel entièrement privatisé et sécurisé</li>
+          <li><div class="fdot"></div>Parking gratuit sur place</li>
+          <li><div class="fdot"></div>Séjour du 5 au 14 avril 2023 · Malgrat de Mar, Barcelone</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <div class="tarifs-sec">

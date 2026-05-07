@@ -68,6 +68,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gal-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
 .gal-item:hover .gal-img,.gal-item:hover .gal-ph{transform:scale(1.07);}
 .gal-ph-txt{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
+.info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
+.info-card-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--noir);margin-bottom:1.2rem;}
+.info-list{display:flex;flex-direction:column;gap:0.6rem;}
+.info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
+.info-list li .fdot{flex-shrink:0;margin-top:7px;}
+@media(max-width:900px){.info-sec{padding-left:1.5rem;padding-right:1.5rem;}.info-grid{grid-template-columns:1fr;}}
 .tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
 .tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
 .tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
@@ -173,15 +182,13 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <div class="highlights">
     <div>
       <div class="hl-label">Été 2023 · Tignes</div>
-      <h2 class="hl-title">L'été en <em>altitude</em><br>à Tignes</h2>
-      <p class="hl-desc">Un séjour d'été inoubliable à 2 100m d'altitude, dans l'écrin alpin de Tignes. L'Hôtel Les Campanules, établissement familial de 40 chambres, a offert à nos familles un cadre exceptionnel entre spa, piscine et panoramas époustouflants.</p>
-      <div class="hl-feats">
-        <div class="hl-feat"><div class="fdot"></div><span>Hôtel Les Campanules ⭐⭐⭐⭐ · Hôtel familial de 40 chambres</span></div>
+      <h2 class="hl-title">Hôtel Les<br><em>Campanules</em></h2>
+      <p class="hl-desc">L'Hôtel Les Campanules est un établissement familial de 40 chambres niché à 2 100m d'altitude à Tignes. Entre panoramas époustouflants sur les glaciers, espace spa et piscine, c'est le cadre idéal pour un séjour d'été en montagne.</p>
+      <p class="hl-desc" style="color:var(--gold);font-style:italic;">Sous la surveillance du Rav Ephraim Cremisi</p>
+      <div class="hl-feats" style="margin-top:1.5rem;">
+        <div class="hl-feat"><div class="fdot"></div><span>⭐⭐⭐⭐ · Établissement familial · 40 chambres · 2 100m d'altitude</span></div>
         <div class="hl-feat"><div class="fdot"></div><span>Piscine · Hammam · Sauna · Massages · Espace spa</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Demi-pension · Midi panier repas · Repas gastronomiques</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Glatt Cacher Laméhadrine · Sous la surveillance du Rav Ephraim Cremisi</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Conférences Rav Michael Amar & Rav Haim Amram Farouz</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span>Activités montagne · Randonnées · Lacs alpins · VTT</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span>Du 30 juillet au 20 août 2023</span></div>
       </div>
     </div>
     <div class="affiche-side">
@@ -191,12 +198,51 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     </div>
   </div>
   <div class="gallery">
-    <div class="gallery-label">Galerie photos</div>
+    <div class="gallery-label">Photos de l'hôtel</div>
     <div class="gal-grid">
       <div class="gal-item large"><div class="gal-ph" style="background-image:url('fond-tignes.jpg');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=600&q=80');background-size:cover;background-position:center;"></div></div>
       <div class="gal-item r1"><div class="gal-ph" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80');background-size:cover;background-position:center;"></div></div>
+    </div>
+  </div>
+  <div class="info-sec">
+    <div class="hl-label">Le séjour en détail</div>
+    <h2 class="hl-title">Tout ce qui est <em>inclus</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-label">Kashrout</div>
+        <div class="info-card-title">Halak Bet Yossef</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Halak Bet Yossef Laméhadrine</li>
+          <li><div class="fdot"></div>Sous la surveillance du Rav Ephraim Cremisi</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Restauration</div>
+        <div class="info-card-title">Demi-pension</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Repas gastronomiques Halak Bet Yossef</li>
+          <li><div class="fdot"></div>Demi-pension · Panier repas midi inclus</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Vie juive</div>
+        <div class="info-card-title">Chabbat & Conférences</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Offices · Chabbat · Kidouch</li>
+          <li><div class="fdot"></div>Conférences : Rav Michael Amar & Rav Haim Amram Farouz</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Activités</div>
+        <div class="info-card-title">Montagne & Détente</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div>Randonnées alpines · Lacs de montagne · VTT</li>
+          <li><div class="fdot"></div>Piscine · Hammam · Sauna · Massages · Spa</li>
+          <li><div class="fdot"></div>Animations pour toute la famille</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
