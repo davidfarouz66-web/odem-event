@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Classes de Neige — ODEM EVENT</title>
+<meta name="description" content="ODEM EVENT — Séjours casher haut de gamme. Pessah, été, classes de neige. Sous la supervision du Rav Cremisi. Infos : 07 66 03 63 80.">
+<meta name="theme-color" content="#C9A84C">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="ODEM EVENT — Séjours Casher d'Exception">
+<meta property="og:description" content="Séjours casher haut de gamme pour Pessah, l'été et l'hiver. Contactez-nous au 07 66 03 63 80.">
+<meta property="og:image" content="logo-odem-gold.png">
+<meta property="og:site_name" content="ODEM EVENT">
+<link rel="icon" href="logo-odem.png" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
@@ -105,8 +114,29 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .reveal.d1{transition-delay:0.1s;}.reveal.d2{transition-delay:0.2s;}.reveal.d3{transition-delay:0.3s;}
 .reveal.on{opacity:1;transform:translateY(0);}
 
+.footer-social-link{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-size:0.82rem;letter-spacing:0.05em;color:rgba(255,255,255,0.5);transition:opacity 0.3s;}
+.footer-social-link:hover{opacity:0.75;}
+.footer-social-link svg{flex-shrink:0;}
+.scroll-top{position:fixed;bottom:6.5rem;right:2.1rem;z-index:998;width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:#C9A84C;display:none;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;font-size:1.1rem;backdrop-filter:blur(4px);}
+.scroll-top.show{display:flex;}
+.scroll-top:hover{background:#C9A84C;color:#0D0D0D;}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;border-top:1px solid rgba(201,168,76,0.2);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform 0.4s ease;}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-txt{font-size:0.65rem;color:rgba(255,255,255,0.55);line-height:1.6;max-width:700px;}
+.cookie-txt a{color:#C9A84C;text-decoration:none;}
+.cookie-btns{display:flex;gap:0.6rem;flex-shrink:0;}
+.cookie-btn{padding:0.5rem 1.2rem;font-size:0.6rem;letter-spacing:0.1em;cursor:pointer;border:none;transition:all 0.3s;}
+.cookie-btn.accept{background:#C9A84C;color:#0D0D0D;}
+.cookie-btn.decline{background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.4);}
+
+.nav-right{display:flex;align-items:center;gap:2rem;}
+.lang-select{position:relative;}
+.lang-select select{background:transparent;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);padding:0.3rem 1.6rem 0.3rem 0.7rem;font-size:0.58rem;letter-spacing:0.12em;font-family:'Montserrat',sans-serif;cursor:pointer;appearance:none;-webkit-appearance:none;outline:none;transition:all 0.3s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center;}
+.lang-select select:hover{border-color:#C9A84C;color:#C9A84C;}
+.lang-select select option{background:#111;color:#fff;}
+
 @media(max-width:900px){
-  nav{padding:0.9rem 1.2rem;}.nav-links{display:none;}.hamburger{display:flex;}
+  nav{padding:0.9rem 1.2rem;}.nav-links{display:none;}.nav-right{display:none;}.hamburger{display:flex;}
   #hero{padding:2rem 1.2rem;}
   .features-grid{grid-template-columns:1fr;}
   .stations-inner{grid-template-columns:1fr;}
@@ -120,25 +150,22 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <nav id="nav">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">
-      <svg viewBox="0 0 50 50" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="25" cy="25" r="22" fill="none" stroke="#C9A84C" stroke-width="1.2"/>
-        <line x1="25" y1="6" x2="25" y2="44" stroke="#C9A84C" stroke-width="1"/>
-        <line x1="20" y1="6" x2="20" y2="44" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
-        <line x1="30" y1="6" x2="30" y2="44" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
-        <line x1="17" y1="27" x2="33" y2="27" stroke="#C9A84C" stroke-width="1"/>
-        <circle cx="25" cy="4" r="1.8" fill="#C9A84C"/>
-      </svg>
-    </div>
-    <span class="nav-logo-name">ODEM <span>EVENT</span></span>
+    <img src="logo-odem.png" alt="ODEM EVENT" style="height:48px;width:auto;">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="portfolio.html">Nos séjours</a></li>
-    <li><a href="classes-de-neige.html" class="active">Classes de neige</a></li>
-    <li><a href="index.html#avis">Avis</a></li>
-    <li><a href="#devis" class="nav-cta">Demander un devis</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Accueil</a></li>
+      <li><a href="portfolio.html" id="nav-port">Nos séjours</a></li>
+      <li><a href="classes-de-neige.html" class="active" id="nav-neige">Classes de neige</a></li>
+      <li><a href="#devis" class="nav-cta" id="nav-cta">Demander un devis</a></li>
+    </ul>
+    <div class="lang-select">
+      <select id="langSelect" onchange="setLang(this.value)">
+        <option value="fr">🇫🇷 FR</option>
+        <option value="en">🇬🇧 EN</option>
+      </select>
+    </div>
+  </div>
   <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 
@@ -149,6 +176,10 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <a href="classes-de-neige.html" onclick="toggleMenu()">Classes de neige</a>
   <a href="index.html#avis" onclick="toggleMenu()">Avis</a>
   <a href="#devis" onclick="toggleMenu()">Demander un devis</a>
+  <select onchange="setLang(this.value);toggleMenu();" style="margin-top:1rem;background:#222;border:1px solid rgba(201,168,76,0.4);color:#fff;padding:0.5rem 1rem;font-size:0.7rem;font-family:'Montserrat',sans-serif;cursor:pointer;outline:none;">
+    <option value="fr">🇫🇷 Français</option>
+    <option value="en">🇬🇧 English</option>
+  </select>
 </div>
 
 <!-- HERO -->
@@ -156,8 +187,8 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
   <div class="hero-content">
-    <div class="hero-label">Groupes & écoles</div>
-    <h1 class="hero-title">Classes de<br><em>neige</em></h1>
+    <div class="hero-label">Groupes & écoles · <span id="hl-label">Classes de Neige</span></div>
+    <h1 class="hero-title" id="ht">Classes <em>de neige</em></h1>
     <p class="hero-sub">Des séjours sur mesure pour vos écoles et groupes communautaires dans les plus belles stations des Alpes.</p>
     <a href="#devis" class="btn-gold">Demander un devis gratuit</a>
   </div>
@@ -275,19 +306,99 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   </div>
 </section>
 
-<div class="ft"><p>© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés</p></div>
+<div class="ft">
+<a href="mentions-legales.html" class="footer-link" style="margin-top:1rem;opacity:0.5;">Mentions légales</a>
+<div class="footer-social" style="max-width:1000px;margin:1.5rem auto 0;display:flex;gap:1rem;">
+  <a href="https://www.instagram.com/odemevent/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram @odemevent">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="ig-grad" cx="30%" cy="100%" r="120%">
+            <stop offset="0%" stop-color="#feda75"/>
+            <stop offset="25%" stop-color="#fa7e1e"/>
+            <stop offset="50%" stop-color="#d62976"/>
+            <stop offset="75%" stop-color="#962fbf"/>
+            <stop offset="100%" stop-color="#4f5bd5"/>
+          </radialGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig-grad)"/>
+        <circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="17.2" cy="6.8" r="1" fill="#fff"/>
+      </svg>
+      <span>@odemevent</span>
+    </a>
+</div>
+<div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;text-decoration:none;opacity:0.6;">Mentions légales</a></div>
+</div>
 
 <a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20un%20devis%20pour%20une%20classe%20de%20neige" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Retour en haut">↑</button>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-txt">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="mentions-legales.html">politique de confidentialité</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn decline" onclick="closeCookie()">Refuser</button>
+    <button class="cookie-btn accept" onclick="acceptCookie()">Accepter</button>
+  </div>
+</div>
+
 <script>
+window.addEventListener('scroll',function(){
+  var st=document.getElementById('scrollTop');
+  if(st)st.classList.toggle('show',window.scrollY>400);
+});
+function acceptCookie(){localStorage.setItem('cookie','1');document.getElementById('cookieBanner').classList.remove('show');}
+function closeCookie(){localStorage.setItem('cookie','0');document.getElementById('cookieBanner').classList.remove('show');}
+if(!localStorage.getItem('cookie')){setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('show');},1500);}
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>80);});
 function toggleMenu(){const m=document.getElementById('mobileMenu');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('on');obs.unobserve(el.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href').slice(1);const el=document.getElementById(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}});});
-function submitForm(e){e.preventDefault();const btn=document.getElementById('f-sub');btn.textContent='✓ Demande envoyée !';btn.style.background='var(--gold)';btn.style.color='var(--noir)';setTimeout(()=>{btn.textContent='Envoyer ma demande de devis →';btn.style.background='';btn.style.color='';e.target.reset();},4000);}
+function submitForm(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('.f-submit')||document.getElementById('f-sub');
+  const orig=btn.textContent;
+  btn.textContent='Envoi en cours...';btn.disabled=true;
+  fetch('https://formspree.io/f/xnjwrobj',{
+    method:'POST',
+    body:new FormData(e.target),
+    headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      btn.textContent='✓ Envoyé !';btn.style.background='#3a7a50';btn.style.color='#fff';
+      e.target.reset();
+      setTimeout(function(){btn.textContent=orig;btn.style.background='';btn.style.color='';btn.disabled=false;},5000);
+    }else{
+      btn.textContent='Erreur — réessayez';btn.style.background='#c0392b';btn.style.color='#fff';
+      setTimeout(function(){btn.textContent=orig;btn.style.background='';btn.style.color='';btn.disabled=false;},4000);
+    }
+  }).catch(function(){
+    btn.textContent='Erreur — réessayez';btn.style.background='#c0392b';btn.style.color='#fff';
+    setTimeout(function(){btn.textContent=orig;btn.style.background='';btn.style.color='';btn.disabled=false;},4000);
+  });
+},4000);}
+let lang='fr';
+const tr={
+  fr:{'hl-label':'Classes de Neige','ht':'Classes <em>de neige</em>','nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige','nav-cta':'Demander un devis'},
+  en:{'hl-label':'Snow Classes','ht':'Snow <em>classes</em>','nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes','nav-cta':'Request a quote'}
+};
+function setLang(l){
+  if(!tr[l])return;
+  lang=l;localStorage.setItem('odemLang',l);
+  document.documentElement.lang=l;
+  const sel=document.getElementById('langSelect');
+  if(sel)sel.value=l;
+  Object.entries(tr[l]).forEach(function([id,val]){
+    const el=document.getElementById(id);
+    if(el)el.innerHTML=val;
+  });
+}
+(function(){var l=localStorage.getItem('odemLang');if(l&&l!=='fr')setLang(l);})();
 </script>
 </body>
 </html>
