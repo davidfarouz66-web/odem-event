@@ -16,7 +16,7 @@
 <style>
 /* SHARED STYLES — ODEM EVENT */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#0D0D0D;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
+:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#1a1a1a;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
 html{scroll-behavior:smooth;}
 body{font-family:'Montserrat',sans-serif;background:var(--blanc);color:var(--noir);overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;transition:all 0.4s;}
@@ -40,7 +40,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:300;line-height:0.9;color:#fff;margin-bottom:0.8rem;text-shadow:0 4px 30px rgba(0,0,0,0.4);}
 .hero-title em{font-style:italic;color:var(--gold-l);}
 .hero-hotel{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;}
-.hero-dates{font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:0.6rem;}
+.hero-dates{font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,255,255,0.8);margin-bottom:0.6rem;}
 .hero-stars{color:var(--gold);font-size:0.7rem;margin-bottom:1.8rem;}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn-gold{background:var(--gold);color:var(--noir);border:none;padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
@@ -53,7 +53,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .status-dot{width:7px;height:7px;border-radius:50%;}
 .dot-archived{background:var(--gris);}
 .dot-cancelled{background:#cc4444;}
-.status-txt{font-size:0.62rem;letter-spacing:0.12em;color:rgba(255,255,255,0.5);}
+.status-txt{font-size:0.62rem;letter-spacing:0.12em;color:rgba(255,255,255,0.8);}
 .cancelled-txt{color:rgba(255,160,160,0.8);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
@@ -93,13 +93,13 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .tarifs-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#fff;text-align:center;margin-bottom:3rem;}
 .tarifs-title em{font-style:italic;color:var(--gold);}
 .t-table{width:100%;border-collapse:collapse;}
-.t-table th{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gris);text-align:left;padding:0.5rem 0;border-bottom:1px solid rgba(201,168,76,0.15);}
+.t-table th{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-align:left;padding:0.5rem 0;border-bottom:1px solid rgba(201,168,76,0.15);}
 .t-table td{padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.72rem;}
 .t-name{color:rgba(255,255,255,0.8);}
-.t-size{color:var(--gris);font-size:0.6rem;margin-top:0.2rem;}
+.t-size{color:rgba(255,255,255,0.7);font-size:0.6rem;margin-top:0.2rem;}
 .t-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;text-align:right;white-space:nowrap;}
 .t-price.dem{color:rgba(255,255,255,0.35);font-size:0.65rem;font-family:'Montserrat',sans-serif;font-style:italic;}
-.tarifs-note{font-size:0.62rem;color:var(--gris);text-align:center;margin-top:2rem;font-style:italic;}
+.tarifs-note{font-size:0.62rem;color:rgba(255,255,255,0.65);text-align:center;margin-top:2rem;font-style:italic;}
 .cancelled-notice{background:rgba(0,0,0,0.9);border-top:2px solid rgba(180,0,0,0.4);border-bottom:2px solid rgba(180,0,0,0.4);padding:3rem 5rem;text-align:center;}
 .cn-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#cc4444;margin-bottom:1rem;}
 .cn-msg{font-size:0.75rem;color:rgba(255,255,255,0.55);line-height:1.9;max-width:550px;margin:0 auto;}
@@ -131,7 +131,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .ft-bar{background:rgba(0,0,0,0.95);border-top:1px solid rgba(201,168,76,0.1);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
 .ft-brand{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:#fff;}
 .ft-brand span{color:var(--gold);}
-.ft-copy{font-size:0.58rem;color:rgba(255,255,255,0.25);}
+.ft-copy{font-size:0.58rem;color:rgba(255,255,255,0.55);}
 .wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s;text-decoration:none;}
 .wa-btn:hover{background:#20b859;transform:scale(1.1);}
 .wa-btn svg{width:28px;height:28px;fill:#fff;}
@@ -140,7 +140,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .lang-select select{background:transparent;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);padding:0.3rem 1.6rem 0.3rem 0.7rem;font-size:0.58rem;letter-spacing:0.12em;font-family:'Montserrat',sans-serif;cursor:pointer;appearance:none;-webkit-appearance:none;outline:none;transition:all 0.3s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center;}
 .lang-select select:hover{border-color:#C9A84C;color:#C9A84C;}
 .lang-select select option{background:#111;color:#fff;}
-.footer-social-link{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-size:0.82rem;letter-spacing:0.05em;color:rgba(255,255,255,0.5);transition:opacity 0.3s;}
+.footer-social-link{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-size:0.82rem;letter-spacing:0.05em;color:rgba(255,255,255,0.8);transition:opacity 0.3s;}
 .footer-social-link:hover{opacity:0.75;}
 .footer-social-link svg{flex-shrink:0;}
 .scroll-top{position:fixed;bottom:6.5rem;right:2.1rem;z-index:998;width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:#C9A84C;display:none;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;font-size:1.1rem;backdrop-filter:blur(4px);}
@@ -157,7 +157,8 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 @media(max-width:900px){
   nav{padding:0.9rem 1.5rem;}.nav-links{display:none;}.nav-right{display:none;}
-  #hero{padding:2rem 1.5rem;}
+  .hamburger{display:flex;}
+  #hero{padding:5rem 1.5rem 2rem;height:100svh;}
   .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
   .affiche-side{position:static;}
@@ -170,6 +171,13 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 }
 
 .hero-bg{background-image:url('photos/chypre-2024/at-herbal-piscine.jpg');background-position:center 50%;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.99);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:1.3rem;letter-spacing:0.2em;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -190,7 +198,20 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       </select>
     </div>
   </div>
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()" id="mm-home">Accueil</a>
+  <a href="portfolio.html" onclick="toggleMenu()" id="mm-port">Nos séjours</a>
+  <a href="classes-de-neige.html" onclick="toggleMenu()" id="mm-neige">Classes de neige</a>
+  <select onchange="setLang(this.value);toggleMenu();" id="mm-lang" style="margin-top:1rem;background:#222;border:1px solid rgba(201,168,76,0.4);color:#fff;padding:0.5rem 1rem;font-size:0.7rem;font-family:'Montserrat',sans-serif;cursor:pointer;outline:none;">
+    <option value="fr">🇫🇷 Français</option>
+    <option value="en">🇬🇧 English</option>
+  </select>
+</div>
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-ov" style="background:linear-gradient(135deg,rgba(0,30,80,0.75) 0%,rgba(0,60,120,0.15) 60%,rgba(0,20,60,0.65) 100%);"></div>
@@ -464,5 +485,11 @@ function setLang(l){
   });
 }
 (function(){var l=localStorage.getItem('odemLang');if(l&&l!=='fr')setLang(l);})();
+
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
 </script>
 </body></html>
