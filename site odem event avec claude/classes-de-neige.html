@@ -136,6 +136,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .lang-select select option{background:#111;color:#fff;}
 
 @media(max-width:900px){
+  .footer-inner{grid-template-columns:1fr;}
   nav{padding:0.9rem 1.2rem;}.nav-links{display:none;}.nav-right{display:none;}.hamburger{display:flex;}
   #hero{padding:2rem 1.2rem;}
   .features-grid{grid-template-columns:1fr;}
@@ -143,6 +144,23 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .form-grid{grid-template-columns:1fr;}
   .f-field.full,.f-submit,.f-rgpd{grid-column:1;}
   #pourquoi,#stations,#devis{padding:4rem 1.2rem;}
+}
+
+/* FOOTER UNIFORME */
+#footer{background:rgba(0,0,0,0.7);border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
+.footer-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
+.footer-brand{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.25em;color:#fff;margin-bottom:0.4rem;}
+.footer-brand span{color:var(--gold);}
+.footer-tag-txt{font-size:0.75rem;color:rgba(255,255,255,0.65);margin-bottom:0.5rem;letter-spacing:0.1em;}
+.footer-kashrut{font-size:0.92rem;color:rgba(201,168,76,0.9);margin-bottom:1.2rem;font-style:italic;}
+.footer-contact-item{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;color:rgba(255,255,255,0.8);margin-bottom:0.5rem;}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.footer-link{display:block;font-size:0.82rem;color:rgba(255,255,255,0.72);text-decoration:none;margin-bottom:0.5rem;transition:color 0.3s;}
+.footer-link:hover{color:var(--gold);}
+.footer-copy{max-width:1000px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(201,168,76,0.08);text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.55);}
+.footer-copy strong{color:var(--gold);font-weight:400;}
+
+
 }
 </style>
 </head>
@@ -306,30 +324,50 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   </div>
 </section>
 
-<div class="ft">
-<a href="mentions-legales.html" class="footer-link" style="margin-top:1rem;opacity:0.5;">Mentions légales</a>
-<div class="footer-social" style="max-width:1000px;margin:1.5rem auto 0;display:flex;gap:1rem;">
-  <a href="https://www.instagram.com/odemevent/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram @odemevent">
+<div id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">ODEM <span>EVENT</span></div>
+      <div class="footer-tag-txt">Séjours d'exception</div>
+      <div class="footer-kashrut">✡ Halak Bet Yossef · Sous la surveillance du Rav Ephraim Cremisi</div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>07 66 03 63 80</span></div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>odemevent@gmail.com</span></div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>+44 7 48 88 67 126</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Séjours</div>
+      <a href="sejour-espagne-2023.html" class="footer-link">Pessah 2023 · Espagne</a>
+      <a href="sejour-tignes-2023.html" class="footer-link">Été 2023 · Tignes</a>
+      <a href="sejour-arcs-2024.html" class="footer-link">Été 2024 · Arcs 2000</a>
+      <a href="sejour-chypre-2024.html" class="footer-link">Pessah 2024 · Chypre</a>
+      <a href="sejour-grece-2025.html" class="footer-link">Pessah 2025 · Grèce</a>
+      <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <a href="index.html" class="footer-link">Accueil</a>
+      <a href="portfolio.html" class="footer-link">Tous les séjours</a>
+      <a href="classes-de-neige.html" class="footer-link">Classes de neige</a>
+      <a href="mentions-legales.html" class="footer-link" style="color:rgba(255,255,255,0.85);">Mentions légales</a>
+    </div>
+  </div>
+  <div class="footer-social" style="max-width:1000px;margin:1.5rem auto 0;display:flex;gap:1rem;">
+    <a href="https://www.instagram.com/odemevent/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram @odemevent">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="ig-grad" cx="30%" cy="100%" r="120%">
-            <stop offset="0%" stop-color="#feda75"/>
-            <stop offset="25%" stop-color="#fa7e1e"/>
-            <stop offset="50%" stop-color="#d62976"/>
-            <stop offset="75%" stop-color="#962fbf"/>
-            <stop offset="100%" stop-color="#4f5bd5"/>
-          </radialGradient>
-        </defs>
+        <defs><radialGradient id="ig-grad" cx="30%" cy="100%" r="120%">
+          <stop offset="0%" stop-color="#feda75"/><stop offset="25%" stop-color="#fa7e1e"/>
+          <stop offset="50%" stop-color="#d62976"/><stop offset="75%" stop-color="#962fbf"/>
+          <stop offset="100%" stop-color="#4f5bd5"/>
+        </radialGradient></defs>
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig-grad)"/>
         <circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="1.5"/>
         <circle cx="17.2" cy="6.8" r="1" fill="#fff"/>
       </svg>
       <span>@odemevent</span>
     </a>
+  </div>
+  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a></div>
 </div>
-<div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;text-decoration:none;opacity:0.6;">Mentions légales</a></div>
-</div>
-
 <a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20un%20devis%20pour%20une%20classe%20de%20neige" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
@@ -381,7 +419,7 @@ function submitForm(e){
     btn.textContent='Erreur — réessayez';btn.style.background='#c0392b';btn.style.color='#fff';
     setTimeout(function(){btn.textContent=orig;btn.style.background='';btn.style.color='';btn.disabled=false;},4000);
   });
-},4000);}
+}
 let lang='fr';
 const tr={
   fr:{'hl-label':'Classes de Neige','ht':'Classes <em>de neige</em>','nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige','nav-cta':'Demander un devis'},
