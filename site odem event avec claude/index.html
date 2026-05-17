@@ -571,10 +571,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 // MOBILE MENU
 function toggleMenu(){
-  const m=document.getElementById('mobileMenu');
-  m.classList.toggle('open');
-  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+  var m=document.getElementById('mobileMenu');
+  if(!m)return;
+  var open=m.style.display==='flex';
+  m.style.display=open?'none':'flex';
+  document.body.style.overflow=open?'':'hidden';
 }
+document.addEventListener('DOMContentLoaded',function(){
+  var hb=document.getElementById('hamburger');
+  if(hb)hb.addEventListener('click',toggleMenu);
+});
 
 // REVEAL
 const obs=new IntersectionObserver(entries=>{
