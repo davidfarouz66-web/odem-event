@@ -571,16 +571,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 // MOBILE MENU
 function toggleMenu(){
-  var m=document.getElementById('mobileMenu');
+  const m=document.getElementById('mobileMenu');
   if(!m)return;
-  var open=m.style.display==='flex';
-  m.style.display=open?'none':'flex';
-  document.body.style.overflow=open?'':'hidden';
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
 }
-document.addEventListener('DOMContentLoaded',function(){
-  var hb=document.getElementById('hamburger');
-  if(hb)hb.addEventListener('click',toggleMenu);
-});
 
 // REVEAL
 const obs=new IntersectionObserver(entries=>{
@@ -630,6 +625,17 @@ function nextAvisPage(){goAvisPage(avisPage+1);}
 function prevAvisPage(){goAvisPage(avisPage-1);}
 window.addEventListener('resize',function(){avisPage=0;goAvisPage(0);});
 window.addEventListener('DOMContentLoaded',function(){buildAvisDots();});
+// SWIPE
+(function(){
+  var sx=0;
+  var el=document.getElementById('avisCarousel');
+  if(!el)return;
+  el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  el.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>50){dx<0?nextAvisPage():prevAvisPage();}
+  },{passive:true});
+})();
 
 // FORM
 function submitForm(e){
@@ -663,7 +669,7 @@ function heroNotify(){
   if(!el.value||!el.value.includes('@')){el.style.borderColor='rgba(255,100,100,0.5)';return;}
   btn.textContent='✓';btn.style.background='#3a7a50';
   el.value='';el.style.borderColor='';
-  setTimeout(()=>{btn.textContent="M’alerter";btn.style.background=’’;},3000);
+  setTimeout(()=>{btn.textContent="M’alerter";btn.style.background='';},3000);
 }
 
 // PORTFOLIO FILTER via URL
