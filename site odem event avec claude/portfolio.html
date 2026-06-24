@@ -117,6 +117,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .lang-select select:hover{border-color:#C9A84C;color:#C9A84C;}
 .lang-select select option{background:#111;color:#fff;}
 
+/* FOOTER UNIFORME */
+#footer{background:rgba(0,0,0,0.7);border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
+.footer-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
+
 @media(max-width:900px){
   .footer-inner{grid-template-columns:1fr;}
   nav{padding:0.9rem 1.2rem;}
@@ -130,10 +134,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
   .port-grid{grid-template-columns:1fr;}
   .port-hero{padding:6rem 1.2rem 3rem;}
 }
-
-/* FOOTER UNIFORME */
-#footer{background:rgba(0,0,0,0.7);border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
-.footer-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
 .footer-brand{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.25em;color:#fff;margin-bottom:0.4rem;}
 .footer-brand span{color:var(--gold);}
 .footer-tag-txt{font-size:0.75rem;color:rgba(255,255,255,0.65);margin-bottom:0.5rem;letter-spacing:0.1em;}
@@ -144,6 +144,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .footer-link:hover{color:var(--gold);}
 .footer-copy{max-width:1000px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(201,168,76,0.08);text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.55);}
 .footer-copy strong{color:var(--gold);font-weight:400;}
+@media(max-width:600px){.footer-copy{padding-right:70px;}}
 
 
 }
@@ -204,23 +205,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 <div class="portfolio-section">
   <div class="port-grid">
 
-    <!-- Été 2026 Tignes le Lac -->
-    <a class="port-card ete reveal d1" href="sejour-tignes-2026.html" data-type="ete">
-      <div class="card-img" style="background-image:url('photos/tignes-2025/diamond-rock-exterieur.jpg');background-position:center;aspect-ratio:2/3;">
-        <div class="card-ov"></div>
-        <div class="card-status"><span class="status-pill s-open">Inscriptions ouvertes</span></div>
-        <div class="card-body">
-          <div class="card-type">Été 2026</div>
-          <div class="card-line"></div>
-          <div class="card-dest">Tignes le Lac</div>
-          <div class="card-hotel">Diamond Rock Lodge</div>
-          <div class="card-stars">★★★★★</div>
-          <div class="card-dates">Été 2026 · Dates à confirmer</div>
-          <span class="card-link">Réserver ma place →</span>
-        </div>
-      </div>
-    </a>
-
     <!-- Pessah 2026 Crète -->
     <a class="port-card pessah reveal d1" href="sejour-crete-2026.html" data-type="pessah">
       <div class="card-img" style="background-image:url('affiches/affiche-crete-2026.jpg');background-position:center;aspect-ratio:2/3;">
@@ -256,7 +240,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     </a>
 
     <!-- Pessah 2025 Grèce -->
-    <a class="port-card pessah reveal d3" href="odem-sejour-grece-2025.html" data-type="pessah">
+    <a class="port-card pessah reveal d3" href="sejour-grece-2025.html" data-type="pessah">
       <div class="card-img" style="background-image:url('affiches/affiche-grece-2025.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>
@@ -273,7 +257,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     </a>
 
     <!-- Été 2024 Arcs 2000 -->
-    <a class="port-card ete reveal d1" href="odem-sejour-arcs-2024.html" data-type="ete">
+    <a class="port-card ete reveal d1" href="sejour-arcs-2024.html" data-type="ete">
       <div class="card-img" style="background-image:url('affiches/affiche-arcs-2024.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>
@@ -290,7 +274,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     </a>
 
     <!-- Pessah 2024 Chypre -->
-    <a class="port-card pessah reveal d2" href="odem-sejour-chypre-2024.html" data-type="pessah">
+    <a class="port-card pessah reveal d2" href="sejour-chypre-2024.html" data-type="pessah">
       <div class="card-img" style="background-image:url('affiches/affiche-chypre-2024.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>
@@ -324,7 +308,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     </a>
 
     <!-- Pessah 2023 Espagne -->
-    <a class="port-card pessah reveal d1" href="odem-sejour-espagne-2023.html" data-type="pessah">
+    <a class="port-card pessah reveal d1" href="sejour-espagne-2023.html" data-type="pessah">
       <div class="card-img" style="background-image:url('affiches/affiche-espagne-2023.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>

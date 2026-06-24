@@ -193,6 +193,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .cookie-btn.decline{background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.4);}
 .cookie-btn:hover{opacity:0.85;}
 .footer-copy strong{color:var(--gold);font-weight:400;}
+@media(max-width:600px){.footer-copy{padding-right:70px;}}
 
 /* WHATSAPP */
 .wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s;text-decoration:none;}
@@ -285,16 +286,6 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <em id="h-t2">ensemble</em>
     </h1>
     <p class="hero-sub" id="h-sub">Pessah en Europe · Séjours d'été · Classes de neige</p>
-
-    <!-- TEASER BIENTOT avant les boutons -->
-    <div class="hero-teaser">
-      <div class="hero-teaser-label" id="ht-label">Prochain séjour</div>
-      <div class="hero-teaser-txt" id="ht-txt">Destination en cours de sélection — Été 2026</div>
-      <div style="display:flex;margin-top:0.8rem;max-width:340px;margin-left:auto;margin-right:auto;">
-        <input type="email" id="hero-notify-email" placeholder="votre@email.com" style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(201,168,76,0.4);border-right:none;color:#fff;font-family:Montserrat,sans-serif;font-size:0.65rem;padding:0.6rem 0.9rem;outline:none;">
-        <button onclick="heroNotify()" style="background:var(--gold);color:var(--noir);border:none;padding:0.6rem 1rem;font-family:Montserrat,sans-serif;font-size:0.55rem;font-weight:600;letter-spacing:0.12em;cursor:pointer;white-space:nowrap;" id="hero-notify-btn">M'alerter</button>
-      </div>
-    </div>
 
     <div class="hero-btns">
       <a href="portfolio.html" class="btn-gold" id="h-b1">Découvrir nos séjours</a>
