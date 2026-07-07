@@ -128,11 +128,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .avis-carousel{overflow:hidden;margin-top:3.5rem;}
 .avis-track{display:flex;gap:1.5rem;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);}
 .avis-track .avis-card{flex:0 0 calc((100% - 3rem)/3);}
-.avis-card{background:#fff;padding:2rem;border:1px solid rgba(0,0,0,0.06);position:relative;}
+.avis-card{background:#fff;padding:2rem;border:1px solid rgba(0,0,0,0.06);position:relative;display:flex;flex-direction:column;min-height:330px;}
 .avis-quote{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;color:rgba(201,168,76,0.15);line-height:1;position:absolute;top:0.5rem;left:1.2rem;}
 .avis-stars{color:var(--gold);font-size:0.6rem;margin-bottom:0.5rem;padding-top:1.5rem;}
-.avis-txt{font-size:0.75rem;color:#555;line-height:1.85;font-style:italic;margin-bottom:1.5rem;}
+.avis-txt{font-size:0.75rem;color:#555;line-height:1.85;font-style:italic;margin-bottom:1rem;max-height:11.1em;overflow:hidden;transition:max-height 0.35s ease;}
+.avis-card.expanded .avis-txt{max-height:34em;}
+.avis-more{align-self:flex-start;background:transparent;border:none;color:var(--gold-d);font-family:'Montserrat',sans-serif;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;margin-bottom:1.4rem;padding:0;}
+.avis-more:hover{color:var(--gold);}
 .avis-author{display:flex;align-items:center;gap:0.8rem;}
+.avis-card .avis-author{margin-top:auto;}
 .avis-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-d));display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:600;color:var(--noir);flex-shrink:0;}
 .avis-name{font-size:0.68rem;font-weight:600;color:var(--noir);}
 .avis-trip{font-size:0.58rem;color:var(--gris);}
@@ -213,7 +217,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .nav-right{display:none;}
   .hamburger{display:flex;}
   #hero{height:100svh;}
-  .hero-title{font-size:clamp(2.5rem,10vw,4rem);}
+  .hero-title{font-size:clamp(2.35rem,9vw,3.45rem);line-height:1;}
   .hero-btns{flex-direction:column;align-items:center;}
   .btn-gold,.btn-white{width:100%;max-width:280px;text-align:center;}
   .types-grid{grid-template-columns:1fr;}
@@ -433,9 +437,9 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       </div>
     </div>
     <div class="avis-nav">
-      <button class="avis-arrow" onclick="prevAvisPage()">←</button>
+      <button class="avis-arrow" onclick="prevAvisPage()" aria-label="Avis précédents">←</button>
       <div class="avis-dots" id="avisDots"></div>
-      <button class="avis-arrow" onclick="nextAvisPage()">→</button>
+      <button class="avis-arrow" onclick="nextAvisPage()" aria-label="Avis suivants">→</button>
     </div>
   </div>
 </section>
@@ -445,28 +449,33 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   <div class="contact-inner">
     <div class="reveal" style="text-align:center;">
       <div class="divider"><div class="diamond"></div></div>
-      <p class="sec-label" id="f-label">Réservez votre place</p>
-      <h2 class="sec-title" id="f-title">Pré-<em>réservation</em></h2>
-      <p style="font-size:0.72rem;color:rgba(255,255,255,0.75);margin-top:0.5rem;" id="f-desc">Notre équipe vous contacte sous 48h.</p>
+      <p class="sec-label" id="f-label">Soyez informé en priorité</p>
+      <h2 class="sec-title" id="f-title">Prochain <em>séjour</em></h2>
+      <p style="font-size:0.72rem;color:rgba(255,255,255,0.75);margin-top:0.5rem;" id="f-desc">Recevez les prochaines dates avant l'ouverture publique.</p>
     </div>
-    <form class="form-grid reveal" onsubmit="submitForm(event)">
-      <div class="f-field"><label class="f-label" id="fl1">Prénom</label><input type="text" class="f-input" placeholder="Votre prénom" required></div>
-      <div class="f-field"><label class="f-label" id="fl2">Nom</label><input type="text" class="f-input" placeholder="Votre nom" required></div>
-      <div class="f-field"><label class="f-label" id="fl3">Email</label><input type="email" class="f-input" placeholder="votre@email.com" required></div>
-      <div class="f-field"><label class="f-label" id="fl4">Téléphone</label><input type="tel" class="f-input" placeholder="+33 6 XX XX XX XX" required></div>
-      <div class="f-field"><label class="f-label" id="fl5">Séjour souhaité</label>
-        <select class="f-select" required>
+    <form class="form-grid reveal" action="https://formsubmit.co/ajax/odemevent@gmail.com" method="POST" onsubmit="submitForm(event)">
+      <input type="hidden" name="_subject" value="Nouvelle demande d'information ODEM EVENT">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="source" value="Site ODEM EVENT">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
+      <div class="f-field"><label class="f-label" id="fl1" for="prenom">Prénom</label><input id="prenom" name="prenom" type="text" class="f-input" placeholder="Votre prénom" autocomplete="given-name" required></div>
+      <div class="f-field"><label class="f-label" id="fl2" for="nom">Nom</label><input id="nom" name="nom" type="text" class="f-input" placeholder="Votre nom" autocomplete="family-name" required></div>
+      <div class="f-field"><label class="f-label" id="fl3" for="email">Email</label><input id="email" name="email" type="email" class="f-input" placeholder="votre@email.com" autocomplete="email" required></div>
+      <div class="f-field"><label class="f-label" id="fl4" for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" class="f-input" placeholder="+33 6 XX XX XX XX" autocomplete="tel" required></div>
+      <div class="f-field"><label class="f-label" id="fl5" for="sejour">Séjour souhaité</label>
+        <select id="sejour" name="sejour_souhaite" class="f-select" required>
           <option value="" disabled selected>Choisir</option>
-          <option>Prochain séjour Pessah</option>
-          <option>Prochain séjour Été</option>
-          <option>Classe de neige — groupe / école</option>
-          <option>M'informer de tous les séjours</option>
+          <option value="Pessah">Prochain séjour Pessah</option>
+          <option value="Ete">Prochain séjour Été</option>
+          <option value="Classe de neige">Classe de neige — groupe / école</option>
+          <option value="Tous les séjours">M'informer de tous les séjours</option>
         </select>
       </div>
-      <div class="f-field"><label class="f-label" id="fl6">Nombre de personnes</label><input type="number" class="f-input" placeholder="Ex: 4" min="1" required></div>
-      <div class="f-field full"><label class="f-label" id="fl7">Message (optionnel)</label><textarea class="f-textarea" placeholder="Chambre souhaitée, besoins particuliers..."></textarea></div>
-      <div class="f-rgpd full"><input type="checkbox" required><label id="fl8">J'accepte que mes données soient utilisées pour traiter ma demande et m'informer des prochains séjours ODEM EVENT.</label></div>
-      <button type="submit" class="f-submit" id="f-sub">Envoyer ma pré-réservation →</button>
+      <div class="f-field"><label class="f-label" id="fl6" for="personnes">Nombre de personnes</label><input id="personnes" name="nombre_personnes" type="number" class="f-input" placeholder="Ex: 4" min="1" inputmode="numeric" required></div>
+      <div class="f-field full"><label class="f-label" id="fl7" for="message">Message (optionnel)</label><textarea id="message" name="message" class="f-textarea" placeholder="Dates souhaitées, chambres, besoins particuliers..."></textarea></div>
+      <div class="f-rgpd full"><input id="rgpd" name="consentement" type="checkbox" value="Oui" required><label id="fl8" for="rgpd">J'accepte que mes données soient utilisées pour traiter ma demande et m'informer des prochains séjours ODEM EVENT.</label></div>
+      <button type="submit" class="f-submit" id="f-sub">Être informé en priorité →</button>
     </form>
   </div>
 </section>
@@ -580,10 +589,14 @@ setTimeout(()=>{
 },800);
 
 // CARROUSEL AVIS
-let avisPage=0;
-const AVIS_TOTAL=9;
+var avisPage=0;
+var avisTimer=null;
+function getAvisCards(){return Array.prototype.slice.call(document.querySelectorAll('#avisTrack .avis-card'));}
 function getAvisCols(){return window.innerWidth<=480?1:window.innerWidth<=768?2:3;}
-function getAvisPages(){return Math.ceil(AVIS_TOTAL/getAvisCols());}
+function getAvisPages(){
+  const total=getAvisCards().length;
+  return Math.max(1,Math.ceil(total/getAvisCols()));
+}
 function buildAvisDots(){
   const pages=getAvisPages();
   const container=document.getElementById('avisDots');
@@ -591,6 +604,8 @@ function buildAvisDots(){
   container.innerHTML='';
   for(let i=0;i<pages;i++){
     const d=document.createElement('div');
+    d.setAttribute('role','button');
+    d.setAttribute('aria-label','Afficher les avis '+(i+1));
     d.className='avis-dot'+(i===avisPage?' active':'');
     (function(idx){d.onclick=function(){goAvisPage(idx);};})(i);
     container.appendChild(d);
@@ -598,33 +613,70 @@ function buildAvisDots(){
 }
 function goAvisPage(n){
   const cols=getAvisCols();
+  const cards=getAvisCards();
   const pages=getAvisPages();
   avisPage=((n%pages)+pages)%pages;
   const track=document.getElementById('avisTrack');
-  const carousel=document.getElementById('avisCarousel');
-  const gap=24;
-  const carouselW=carousel.offsetWidth;
-  const cardW=(carouselW-(cols-1)*gap)/cols;
-  const stride=cardW+gap;
+  if(!track||cards.length===0){return;}
   const firstIdx=avisPage*cols;
-  const maxFirst=AVIS_TOTAL-cols;
-  const offset=Math.min(firstIdx,maxFirst)*stride;
-  track.style.transform=`translateX(-${offset}px)`;
+  const maxFirst=Math.max(cards.length-cols,0);
+  const offset=cards[Math.min(firstIdx,maxFirst)].offsetLeft;
+  track.style.transform='translate3d(-'+offset+'px,0,0)';
   buildAvisDots();
 }
 function nextAvisPage(){goAvisPage(avisPage+1);}
 function prevAvisPage(){goAvisPage(avisPage-1);}
-window.addEventListener('resize',function(){avisPage=0;goAvisPage(0);});
-window.addEventListener('DOMContentLoaded',function(){buildAvisDots();});
+function prepareAvisCards(){
+  getAvisCards().forEach(function(card){
+    const text=card.querySelector('.avis-txt');
+    if(!text||card.querySelector('.avis-more')){return;}
+    if(text.scrollHeight<=text.clientHeight+4){return;}
+    const btn=document.createElement('button');
+    btn.type='button';
+    btn.className='avis-more';
+    btn.textContent='Lire la suite';
+    btn.setAttribute('aria-expanded','false');
+    btn.addEventListener('click',function(){
+      const expanded=card.classList.toggle('expanded');
+      btn.textContent=expanded?'Réduire':'Lire la suite';
+      btn.setAttribute('aria-expanded',expanded?'true':'false');
+      stopAvisAuto();
+      goAvisPage(avisPage);
+    });
+    text.insertAdjacentElement('afterend',btn);
+  });
+}
+function startAvisAuto(){
+  stopAvisAuto();
+  avisTimer=setInterval(function(){nextAvisPage();},6000);
+}
+function stopAvisAuto(){
+  if(avisTimer){clearInterval(avisTimer);avisTimer=null;}
+}
+window.addEventListener('resize',function(){goAvisPage(avisPage);});
+window.addEventListener('DOMContentLoaded',function(){
+  const carousel=document.getElementById('avisCarousel');
+  prepareAvisCards();
+  goAvisPage(0);
+  startAvisAuto();
+  if(carousel){
+    carousel.addEventListener('mouseenter',stopAvisAuto);
+    carousel.addEventListener('mouseleave',startAvisAuto);
+    carousel.addEventListener('focusin',stopAvisAuto);
+    carousel.addEventListener('focusout',startAvisAuto);
+  }
+});
+window.addEventListener('load',function(){goAvisPage(avisPage);});
 // SWIPE
 (function(){
   var sx=0;
   var el=document.getElementById('avisCarousel');
   if(!el)return;
-  el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;stopAvisAuto();},{passive:true});
   el.addEventListener('touchend',function(e){
     var dx=e.changedTouches[0].clientX-sx;
     if(Math.abs(dx)>50){dx<0?nextAvisPage():prevAvisPage();}
+    startAvisAuto();
   },{passive:true});
 })();
 
@@ -634,9 +686,12 @@ function submitForm(e){
   const btn=e.target.querySelector('.f-submit')||document.getElementById('f-sub');
   const orig=btn.textContent;
   btn.textContent='Envoi en cours...';btn.disabled=true;
-  fetch('https://formspree.io/f/xnjwrobj',{
+  const formData=new FormData(e.target);
+  formData.set('page_source',window.location.href);
+  formData.set('date_demande',new Date().toLocaleString('fr-FR',{timeZone:'Europe/Paris'}));
+  fetch(e.target.action,{
     method:'POST',
-    body:new FormData(e.target),
+    body:formData,
     headers:{'Accept':'application/json'}
   }).then(function(r){
     if(r.ok){
@@ -669,8 +724,8 @@ function heroNotify(){
 // LANG
 let lang='fr';
 const tr={
-  fr:{'h-tag':'Séjours d\'exception','h-t1':'L\'art de voyager','h-t2':'ensemble','h-sub':'Pessah en Europe · Séjours d\'été · Classes de neige','ht-label':'Prochain séjour','ht-txt':'Destination en cours de sélection — Été 2026','h-b1':'Découvrir nos séjours','h-b2':'Nous contacter','h-scroll':'Découvrir','nav-port':'Portfolio','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver','tp-label':'Ce que nous organisons','tp-title':'Nos <em>séjours</em>','tt1':'Pessah en Europe','td1':'Espagne · Chypre · Grèce · Crète','tl1':'Voir les séjours','tt2':'Été en montagne','td2':'Tignes · Les Arcs 2000','tl2':'Voir les séjours','tt3':'Groupes & écoles','td3':'Tignes · Les Arcs 2000','tl3':'En savoir plus','c1':'Séjours organisés','c2':'Familles accompagnées','c3':'Pays visités','c4':'Hôtels partenaires','av-label':'Ce qu\'ils disent','av-title':'Avis de nos <em>familles</em>','av1':'Ce Pessah était vraiment hors du commun. Tout ne suffirait pas pour vous dire ma gratitude. Merci à vous deux pour tout ce que vous faites — c\'était exceptionnel.','av2':'Merci de nous avoir accueillis comme votre famille. Toujours un mot doux, une attention de chaque instant — un séjour que l\'on n\'oubliera pas. À très vite !','av3':'Ce séjour était plus que super ! Vous étiez à l\'écoute de tous, présents avec nous à chaque instant. Vous avez répondu à chacune de nos demandes. Encore merci, c\'était incroyable !','av4':'Moi qui ne voulais pas partir d\'Israël pour Pessah, je n\'ai pas été déçue. Des retrouvailles familiales magiques, zéro fausse note. Vous avez permis des moments inoubliables. Longue vie à ODEM !','av5':'Un séjour vraiment inoubliable, familial et convivial. La nourriture excellente et en quantité, les chants de Chabbat, les cours de Torah... Nous avons vraiment beaucoup apprécié.','av6':'Tout était magnifique, de l\'organisation générale aux moindres détails, et surtout votre sourire à tout moment malgré la fatigue. On vous souhaite encore beaucoup d\'événements comme celui-là !','av7':'Chaque détail a été pris en charge de manière personnelle — impeccable tant dans le matériel que dans le spirituel. Le Rav, l\'ambiance, tout était merveilleux. Vous nous avez vraiment rempli le cœur.','av8':'David et Osnat ont été remarquables du début à la fin. La nourriture, de l\'apéritif au dîner, était délicieuse et en grande quantité. Nos amis dans d\'autres organisations ont fini par nous rejoindre ! Nous recommandons chaleureusement.','av9':'Merci mille fois pour ce Pessah hors du commun. Tout ne suffirait pas pour exprimer ma gratitude. Merci à toi et Menahem pour tout ce que vous faites — qu\'Hachem vous ouvre les portes et vous envoie la joie et le bonheur.','f-label':'Réservez votre place','f-title':'Pré-<em>réservation</em>','f-desc':'Notre équipe vous contacte sous 48h.','fl1':'Prénom','fl2':'Nom','fl3':'Email','fl4':'Téléphone','fl5':'Séjour souhaité','fl6':'Nombre de personnes','fl7':'Message (optionnel)','fl8':'J\'accepte que mes données soient utilisées pour traiter ma demande.','f-sub':'Envoyer ma pré-réservation →','ft-col':'Séjours','ft-tag':'Séjours d\'exception'},
-  en:{'h-tag':'Exceptional trips since 2023','h-t1':'The art of traveling','h-t2':'together','h-sub':'Passover in Europe · Summer trips · Snow classes','ht-label':'Next trip','ht-txt':'Destination being selected — Summer 2026','h-b1':'Discover our trips','h-b2':'Contact us','h-scroll':'Discover','nav-port':'Portfolio','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book','tp-label':'What we organise','tp-title':'Our <em>trips</em>','tt1':'Passover in Europe','td1':'Spain · Cyprus · Greece · Crete','tl1':'View trips','tt2':'Summer in the mountains','td2':'Tignes · Les Arcs 2000','tl2':'View trips','tt3':'Groups & schools','td3':'Tignes · Les Arcs 2000','tl3':'Learn more','c1':'Trips organised','c2':'Families accompanied','c3':'Countries visited','c4':'Partner hotels','av-label':'What they say','av-title':'Reviews from our <em>families</em>','av1':'This Passover was truly exceptional. Words cannot express my gratitude. Thank you both for everything you do — it was incredible.','av2':'Thank you for welcoming us like family. Always a kind word, constant attention — a trip we will never forget. See you soon!','av3':'This trip was more than wonderful! You were attentive to everyone, present at every moment. You answered our every request. Thank you — it was incredible!','av4':'I who did not want to leave Israel for Passover was not disappointed. Magical family reunion, zero false notes. You made unforgettable moments. Long live ODEM!','av5':'A truly unforgettable, family-friendly trip. Excellent food in abundance, Shabbat songs, Torah classes... We truly appreciated every moment.','av6':'Everything was magnificent, from the overall organisation to the smallest details, and above all your smile at every moment despite the fatigue. We wish you many more events like this!','av7':'Every detail was handled personally — impeccable on both the material and spiritual level. The Rabbi, the atmosphere, everything was wonderful. You truly filled our hearts.','av8':'David and Osnat were remarkable throughout. The food, from appetiser to dinner, was delicious and plentiful. Our friends in other organisations ended up joining us! Highly recommended.','av9':'A thousand thanks for this extraordinary Passover. Words cannot express my gratitude. Thank you and Menahem for everything — may Hashem open doors for you and send you joy and happiness.','f-label':'Book your place','f-title':'<em>Pre-booking</em>','f-desc':'Our team contacts you within 48h.','fl1':'First name','fl2':'Last name','fl3':'Email','fl4':'Phone','fl5':'Desired trip','fl6':'Number of people','fl7':'Message (optional)','fl8':'I agree that my data will be used to process my request.','f-sub':'Send my pre-booking →','ft-col':'Trips','ft-tag':'Exceptional trips since 2023'}
+  fr:{'h-tag':'Séjours d\'exception','h-t1':'L\'art de voyager','h-t2':'ensemble','h-sub':'Pessah en Europe · Séjours d\'été · Classes de neige','ht-label':'Prochain séjour','ht-txt':'Destination en cours de sélection — Été 2026','h-b1':'Découvrir nos séjours','h-b2':'Nous contacter','h-scroll':'Découvrir','nav-port':'Portfolio','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver','tp-label':'Ce que nous organisons','tp-title':'Nos <em>séjours</em>','tt1':'Pessah en Europe','td1':'Espagne · Chypre · Grèce · Crète','tl1':'Voir les séjours','tt2':'Été en montagne','td2':'Tignes · Les Arcs 2000','tl2':'Voir les séjours','tt3':'Groupes & écoles','td3':'Tignes · Les Arcs 2000','tl3':'En savoir plus','c1':'Séjours organisés','c2':'Familles accompagnées','c3':'Pays visités','c4':'Hôtels partenaires','av-label':'Ce qu\'ils disent','av-title':'Avis de nos <em>familles</em>','av1':'Ce Pessah était vraiment hors du commun. Tout ne suffirait pas pour vous dire ma gratitude. Merci à vous deux pour tout ce que vous faites — c\'était exceptionnel.','av2':'Merci de nous avoir accueillis comme votre famille. Toujours un mot doux, une attention de chaque instant — un séjour que l\'on n\'oubliera pas. À très vite !','av3':'Ce séjour était plus que super ! Vous étiez à l\'écoute de tous, présents avec nous à chaque instant. Vous avez répondu à chacune de nos demandes. Encore merci, c\'était incroyable !','av4':'Moi qui ne voulais pas partir d\'Israël pour Pessah, je n\'ai pas été déçue. Des retrouvailles familiales magiques, zéro fausse note. Vous avez permis des moments inoubliables. Longue vie à ODEM !','av5':'Un séjour vraiment inoubliable, familial et convivial. La nourriture excellente et en quantité, les chants de Chabbat, les cours de Torah... Nous avons vraiment beaucoup apprécié.','av6':'Tout était magnifique, de l\'organisation générale aux moindres détails, et surtout votre sourire à tout moment malgré la fatigue. On vous souhaite encore beaucoup d\'événements comme celui-là !','av7':'Chaque détail a été pris en charge de manière personnelle — impeccable tant dans le matériel que dans le spirituel. Le Rav, l\'ambiance, tout était merveilleux. Vous nous avez vraiment rempli le cœur.','av8':'David et Osnat ont été remarquables du début à la fin. La nourriture, de l\'apéritif au dîner, était délicieuse et en grande quantité. Nos amis dans d\'autres organisations ont fini par nous rejoindre ! Nous recommandons chaleureusement.','av9':'Merci mille fois pour ce Pessah hors du commun. Tout ne suffirait pas pour exprimer ma gratitude. Merci à toi et Menahem pour tout ce que vous faites — qu\'Hachem vous ouvre les portes et vous envoie la joie et le bonheur.','f-label':'Soyez informé en priorité','f-title':'Prochain <em>séjour</em>','f-desc':'Recevez les prochaines dates avant l\'ouverture publique.','fl1':'Prénom','fl2':'Nom','fl3':'Email','fl4':'Téléphone','fl5':'Séjour souhaité','fl6':'Nombre de personnes','fl7':'Message (optionnel)','fl8':'J\'accepte que mes données soient utilisées pour traiter ma demande et m\'informer des prochains séjours ODEM EVENT.','f-sub':'Être informé en priorité →','ft-col':'Séjours','ft-tag':'Séjours d\'exception'},
+  en:{'h-tag':'Exceptional trips since 2023','h-t1':'The art of traveling','h-t2':'together','h-sub':'Passover in Europe · Summer trips · Snow classes','ht-label':'Next trip','ht-txt':'Destination being selected — Summer 2026','h-b1':'Discover our trips','h-b2':'Contact us','h-scroll':'Discover','nav-port':'Portfolio','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book','tp-label':'What we organise','tp-title':'Our <em>trips</em>','tt1':'Passover in Europe','td1':'Spain · Cyprus · Greece · Crete','tl1':'View trips','tt2':'Summer in the mountains','td2':'Tignes · Les Arcs 2000','tl2':'View trips','tt3':'Groups & schools','td3':'Tignes · Les Arcs 2000','tl3':'Learn more','c1':'Trips organised','c2':'Families accompanied','c3':'Countries visited','c4':'Partner hotels','av-label':'What they say','av-title':'Reviews from our <em>families</em>','av1':'This Passover was truly exceptional. Words cannot express my gratitude. Thank you both for everything you do — it was incredible.','av2':'Thank you for welcoming us like family. Always a kind word, constant attention — a trip we will never forget. See you soon!','av3':'This trip was more than wonderful! You were attentive to everyone, present at every moment. You answered our every request. Thank you — it was incredible!','av4':'I who did not want to leave Israel for Passover was not disappointed. Magical family reunion, zero false notes. You made unforgettable moments. Long live ODEM!','av5':'A truly unforgettable, family-friendly trip. Excellent food in abundance, Shabbat songs, Torah classes... We truly appreciated every moment.','av6':'Everything was magnificent, from the overall organisation to the smallest details, and above all your smile at every moment despite the fatigue. We wish you many more events like this!','av7':'Every detail was handled personally — impeccable on both the material and spiritual level. The Rabbi, the atmosphere, everything was wonderful. You truly filled our hearts.','av8':'David and Osnat were remarkable throughout. The food, from appetiser to dinner, was delicious and plentiful. Our friends in other organisations ended up joining us! Highly recommended.','av9':'A thousand thanks for this extraordinary Passover. Words cannot express my gratitude. Thank you and Menahem for everything — may Hashem open doors for you and send you joy and happiness.','f-label':'Be informed first','f-title':'Next <em>trip</em>','f-desc':'Receive the next dates before public opening.','fl1':'First name','fl2':'Last name','fl3':'Email','fl4':'Phone','fl5':'Desired trip','fl6':'Number of people','fl7':'Message (optional)','fl8':'I agree that my data will be used to process my request and inform me about upcoming ODEM EVENT trips.','f-sub':'Be informed first →','ft-col':'Trips','ft-tag':'Exceptional trips since 2023'}
 };
 function setLang(l){
   if(!tr[l])return;
