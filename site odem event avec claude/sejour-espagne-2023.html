@@ -57,11 +57,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .status-txt{font-size:0.62rem;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;}
 .cancelled-txt{color:rgba(255,160,160,0.8);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
+.highlights-compact{gap:3.5rem;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
 .hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
 .hl-title em{font-style:italic;color:var(--gold);}
 .hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:2rem;}
+.highlights-compact .hl-desc{margin-bottom:1.1rem;}
 .hl-feats{display:flex;flex-direction:column;gap:0.9rem;}
+.highlights-compact .hl-feats{gap:0.7rem;}
 .hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
 .fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
 .affiche-side{position:sticky;top:6rem;}
@@ -168,8 +171,10 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   #hero{padding:5rem 1.5rem 2rem;height:100svh;}
   .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
+  .highlights-compact{padding-top:3rem;padding-bottom:3rem;gap:2rem;}
   .info-grid{grid-template-columns:1fr;}
   .affiche-side{position:static;}
+  .highlights-compact .affiche-side{max-width:280px;margin:0 auto;}
   .gal-grid{grid-template-columns:1fr 1fr;}
   .gal-item.large{grid-column:span 2;}
   .form-grid{grid-template-columns:1fr;}
@@ -258,18 +263,18 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 <div style="background:var(--blanc);">
 
   <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
-  <div class="highlights">
+  <div class="highlights highlights-compact">
     <div>
       <div class="hl-label" data-fr="Pessah 2023 · Espagne" data-en="Passover 2023 · Spain">Pessah 2023 · Espagne</div>
       <h2 class="hl-title">Luna Club Hôtel<br><em>Yoga & Spa</em></h2>
-      <p class="hl-desc" data-fr="Malgrat de Mar se trouve dans la partie la plus méridionale de la Costa Brava, dans la province de Gérone. Bordée de somptueuses plages de sable, elle bénéficie d'un climat typiquement méditerranéen ensoleillé toute l'année. L'hôtel est situé à proximité de la plage de Fenals et à 5 minutes à pied du centre-ville et du Casino." data-en="Malgrat de Mar is located in the southernmost part of the Costa Brava, in the province of Girona. Bordered by magnificent sandy beaches, it enjoys a typically Mediterranean climate with sunshine year-round. The hotel is close to Fenals beach and a 5-minute walk from the town centre and the Casino.">Malgrat de Mar se trouve dans la partie la plus méridionale de la Costa Brava, dans la province de Gérone. Bordée de somptueuses plages de sable, elle bénéficie d'un climat typiquement méditerranéen ensoleillé toute l'année. L'hôtel est situé à proximité de la plage de Fenals et à 5 minutes à pied du centre-ville et du Casino.</p>
-      <p class="hl-desc" data-fr="L'hôtel dispose de 2 piscines extérieures adultes, d'une grande terrasse ensoleillée, d'une piscine pour enfants, d'un Thalasso & Spa (sauna, hammam, jacuzzi), d'une piscine couverte chauffée, d'une salle de gym et de salles de massages. Une aire de jeux extérieure avec trampoline, ping-pong, baby-foot, châteaux gonflables et toboggans complète les équipements." data-en="The hotel features 2 adult outdoor pools, a large sunny terrace, a children's pool, a Thalasso & Spa (sauna, hammam, jacuzzi), a heated indoor pool, a gym and massage rooms. An outdoor play area with trampoline, ping-pong, foosball, bouncy castles and slides completes the facilities.">L'hôtel dispose de 2 piscines extérieures adultes, d'une grande terrasse ensoleillée, d'une piscine pour enfants, d'un Thalasso & Spa (sauna, hammam, jacuzzi), d'une piscine couverte chauffée, d'une salle de gym et de salles de massages. Une aire de jeux extérieure avec trampoline, ping-pong, baby-foot, châteaux gonflables et toboggans complète les équipements.</p>
+      <p class="hl-desc" data-fr="À Malgrat de Mar, au sud de la Costa Brava, le Luna Club Hôtel Yoga & Spa offrait un cadre méditerranéen proche de la plage, du centre-ville et de Barcelone." data-en="In Malgrat de Mar, in the south of the Costa Brava, the Luna Club Hotel Yoga & Spa offered a Mediterranean setting close to the beach, the town centre and Barcelona.">À Malgrat de Mar, au sud de la Costa Brava, le Luna Club Hôtel Yoga & Spa offrait un cadre méditerranéen proche de la plage, du centre-ville et de Barcelone.</p>
       <p class="hl-desc" style="color:var(--gold);font-style:italic;" data-fr="Hôtel entièrement sécurisé et privatisé dans le cadre de notre séjour. Parking disponible." data-en="Hotel fully secured and privatised for our stay. Parking available.">Hôtel entièrement sécurisé et privatisé dans le cadre de notre séjour. Parking disponible.</p>
       <div class="hl-feats" style="margin-top:1.5rem;">
         <div class="hl-feat"><div class="fdot"></div><span data-fr="⭐⭐⭐⭐ · All Inclusive · Pension complète" data-en="⭐⭐⭐⭐ · All Inclusive · Full board">⭐⭐⭐⭐ · All Inclusive · Pension complète</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="2 piscines extérieures · Piscine couverte chauffée · Thalasso & Spa gratuit" data-en="2 outdoor pools · Heated indoor pool · Free Thalasso & Spa">2 piscines extérieures · Piscine couverte chauffée · Thalasso & Spa gratuit</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="2 piscines extérieures · Piscine enfants · Piscine couverte chauffée" data-en="2 outdoor pools · Children's pool · Heated indoor pool">2 piscines extérieures · Piscine enfants · Piscine couverte chauffée</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="Sauna · Hammam · Jacuzzi · Salle de gym Technogym" data-en="Sauna · Hammam · Jacuzzi · Technogym gym">Sauna · Hammam · Jacuzzi · Salle de gym Technogym</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="Chambres : Individuelle · Double · Triple · Double Premium · Premium Plus · Supérieure" data-en="Rooms: Single · Double · Triple · Double Premium · Premium Plus · Superior">Chambres : Individuelle · Double · Triple · Double Premium · Premium Plus · Supérieure</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Thalasso & Spa gratuit · Salles de massages · Grande terrasse ensoleillée" data-en="Free Thalasso & Spa · Massage rooms · Large sunny terrace">Thalasso & Spa gratuit · Salles de massages · Grande terrasse ensoleillée</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Aire de jeux : trampoline · ping-pong · baby-foot · châteaux gonflables" data-en="Play area: trampoline · ping-pong · foosball · bouncy castles">Aire de jeux : trampoline · ping-pong · baby-foot · châteaux gonflables</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="Toutes les chambres avec balcon ou terrasse vue mer ou piscine" data-en="All rooms with balcony or terrace with sea or pool view">Toutes les chambres avec balcon ou terrasse vue mer ou piscine</span></div>
       </div>
     </div>

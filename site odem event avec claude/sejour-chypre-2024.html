@@ -57,11 +57,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .status-txt{font-size:0.62rem;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;}
 .cancelled-txt{color:rgba(255,160,160,0.8);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
+.highlights-compact{gap:3.5rem;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
 .hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
 .hl-title em{font-style:italic;color:var(--gold);}
 .hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:2rem;}
+.highlights-compact .hl-desc{margin-bottom:1.1rem;}
 .hl-feats{display:flex;flex-direction:column;gap:0.9rem;}
+.highlights-compact .hl-feats{gap:0.7rem;}
 .hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
 .fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
 .affiche-side{position:sticky;top:6rem;}
@@ -169,8 +172,10 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   #hero{padding:5rem 1.5rem 2rem;height:100svh;}
   .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
+  .highlights-compact{padding-top:3rem;padding-bottom:3rem;gap:2rem;}
   .info-grid{grid-template-columns:1fr;}
   .affiche-side{position:static;}
+  .highlights-compact .affiche-side{max-width:280px;margin:0 auto;}
   .gal-grid{grid-template-columns:1fr 1fr;}
   .gal-item.large{grid-column:span 2;}
   .form-grid{grid-template-columns:1fr;}
@@ -253,17 +258,16 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 <div style="background:var(--blanc);">
 
   <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
-  <div class="highlights">
+  <div class="highlights highlights-compact">
     <div>
       <div class="hl-label" data-fr="Pessah 2024 · Chypre" data-en="Passover 2024 · Cyprus">Pessah 2024 · Chypre</div>
       <h2 class="hl-title">AT Herbal<br><em>Hotel & Spa</em></h2>
-      <p class="hl-desc" data-fr="L'hôtel Herbal 5 étoiles est situé à quelques pas de la plage de Fig Tree Bay, labellisée Pavillon Bleu pour la qualité exceptionnelle de ses eaux et de ses infrastructures. Tout au long de l'année, nos clients peuvent profiter du soleil et se détendre en admirant une vue magnifique sur la Méditerranée." data-en="The 5-star Herbal hotel is located steps from Fig Tree Bay beach, awarded the Blue Flag label for the exceptional quality of its waters and facilities. Year-round, guests can enjoy the sunshine and relax while admiring a magnificent view of the Mediterranean.">L'hôtel Herbal 5 étoiles est situé à quelques pas de la plage de Fig Tree Bay, labellisée Pavillon Bleu pour la qualité exceptionnelle de ses eaux et de ses infrastructures. Tout au long de l'année, nos clients peuvent profiter du soleil et se détendre en admirant une vue magnifique sur la Méditerranée.</p>
-      <p class="hl-desc" data-fr="L'Herbal Boutique Hotel & Spa, situé à Protaras, propose un restaurant, une piscine extérieure, un bassin pour enfants, une piscine intérieure chauffée et 6 salles de soins." data-en="The Herbal Boutique Hotel & Spa, located in Protaras, offers a restaurant, an outdoor pool, a children's pool, a heated indoor pool and 6 treatment rooms.">L'Herbal Boutique Hotel & Spa, situé à Protaras, propose un restaurant, une piscine extérieure, un bassin pour enfants, une piscine intérieure chauffée et 6 salles de soins.</p>
+      <p class="hl-desc" data-fr="À Protaras, l'AT Herbal Hotel & Spa offrait un cadre 5 étoiles à quelques pas de Fig Tree Bay, plage de sable labellisée Pavillon Bleu, avec une vue ouverte sur la Méditerranée." data-en="In Protaras, the AT Herbal Hotel & Spa offered a 5-star setting steps from Fig Tree Bay, a Blue Flag sandy beach, with open views over the Mediterranean.">À Protaras, l'AT Herbal Hotel & Spa offrait un cadre 5 étoiles à quelques pas de Fig Tree Bay, plage de sable labellisée Pavillon Bleu, avec une vue ouverte sur la Méditerranée.</p>
       <p class="hl-desc" style="color:var(--gold);font-style:italic;" data-fr="Sous le contrôle du Rav Ephraim Cremisi · Avec le Rav David Ichay" data-en="Under the supervision of Rabbi Ephraim Cremisi · With Rabbi David Ichay">Sous le contrôle du Rav Ephraim Cremisi · Avec le Rav David Ichay</p>
       <div class="hl-feats" style="margin-top:1.5rem;">
         <div class="hl-feat"><div class="fdot"></div><span data-fr="⭐⭐⭐⭐⭐ · Protaras, Chypre · Fig Tree Bay (Pavillon Bleu)" data-en="⭐⭐⭐⭐⭐ · Protaras, Cyprus · Fig Tree Bay (Blue Flag)">⭐⭐⭐⭐⭐ · Protaras, Chypre · Fig Tree Bay (Pavillon Bleu)</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="1 piscine extérieure · 1 piscine extérieure enfants · 1 piscine intérieure chauffée" data-en="1 outdoor pool · 1 children's outdoor pool · 1 heated indoor pool">1 piscine extérieure · 1 piscine extérieure enfants · 1 piscine intérieure chauffée</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="6 salles de soins · Plage de sable à 200 mètres" data-en="6 treatment rooms · Sandy beach 200 metres away">6 salles de soins · Plage de sable à 200 mètres</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Restaurant · 6 salles de soins · Plage de sable à 200 mètres" data-en="Restaurant · 6 treatment rooms · Sandy beach 200 metres away">Restaurant · 6 salles de soins · Plage de sable à 200 mètres</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="Chambres : Chambre haute · Familiale de luxe · Suite vue mer · Suite junior · Suite junior jacuzzi vue mer" data-en="Rooms: Superior Room · Luxury Family · Sea View Suite · Junior Suite · Junior Suite jacuzzi sea view">Chambres : Chambre haute · Familiale de luxe · Suite vue mer · Suite junior · Suite junior jacuzzi vue mer</span></div>
       </div>
     </div>
