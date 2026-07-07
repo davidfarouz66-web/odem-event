@@ -58,13 +58,16 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .cancelled-txt{color:rgba(255,160,160,0.8);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
 .highlights-compact{gap:3.5rem;}
+.sejour-espagne-overview{grid-template-columns:minmax(0,1.2fr) 270px;gap:3rem;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
 .hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
+.sejour-espagne-overview .hl-title{margin-bottom:1rem;}
 .hl-title em{font-style:italic;color:var(--gold);}
 .hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:2rem;}
 .highlights-compact .hl-desc{margin-bottom:1.1rem;}
 .hl-feats{display:flex;flex-direction:column;gap:0.9rem;}
 .highlights-compact .hl-feats{gap:0.7rem;}
+.sejour-espagne-overview .hl-feats{margin-top:0.8rem!important;}
 .hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
 .fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
 .affiche-side{position:sticky;top:6rem;}
@@ -172,9 +175,11 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .highlights,.gallery,.tarifs-sec,.res-sec,.cancelled-notice,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
   .highlights-compact{padding-top:3rem;padding-bottom:3rem;gap:2rem;}
+  .sejour-espagne-overview{padding-top:2.2rem;padding-bottom:2rem;gap:1.4rem;}
   .info-grid{grid-template-columns:1fr;}
   .affiche-side{position:static;}
   .highlights-compact .affiche-side{max-width:280px;margin:0 auto;}
+  .sejour-espagne-overview .affiche-side{max-width:210px;}
   .gal-grid{grid-template-columns:1fr 1fr;}
   .gal-item.large{grid-column:span 2;}
   .form-grid{grid-template-columns:1fr;}
@@ -263,7 +268,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 <div style="background:var(--blanc);">
 
   <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
-  <div class="highlights highlights-compact">
+  <div class="highlights highlights-compact sejour-espagne-overview">
     <div>
       <div class="hl-label" data-fr="Pessah 2023 · Espagne" data-en="Passover 2023 · Spain">Pessah 2023 · Espagne</div>
       <h2 class="hl-title">Luna Club Hôtel<br><em>Yoga & Spa</em></h2>
@@ -272,9 +277,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <div class="hl-feats" style="margin-top:1.5rem;">
         <div class="hl-feat"><div class="fdot"></div><span data-fr="⭐⭐⭐⭐ · All Inclusive · Pension complète" data-en="⭐⭐⭐⭐ · All Inclusive · Full board">⭐⭐⭐⭐ · All Inclusive · Pension complète</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="2 piscines extérieures · Piscine enfants · Piscine couverte chauffée" data-en="2 outdoor pools · Children's pool · Heated indoor pool">2 piscines extérieures · Piscine enfants · Piscine couverte chauffée</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="Sauna · Hammam · Jacuzzi · Salle de gym Technogym" data-en="Sauna · Hammam · Jacuzzi · Technogym gym">Sauna · Hammam · Jacuzzi · Salle de gym Technogym</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="Thalasso & Spa gratuit · Salles de massages · Grande terrasse ensoleillée" data-en="Free Thalasso & Spa · Massage rooms · Large sunny terrace">Thalasso & Spa gratuit · Salles de massages · Grande terrasse ensoleillée</span></div>
-        <div class="hl-feat"><div class="fdot"></div><span data-fr="Aire de jeux : trampoline · ping-pong · baby-foot · châteaux gonflables" data-en="Play area: trampoline · ping-pong · foosball · bouncy castles">Aire de jeux : trampoline · ping-pong · baby-foot · châteaux gonflables</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Thalasso & Spa · Sauna · Hammam · Jacuzzi · Salle de gym" data-en="Thalasso & Spa · Sauna · Hammam · Jacuzzi · Gym">Thalasso & Spa · Sauna · Hammam · Jacuzzi · Salle de gym</span></div>
         <div class="hl-feat"><div class="fdot"></div><span data-fr="Toutes les chambres avec balcon ou terrasse vue mer ou piscine" data-en="All rooms with balcony or terrace with sea or pool view">Toutes les chambres avec balcon ou terrasse vue mer ou piscine</span></div>
       </div>
     </div>
