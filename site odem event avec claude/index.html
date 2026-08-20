@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>ODEM EVENT — Séjours casher d'exception</title>
-<meta name="description" content="ODEM EVENT organise des séjours casher haut de gamme pour familles : Pessah en Europe, vacances d'été, classes de neige et séjour ski aux 2 Alpes. Infos : 07 66 03 63 80.">
+<title>ODEM EVENT — Séjours casher haut de gamme en famille</title>
+<meta name="description" content="ODEM EVENT organise des séjours casher haut de gamme pour familles : Pessah en Europe, vacances d'été, classes de neige, séjour ski casher et hôtels sélectionnés. Infos : 07 66 03 63 80.">
 <meta name="theme-color" content="#C9A84C">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="ODEM EVENT — Séjours casher d'exception">
-<meta property="og:description" content="Séjours casher haut de gamme pour Pessah, l'été, l'hiver et les familles. Découvrez nos prochaines destinations et contactez ODEM EVENT.">
+<meta property="og:title" content="ODEM EVENT — Séjours casher haut de gamme en famille">
+<meta property="og:description" content="Séjours casher haut de gamme pour Pessah, l'été, l'hiver, le ski et les familles. Découvrez nos prochaines destinations et contactez ODEM EVENT.">
 <meta property="og:url" content="https://odemevent.fr/">
 <meta property="og:image" content="https://odemevent.fr/og-odem-event.png">
 <meta property="og:image:width" content="1200">
@@ -31,10 +31,58 @@
   "image": "https://odemevent.fr/affiches/affiche-2-alpes-2027.jpg",
   "telephone": "+33766036380",
   "email": "odemevent@gmail.com",
-  "description": "Organisation de séjours casher haut de gamme pour familles : Pessah, été, hiver, classes de neige et séjours ski.",
+  "description": "Organisation de séjours casher haut de gamme pour familles : Pessah en Europe, vacances d'été, séjours ski casher, classes de neige et hôtels sélectionnés.",
   "areaServed": ["France", "Europe"],
+  "knowsAbout": [
+    "séjour casher",
+    "vacances casher en famille",
+    "Pessah casher",
+    "séjour ski casher",
+    "classe de neige casher"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Séjours ODEM EVENT",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Séjours Pessah casher en Europe"},
+      {"@type": "Offer", "name": "Vacances casher d'été en famille"},
+      {"@type": "Offer", "name": "Séjours ski casher et classes de neige"}
+    ]
+  },
   "sameAs": [
     "https://www.instagram.com/odem.event/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels types de séjours casher ODEM EVENT organise ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ODEM EVENT organise des séjours casher haut de gamme pour familles : Pessah en Europe, vacances d'été, séjours hiver, ski casher et classes de neige."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les séjours sont-ils adaptés aux familles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Les séjours ODEM EVENT sont pensés pour les familles, avec hébergements sélectionnés, restauration casher, ambiance conviviale et accompagnement sur place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réserver ou recevoir les prochaines dates ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous pouvez contacter ODEM EVENT par téléphone, WhatsApp ou via le formulaire du site pour recevoir les prochaines dates et les informations de réservation."
+      }
+    }
   ]
 }
 </script>
@@ -148,6 +196,16 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .type-card:hover .type-link{gap:0.7rem;}
 .type-link::after{content:'→';}
 
+/* REFERENCEMENT */
+#seo-content{background:var(--blanc);padding:0 2rem 5.5rem;}
+.seo-content-inner{max-width:980px;margin:0 auto;border-top:1px solid rgba(201,168,76,0.28);padding-top:3rem;}
+.seo-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1.55rem,3vw,2.2rem);font-weight:300;line-height:1.25;color:var(--noir);max-width:760px;margin:0 auto 2.2rem;text-align:center;}
+.seo-lead em{font-style:italic;color:var(--gold-d);}
+.seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+.seo-item{border-left:1px solid rgba(201,168,76,0.35);padding-left:1.2rem;}
+.seo-item h3{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--noir);margin-bottom:0.7rem;}
+.seo-item p{font-size:0.75rem;line-height:1.9;color:#5b5750;}
+
 /* CHIFFRES */
 #chiffres{background:var(--noir);padding:5rem 2rem;position:relative;overflow:hidden;}
 #chiffres::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
@@ -259,6 +317,9 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .winter-feature-label{font-size:0.52rem;line-height:1.8;}
   .types-grid{grid-template-columns:1fr;}
   .type-card{height:300px;border-radius:16px;}
+  #seo-content{padding:0 1.2rem 3.5rem;}
+  .seo-grid{grid-template-columns:1fr;gap:1.4rem;}
+  .seo-item{padding-left:1rem;}
   .chiffres-inner{grid-template-columns:1fr 1fr;}
   .chiffre-sep{display:none;}
   .avis-track .avis-card{flex:0 0 calc((100% - 1.5rem)/2);}
@@ -326,7 +387,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <span id="h-t1">L'art de voyager</span><br>
       <em id="h-t2">ensemble</em>
     </h1>
-    <p class="hero-sub" id="h-sub">Pessah en Europe · Séjours d'été · Classes de neige</p>
+    <p class="hero-sub" id="h-sub">Pessah casher en Europe · Vacances d'été · Séjours ski & classes de neige</p>
 
     <div class="hero-btns">
       <a href="portfolio.html" class="btn-gold" id="h-b1">Découvrir nos séjours</a>
@@ -402,6 +463,27 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         <span class="type-link" id="tl3">En savoir plus</span>
       </div>
     </a>
+  </div>
+</section>
+
+<!-- CONTENU REFERENCEMENT -->
+<section id="seo-content" aria-label="Séjours casher ODEM EVENT">
+  <div class="seo-content-inner reveal">
+    <p class="seo-lead">ODEM EVENT accompagne les familles dans l'organisation de <em>séjours casher haut de gamme</em>, avec des destinations sélectionnées, une restauration soignée et une présence attentive tout au long du voyage.</p>
+    <div class="seo-grid">
+      <div class="seo-item">
+        <h3>Pessah casher</h3>
+        <p>Des séjours Pessah en Europe dans des hôtels choisis pour leur confort, leur cadre et leur adaptation aux familles.</p>
+      </div>
+      <div class="seo-item">
+        <h3>Vacances en famille</h3>
+        <p>Des vacances casher d'été et d'hiver pensées pour les parents, les enfants et les groupes qui recherchent une ambiance conviviale.</p>
+      </div>
+      <div class="seo-item">
+        <h3>Ski & neige</h3>
+        <p>Des séjours ski casher et classes de neige avec hébergement, restauration, accompagnement et organisation sur place.</p>
+      </div>
+    </div>
   </div>
 </section>
 
