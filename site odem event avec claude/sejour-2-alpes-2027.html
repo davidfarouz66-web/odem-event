@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Hiver 2027 — Les 2 Alpes — ODEM EVENT</title>
+<meta name="description" content="ODEM EVENT — Séjour hiver casher aux 2 Alpes du 21 au 28 février 2027, Hôtel La Brunerie, pension complète, piscine, spa et prise en charge enfants.">
+<meta name="theme-color" content="#C9A84C">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="ODEM EVENT — Séjour Aux 2 Alpes 2027">
+<meta property="og:description" content="Séjour hiver aux 2 Alpes du 21 au 28 février 2027, Hôtel La Brunerie, pension complète, piscine, spa et enfants pris en charge.">
+<meta property="og:image" content="affiches/affiche-2-alpes-2027.jpg">
+<meta property="og:site_name" content="ODEM EVENT">
+<link rel="icon" href="logo-odem.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--gold:#C9A84C;--gold-l:#E8D5A3;--gold-d:#8B6914;--noir:#1a1a1a;--noir2:#1A1A1A;--blanc:#FAF8F4;--gris:#8A8880;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:var(--blanc);color:var(--noir);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;transition:all 0.4s;}
+nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,0.15);padding:0.8rem 3rem;}
+.nav-logo{display:flex;align-items:center;gap:0.7rem;text-decoration:none;}
+.nav-logo-mark{width:38px;height:38px;border:1.5px solid rgba(201,168,76,0.6);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);}
+.nav-logo-name{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.25em;color:#fff;}
+.nav-logo-name span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;transition:color 0.3s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-back{border:1px solid rgba(201,168,76,0.4);color:var(--gold)!important;padding:0.4rem 1.1rem;}
+#hero{height:100vh;min-height:600px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start;padding:5rem;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:hzoom 20s ease-in-out infinite alternate;}
+@keyframes hzoom{from{transform:scale(1);}to{transform:scale(1.07);}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.15) 60%,rgba(0,0,0,0.5) 100%);}
+.hero-content{position:relative;z-index:2;max-width:650px;animation:fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.hero-type{font-size:0.55rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+.hero-type::before{content:'';width:40px;height:1px;background:var(--gold);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6rem);font-weight:300;line-height:0.9;color:#fff;margin-bottom:0.8rem;text-shadow:0 4px 30px rgba(0,0,0,0.4);}
+.hero-title em{font-style:italic;color:var(--gold-l);}
+.hero-hotel{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,0.7);margin-bottom:0.4rem;}
+.hero-dates{font-size:0.65rem;letter-spacing:0.2em;color:rgba(255,255,255,0.8);margin-bottom:0.6rem;}
+.hero-stars{color:var(--gold);font-size:0.7rem;margin-bottom:1.8rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
+.status-bar{padding:0.9rem 3rem;display:flex;align-items:center;gap:1rem;}
+.status-archived-bar{background:rgba(0,0,0,0.6);border-top:1px solid rgba(201,168,76,0.3);border-bottom:1px solid rgba(201,168,76,0.3);}
+.status-dot{width:7px;height:7px;border-radius:50%;}
+.dot-archived{background:var(--gold);}
+.status-txt{font-size:0.62rem;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;}
+.highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
+.hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
+.hl-title em{font-style:italic;color:var(--gold);}
+.hl-desc{font-size:0.75rem;color:var(--gris);line-height:1.9;margin-bottom:1.2rem;}
+.hl-feats{display:flex;flex-direction:column;gap:0.9rem;margin-top:1.5rem;}
+.hl-feat{display:flex;align-items:flex-start;gap:0.8rem;font-size:0.72rem;color:#444;line-height:1.6;}
+.fdot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px;}
+.affiche-side{position:sticky;top:6rem;}
+.affiche-frame{border:1px solid rgba(201,168,76,0.25);padding:6px;background:#fff;box-shadow:0 10px 50px rgba(0,0,0,0.15);}
+.affiche-frame img{width:100%;display:block;}
+.gallery{padding:0 5rem 5rem;max-width:1100px;margin:0 auto;}
+.gallery-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
+.gal-item{overflow:hidden;cursor:pointer;border-radius:32px;}
+.gal-item.r1{aspect-ratio:4/3;}
+.gal-item.large{grid-column:span 2;aspect-ratio:16/9;}
+.gal-ph{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
+.gal-item:hover .gal-ph{transform:scale(1.07);}
+.info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;}
+.info-card{background:#fff;border:1px solid rgba(201,168,76,0.15);padding:2rem;}
+.info-card-label{font-size:0.48rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--noir);margin-bottom:1.2rem;}
+.info-list{display:flex;flex-direction:column;gap:0.6rem;}
+.info-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.7rem;color:#444;line-height:1.6;list-style:none;}
+.info-list li .fdot{flex-shrink:0;margin-top:7px;}
+.tarifs-sec{background:var(--noir);padding:5rem;position:relative;overflow:hidden;}
+.tarifs-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,168,76,0.05) 0%,transparent 70%);}
+.tarifs-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
+.tarifs-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;text-align:center;}
+.tarifs-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#fff;text-align:center;margin-bottom:3rem;}
+.tarifs-title em{font-style:italic;color:var(--gold);}
+.t-table{width:100%;border-collapse:collapse;}
+.t-table th{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-align:left;padding:0.5rem 0;border-bottom:1px solid rgba(201,168,76,0.15);}
+.t-table td{padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:0.72rem;}
+.t-name{color:rgba(255,255,255,0.8);}
+.t-size{color:rgba(255,255,255,0.7);font-size:0.6rem;margin-top:0.2rem;}
+.t-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;text-align:right;white-space:nowrap;}
+.tarifs-note{font-size:0.62rem;color:rgba(255,255,255,0.65);text-align:center;margin-top:2rem;font-style:italic;}
+.waitlist-sec{background:#f8f6f2;padding:4rem 5rem;text-align:center;}
+.wl-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--noir);margin-bottom:0.8rem;}
+.wl-title em{font-style:italic;color:var(--gold);}
+.wl-sub{font-size:0.72rem;color:#555;margin-bottom:2rem;}
+.wl-form{display:flex;max-width:420px;margin:0 auto;}
+.wl-input{flex:1;background:#fff;border:1px solid rgba(0,0,0,0.12);border-right:none;color:var(--noir);font-family:'Montserrat',sans-serif;font-size:0.7rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;}
+.wl-input:focus{border-color:var(--gold);}
+.wl-btn{background:var(--noir);color:#fff;border:none;padding:0.85rem 1.4rem;font-family:'Montserrat',sans-serif;font-size:0.58rem;font-weight:600;letter-spacing:0.15em;cursor:pointer;transition:all 0.3s;}
+.wl-btn:hover{background:var(--gold);color:var(--noir);}
+.contact-actions{display:flex;justify-content:center;gap:0.8rem;flex-wrap:wrap;margin-top:1.8rem;}
+.contact-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0.85rem 1.4rem;border:1px solid rgba(201,168,76,0.4);background:#fff;color:var(--noir);text-decoration:none;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:all 0.3s;}
+.contact-action.primary{background:var(--noir);color:#fff;border-color:var(--noir);}
+.contact-action:hover{background:var(--gold);border-color:var(--gold);color:var(--noir);}
+.ft-bar{background:rgba(0,0,0,0.95);border-top:1px solid rgba(201,168,76,0.1);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
+.ft-brand{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:#fff;}
+.ft-brand span{color:var(--gold);}
+.ft-copy{font-size:0.58rem;color:rgba(255,255,255,0.55);}
+.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.wa-btn:hover{background:#20b859;transform:scale(1.1);}
+.wa-btn svg{width:28px;height:28px;fill:#fff;}
+.nav-right{display:flex;align-items:center;gap:2rem;}
+.lang-select{position:relative;}
+.lang-select select{background:transparent;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);padding:0.3rem 1.6rem 0.3rem 0.7rem;font-size:0.58rem;letter-spacing:0.12em;font-family:'Montserrat',sans-serif;cursor:pointer;appearance:none;-webkit-appearance:none;outline:none;transition:all 0.3s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center;}
+.lang-select select:hover{border-color:#C9A84C;color:#C9A84C;}
+.lang-select select option{background:#111;color:#fff;}
+.footer-social-link{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-size:0.82rem;letter-spacing:0.05em;color:rgba(255,255,255,0.8);transition:opacity 0.3s;}
+.footer-social-link:hover{opacity:0.75;}
+.footer-social-link svg{flex-shrink:0;}
+.scroll-top{position:fixed;bottom:6.5rem;right:2.1rem;z-index:998;width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:#C9A84C;display:none;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;font-size:1.1rem;backdrop-filter:blur(4px);}
+.scroll-top.show{display:flex;}
+.scroll-top:hover{background:#C9A84C;color:#0D0D0D;}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a1a;border-top:1px solid rgba(201,168,76,0.2);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform 0.4s ease;}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-txt{font-size:0.65rem;color:rgba(255,255,255,0.55);line-height:1.6;max-width:700px;}
+.cookie-txt a{color:#C9A84C;text-decoration:none;}
+.cookie-btns{display:flex;gap:0.6rem;flex-shrink:0;}
+.cookie-btn{padding:0.5rem 1.2rem;font-size:0.6rem;letter-spacing:0.1em;cursor:pointer;border:none;transition:all 0.3s;}
+.cookie-btn.accept{background:#C9A84C;color:#0D0D0D;}
+.cookie-btn.decline{background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.4);}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+/* FOOTER UNIFORME */
+#footer{background:rgba(0,0,0,0.7);border-top:1px solid rgba(201,168,76,0.1);padding:3rem 2rem;}
+.footer-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;}
+.footer-brand{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.25em;color:#fff;margin-bottom:0.4rem;}
+
+@media(max-width:900px){
+  .footer-inner{grid-template-columns:1fr;}
+  nav{padding:0.9rem 1.5rem;}.nav-links{display:none;}.nav-right{display:none;}
+  .hamburger{display:flex;}
+  #hero{padding:5rem 1.5rem 2rem;height:100svh;}
+  .highlights,.gallery,.info-sec,.tarifs-sec,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
+  .highlights{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+  .affiche-side{position:static;}
+  .gal-grid{grid-template-columns:1fr 1fr;}
+  .gal-item.large{grid-column:span 2;}
+  .info-grid{grid-template-columns:1fr;}
+  .ft-bar{flex-direction:column;gap:0.5rem;text-align:center;}
+  .gal-item{border-radius:16px;}
+  .video-wrap{border-radius:16px!important;}
+}
+.hero-bg{background-image:url('fond-neige-panorama.jpg?v=2alpes-hero');background-position:center 38%;}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,0.99);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:1.3rem;letter-spacing:0.2em;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.mobile-menu a:hover{color:var(--gold);}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;}
+
+.footer-brand span{color:var(--gold);}
+.footer-tag-txt{font-size:0.75rem;color:rgba(255,255,255,0.65);margin-bottom:0.5rem;letter-spacing:0.1em;}
+.footer-kashrut{font-size:0.92rem;color:rgba(201,168,76,0.9);margin-bottom:1.2rem;font-style:italic;}
+.footer-contact-item{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;color:rgba(255,255,255,0.8);margin-bottom:0.5rem;}
+.footer-col-title{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.footer-link{display:block;font-size:0.82rem;color:rgba(255,255,255,0.72);text-decoration:none;margin-bottom:0.5rem;transition:color 0.3s;}
+.footer-link:hover{color:var(--gold);}
+.footer-copy{max-width:1000px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(201,168,76,0.08);text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.55);}
+.footer-copy strong{color:var(--gold);font-weight:400;}
+@media(max-width:600px){.footer-copy{padding-right:70px;}}
+
+
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-odem.png" alt="ODEM EVENT" style="height:48px;width:auto;">
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Accueil</a></li>
+      <li><a href="portfolio.html" id="nav-port">Nos séjours</a></li>
+      <li><a href="classes-de-neige.html" id="nav-neige">Classes de neige</a></li>
+    </ul>
+    <div class="lang-select">
+      <select id="langSelect" onchange="setLang(this.value)">
+        <option value="fr">🇫🇷 FR</option>
+        <option value="en">🇬🇧 EN</option>
+      </select>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Accueil</a>
+  <a href="portfolio.html" onclick="toggleMenu()">Nos séjours</a>
+  <a href="classes-de-neige.html" onclick="toggleMenu()">Classes de neige</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="hero-type" data-fr="Hiver · 2027" data-en="Winter · 2027">Hiver · 2027</div>
+    <h1 class="hero-title"><em>Les 2</em><br>Alpes</h1>
+    <div class="hero-hotel">Hôtel La Brunerie</div>
+    <div class="hero-dates" data-fr="Du 21 au 28 février 2027 · Les 2 Alpes" data-en="February 21 to 28, 2027 · Les 2 Alpes">Du 21 au 28 février 2027 · Les 2 Alpes</div>
+    <div class="hero-stars">3 étoiles</div>
+    <div class="hero-btns">
+      <a href="portfolio.html" class="btn-outline-w" id="sj-back">← Retour aux séjours</a>
+    </div>
+  </div>
+</section>
+
+<div class="status-bar status-archived-bar">
+  <div class="status-dot dot-archived"></div>
+  <span class="status-txt" id="sj-status">Nouveau séjour hiver — Réservations ouvertes pour février 2027.</span>
+</div>
+
+<div style="background:var(--blanc);">
+
+  <!-- 1. DESCRIPTION HÔTEL + AFFICHE -->
+  <div class="highlights">
+    <div>
+      <div class="hl-label" data-fr="Hiver 2027 · Les 2 Alpes" data-en="Winter 2027 · Les 2 Alpes">Hiver 2027 · Les 2 Alpes</div>
+      <h2 class="hl-title">Hôtel La<br><em>Brunerie</em></h2>
+      <p class="hl-desc" data-fr="Situé au coeur de la station des Deux Alpes, l'Hôtel La Brunerie 3 étoiles est un hôtel chaleureux et convivial, idéal pour un séjour au ski en famille." data-en="Located in the heart of Les Deux Alpes, Hotel La Brunerie 3-star is a warm and welcoming hotel, ideal for a family ski stay.">Situé au coeur de la station des Deux Alpes, l'Hôtel La Brunerie 3 étoiles est un hôtel chaleureux et convivial, idéal pour un séjour au ski en famille.</p>
+      <p class="hl-desc" data-fr="L'établissement compte 58 chambres et propose piscine intérieure chauffée, sauna, espace fitness, salon avec cheminée, restaurant et Wi-Fi." data-en="The hotel has 58 rooms and offers an indoor heated pool, sauna, fitness area, lounge with fireplace, restaurant and Wi-Fi.">L'établissement compte 58 chambres et propose piscine intérieure chauffée, sauna, espace fitness, salon avec cheminée, restaurant et Wi-Fi.</p>
+      <div class="hl-feats">
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Pension complète · Repas chaud à midi à l'hôtel" data-en="Full board · Hot lunch at the hotel">Pension complète · Repas chaud à midi à l'hôtel</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Paniers-repas livrables directement sur les pistes" data-en="Packed lunches can be delivered directly to the slopes">Paniers-repas livrables directement sur les pistes</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Mini-club inclus tous les jours de 9h00 à 17h30" data-en="Mini-club included every day from 9:00am to 5:30pm">Mini-club inclus tous les jours de 9h00 à 17h30</span></div>
+        <div class="hl-feat"><div class="fdot"></div><span data-fr="Sous le contrôle du Rav Ephraim Cremisi" data-en="Under the supervision of Rabbi Ephraim Cremisi">Sous le contrôle du Rav Ephraim Cremisi</span></div>
+      </div>
+    </div>
+    <div class="affiche-side">
+      <div class="affiche-frame">
+        <img src="affiches/affiche-2-alpes-2027.jpg" alt="Affiche officielle du séjour Aux 2 Alpes 2027" style="width:100%;display:block;border-radius:1px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PHOTOS DE L'HÔTEL -->
+  <div class="gallery">
+    <div class="gallery-label" id="sj-gal-label">Photos de l'hôtel</div>
+    <div class="gal-grid">
+      <div class="gal-item large"><div class="gal-ph" style="background-image:url('affiches/affiche-2-alpes-2027.jpg?v=2alpes-affiche-large');background-size:cover;background-position:center top;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/2-alpes-2027/piscine-spa.jpeg?v=2alpes-photos');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/2-alpes-2027/chambre-double.jpeg?v=2alpes-photos');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/2-alpes-2027/chambre-twin.jpeg?v=2alpes-photos');background-size:cover;background-position:center;"></div></div>
+      <div class="gal-item r1"><div class="gal-ph" style="background-image:url('photos/2-alpes-2027/hotel-exterieur.jpeg?v=2alpes-photos');background-size:cover;background-position:center;"></div></div>
+    </div>
+  </div>
+
+  <!-- 3. INFOS DU SÉJOUR -->
+  <div class="info-sec">
+    <div class="hl-label" id="sj-detail-label">Le séjour en détail</div>
+    <h2 class="hl-title" id="sj-incl-title">Détails du <em>séjour</em></h2>
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card-label" id="sj-kashrout-label">Kashrout</div>
+        <div class="info-card-title" data-fr="Supervision" data-en="Supervision">Supervision</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="Sous le contrôle du Rav Ephraim Cremisi" data-en="Under the supervision of Rabbi Ephraim Cremisi">Sous le contrôle du Rav Ephraim Cremisi</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label" id="sj-rest-label">Restauration</div>
+        <div class="info-card-title" data-fr="Pension complète" data-en="Full board">Pension complète</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="Prestation du dimanche soir au petit-déjeuner du dimanche 28 février" data-en="Service from Sunday evening to breakfast on Sunday, February 28">Prestation du dimanche soir au petit-déjeuner du dimanche 28 février</span></li>
+          <li><div class="fdot"></div><span data-fr="Repas chaud à midi à l'hôtel" data-en="Hot lunch at the hotel">Repas chaud à midi à l'hôtel</span></li>
+          <li><div class="fdot"></div><span data-fr="Possibilité de commander des paniers-repas livrés directement sur les pistes" data-en="Option to order packed lunches delivered directly to the slopes">Possibilité de commander des paniers-repas livrés directement sur les pistes</span></li>
+          <li><div class="fdot"></div><span data-fr="Boissons incluses pendant les repas" data-en="Drinks included during meals">Boissons incluses pendant les repas</span></li>
+          <li><div class="fdot"></div><span data-fr="Bar à vin tous les soirs" data-en="Wine bar every evening">Bar à vin tous les soirs</span></li>
+          <li><div class="fdot"></div><span data-fr="Soirées à thème · Room service avec supplément" data-en="Theme evenings · Room service with supplement">Soirées à thème · Room service avec supplément</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label" id="sj-vie-label">Hôtel</div>
+        <div class="info-card-title" data-fr="La Brunerie 3 étoiles" data-en="La Brunerie 3-star">La Brunerie 3 étoiles</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="58 chambres au coeur de la station des Deux Alpes" data-en="58 rooms in the heart of Les Deux Alpes resort">58 chambres au coeur de la station des Deux Alpes</span></li>
+          <li><div class="fdot"></div><span data-fr="Piscine intérieure chauffée, sauna et espace fitness" data-en="Indoor heated pool, sauna and fitness area">Piscine intérieure chauffée, sauna et espace fitness</span></li>
+          <li><div class="fdot"></div><span data-fr="Salon avec cheminée, restaurant et Wi-Fi" data-en="Lounge with fireplace, restaurant and Wi-Fi">Salon avec cheminée, restaurant et Wi-Fi</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label" data-fr="Enfants" data-en="Children">Enfants</div>
+        <div class="info-card-title" data-fr="Baby-club & mini-club" data-en="Baby-club & mini-club">Baby-club & mini-club</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="Baby-club : moins de 1 an non inclus, avec supplément" data-en="Baby-club: under 1 year not included, supplement applies">Baby-club : moins de 1 an non inclus, avec supplément</span></li>
+          <li><div class="fdot"></div><span data-fr="Mini-club inclus tous les jours de 9h00 à 17h30" data-en="Mini-club included every day from 9:00am to 5:30pm">Mini-club inclus tous les jours de 9h00 à 17h30</span></li>
+          <li><div class="fdot"></div><span data-fr="Mini-club de 19h30 à 21h30 pour permettre aux parents de dîner tranquillement" data-en="Mini-club from 7:30pm to 9:30pm so parents can dine peacefully">Mini-club de 19h30 à 21h30 pour permettre aux parents de dîner tranquillement</span></li>
+          <li><div class="fdot"></div><span data-fr="Activités et sorties enfants tous les soirs incluses" data-en="Children's activities and outings every evening included">Activités et sorties enfants tous les soirs incluses</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label" id="sj-act-label">Ski</div>
+        <div class="info-card-title" data-fr="Options ski" data-en="Ski options">Options ski</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="Cours de ski enfants pour toute la semaine : 350 €" data-en="Children's ski lessons for the week: €350">Cours de ski enfants pour toute la semaine : 350 €</span></li>
+          <li><div class="fdot"></div><span data-fr="Jusqu'à 12 ans : cours de ski + remontées mécaniques : 510 €" data-en="Up to age 12: ski lessons + lift pass: €510">Jusqu'à 12 ans : cours de ski + remontées mécaniques : 510 €</span></li>
+          <li><div class="fdot"></div><span data-fr="Groupes de 8 enfants maximum" data-en="Groups of up to 8 children">Groupes de 8 enfants maximum</span></li>
+          <li><div class="fdot"></div><span data-fr="Location du matériel de ski : 65 € pour toute la semaine" data-en="Ski equipment rental: €65 for the week">Location du matériel de ski : 65 € pour toute la semaine</span></li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-label" data-fr="Pratique" data-en="Practical">Pratique</div>
+        <div class="info-card-title" data-fr="Arrivée & accès" data-en="Arrival & access">Arrivée & accès</div>
+        <ul class="info-list">
+          <li><div class="fdot"></div><span data-fr="Chambres disponibles à partir de 17h le jour de l'arrivée" data-en="Rooms available from 5pm on arrival day">Chambres disponibles à partir de 17h le jour de l'arrivée</span></li>
+          <li><div class="fdot"></div><span data-fr="Chambres à libérer avant 10h le jour du départ" data-en="Rooms must be vacated before 10am on departure day">Chambres à libérer avant 10h le jour du départ</span></li>
+          <li><div class="fdot"></div><span data-fr="Gare TGV : Grenoble, puis bus, navette, taxi ou transfert privé" data-en="TGV station: Grenoble, then bus, shuttle, taxi or private transfer">Gare TGV : Grenoble, puis bus, navette, taxi ou transfert privé</span></li>
+          <li><div class="fdot"></div><span data-fr="Aéroport Grenoble Alpes-Isère : environ 120 km" data-en="Grenoble Alpes-Isère airport: around 120 km">Aéroport Grenoble Alpes-Isère : environ 120 km</span></li>
+          <li><div class="fdot"></div><span data-fr="Aéroport Lyon-Saint-Exupéry : environ 160 km" data-en="Lyon-Saint-Exupéry airport: around 160 km">Aéroport Lyon-Saint-Exupéry : environ 160 km</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="tarifs-sec">
+  <div class="tarifs-inner">
+    <div class="tarifs-label" id="tarifs-label">Informations tarifaires</div>
+    <h2 class="tarifs-title" id="tarifs-title">Tarifs <em>sur demande</em></h2>
+    <table class="t-table">
+      <tr><th>Formule</th><th style="text-align:right;">Tarif / pers.</th></tr>
+      <tr><td><div class="t-name" data-fr="Adulte" data-en="Adult">Adulte</div><div class="t-size" data-fr="Tarif semaine" data-en="Weekly rate">Tarif semaine</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
+      <tr><td><div class="t-name" data-fr="Enfant de 3 à 12 ans*" data-en="Child aged 3 to 12*">Enfant de 3 à 12 ans*</div><div class="t-size" data-fr="Si l'enfant partage la chambre de deux adultes payants" data-en="When sharing a room with two paying adults">Si l'enfant partage la chambre de deux adultes payants</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
+      <tr><td><div class="t-name" data-fr="Enfant de 0 à 3 ans*" data-en="Child aged 0 to 3*">Enfant de 0 à 3 ans*</div><div class="t-size" data-fr="Si l'enfant partage la chambre de deux adultes payants" data-en="When sharing a room with two paying adults">Si l'enfant partage la chambre de deux adultes payants</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
+      <tr><td><div class="t-name" data-fr="Bébé de moins de 1 an*" data-en="Baby under 1 year*">Bébé de moins de 1 an*</div><div class="t-size" data-fr="Sous réserve des conditions du séjour" data-en="Subject to stay conditions">Sous réserve des conditions du séjour</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
+    </table>
+    <p class="tarifs-note" data-fr="* Contactez-nous pour recevoir la grille tarifaire et les conditions du séjour." data-en="* Contact us to receive the price list and stay conditions.">* Contactez-nous pour recevoir la grille tarifaire et les conditions du séjour.</p>
+  </div>
+</div>
+
+<div class="waitlist-sec">
+  <h2 class="wl-title" id="sj-wl-title">Réserver votre <em>séjour</em></h2>
+  <p class="wl-sub" id="sj-wl-sub">Contactez ODEM EVENT pour recevoir les informations et disponibilités du séjour Aux 2 Alpes 2027.</p>
+  <div class="contact-actions">
+    <a class="contact-action primary" id="sj-call-btn" href="tel:+33766036380">Appeler</a>
+    <a class="contact-action" id="sj-mail-btn" href="mailto:odemevent@gmail.com?subject=Séjour Aux 2 Alpes 2027">Envoyer un mail</a>
+    <a class="contact-action" id="sj-wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Aux%202%20Alpes%202027" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">ODEM <span>EVENT</span></div>
+      <div class="footer-tag-txt">Séjours d'exception</div>
+      <div class="footer-kashrut">✡ Halak Bet Yossef · Sous la surveillance du Rav Ephraim Cremisi</div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>07 66 03 63 80</span></div>
+      <div class="footer-contact-item"><div class="fdot"></div><span>odemevent@gmail.com</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Séjours</div>
+      <a href="sejour-espagne-2023.html" class="footer-link">Pessah 2023 · Espagne</a>
+      <a href="sejour-tignes-2023.html" class="footer-link">Été 2023 · Tignes</a>
+      <a href="sejour-arcs-2024.html" class="footer-link">Été 2024 · Arcs 2000</a>
+      <a href="sejour-chypre-2024.html" class="footer-link">Pessah 2024 · Chypre</a>
+      <a href="sejour-grece-2025.html" class="footer-link">Pessah 2025 · Grèce</a>
+      <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
+      <a href="sejour-2-alpes-2027.html" class="footer-link">Hiver 2027 · Les 2 Alpes</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <a href="index.html" class="footer-link">Accueil</a>
+      <a href="portfolio.html" class="footer-link">Tous les séjours</a>
+      <a href="classes-de-neige.html" class="footer-link">Classes de neige</a>
+      <a href="mentions-legales.html" class="footer-link" style="color:rgba(255,255,255,0.85);">Mentions légales</a>
+    </div>
+  </div>
+  <div class="footer-social" style="max-width:1000px;margin:1.5rem auto 0;display:flex;gap:1rem;">
+    <a href="https://www.instagram.com/odemevent/" target="_blank" rel="noopener" class="footer-social-link" title="Instagram @odemevent">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><radialGradient id="ig-grad" cx="30%" cy="100%" r="120%">
+          <stop offset="0%" stop-color="#feda75"/><stop offset="25%" stop-color="#fa7e1e"/>
+          <stop offset="50%" stop-color="#d62976"/><stop offset="75%" stop-color="#962fbf"/>
+          <stop offset="100%" stop-color="#4f5bd5"/>
+        </radialGradient></defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig-grad)"/>
+        <circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <circle cx="17.2" cy="6.8" r="1" fill="#fff"/>
+      </svg>
+      <span>@odemevent</span>
+    </a>
+  </div>
+  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a></div>
+</div>
+<a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Aux%202%20Alpes%202027" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Retour en haut">↑</button>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p class="cookie-txt" data-fr="Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href='mentions-legales.html'>politique de confidentialité</a>." data-en="We use cookies to improve your experience. By continuing, you accept our <a href='mentions-legales.html'>privacy policy</a>.">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="mentions-legales.html">politique de confidentialité</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn decline" onclick="closeCookie()">Refuser</button>
+    <button class="cookie-btn accept" onclick="acceptCookie()">Accepter</button>
+  </div>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){
+  var st=document.getElementById('scrollTop');
+  if(st)st.classList.toggle('show',window.scrollY>400);
+});
+function acceptCookie(){localStorage.setItem('cookie','1');document.getElementById('cookieBanner').classList.remove('show');}
+function closeCookie(){localStorage.setItem('cookie','0');document.getElementById('cookieBanner').classList.remove('show');}
+if(!localStorage.getItem('cookie')){setTimeout(function(){var b=document.getElementById('cookieBanner');if(b)b.classList.add('show');},1500);}
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>80);});
+let lang='fr';
+const tr={
+  fr:{
+    'sj-back':'← Retour aux séjours',
+    'nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige',
+    'sj-status':'Nouveau séjour hiver — Réservations ouvertes pour février 2027.',
+    'sj-gal-label':'Photos de l\'hôtel',
+    'sj-detail-label':'Le séjour en détail',
+    'sj-incl-title':'Détails du <em>séjour</em>',
+    'sj-kashrout-label':'Kashrout',
+    'sj-rest-label':'Restauration',
+    'sj-vie-label':'Hôtel',
+    'sj-act-label':'Ski',
+    'tarifs-label':'Informations tarifaires',
+    'tarifs-title':'Tarifs <em>sur demande</em>',
+    'sj-wl-title':'Réserver votre <em>séjour</em>',
+    'sj-wl-sub':'Contactez ODEM EVENT pour recevoir les informations et disponibilités du séjour Aux 2 Alpes 2027.',
+    'sj-call-btn':'Appeler',
+    'sj-mail-btn':'Envoyer un mail',
+    'sj-wa-btn':'WhatsApp'
+  },
+  en:{
+    'sj-back':'← Back to trips',
+    'nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes',
+    'sj-status':'New winter stay — Bookings are open for February 2027.',
+    'sj-gal-label':'Hotel photos',
+    'sj-detail-label':'Trip details',
+    'sj-incl-title':'Stay <em>details</em>',
+    'sj-kashrout-label':'Kashrut',
+    'sj-rest-label':'Catering',
+    'sj-vie-label':'Hotel',
+    'sj-act-label':'Ski',
+    'tarifs-label':'Pricing information',
+    'tarifs-title':'Rates <em>on request</em>',
+    'sj-wl-title':'Book your <em>stay</em>',
+    'sj-wl-sub':'Contact ODEM EVENT to receive details and availability for the Les 2 Alpes 2027 stay.',
+    'sj-call-btn':'Call',
+    'sj-mail-btn':'Send an email',
+    'sj-wa-btn':'WhatsApp'
+  }
+};
+function setLang(l){
+  if(!tr[l])return;
+  lang=l;localStorage.setItem('odemLang',l);
+  document.documentElement.lang=l;
+  const sel=document.getElementById('langSelect');
+  if(sel)sel.value=l;
+  Object.entries(tr[l]).forEach(function([id,val]){
+    const el=document.getElementById(id);
+    if(el)el.innerHTML=val;
+  });
+  document.querySelectorAll('[data-fr]').forEach(function(el){
+    el.innerHTML=el.getAttribute('data-'+l)||el.getAttribute('data-fr');
+  });
+}
+(function(){var l=localStorage.getItem('odemLang');if(l&&l!=='fr')setLang(l);})();
+
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+</script>
+</body>
+</html>

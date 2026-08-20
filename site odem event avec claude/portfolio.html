@@ -61,6 +61,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 .port-card{position:relative;overflow:hidden;border-radius:32px;cursor:pointer;text-decoration:none;display:block;}
 .port-card.pessah .card-img{aspect-ratio:2/3;}
 .port-card.ete .card-img{aspect-ratio:2/3;}
+.port-card.hiver .card-img{aspect-ratio:2/3;}
 .port-card.annule{opacity:0.85;}
 .card-img{width:100%;background-size:cover;background-position:center;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1);position:relative;}
 .port-card:hover .card-img{transform:scale(1.07);}
@@ -193,11 +194,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
   <div class="port-hero-inner">
     <div class="port-hero-label" id="ph-label">ODEM EVENT</div>
     <h1 class="port-hero-title" id="ph-title">Tous nos <em>séjours</em></h1>
-    <p class="port-hero-sub" id="ph-sub">7 séjours d'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.</p>
+    <p class="port-hero-sub" id="ph-sub">8 séjours d'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.</p>
     <div class="filters">
       <button class="filter-btn active" id="fb-all" data-filter="all" onclick="filter('all',this)">Tous</button>
       <button class="filter-btn" id="fb-pessah" data-filter="pessah" onclick="filter('pessah',this)">Pessah</button>
       <button class="filter-btn" id="fb-ete" data-filter="ete" onclick="filter('ete',this)">Été</button>
+      <button class="filter-btn" id="fb-hiver" data-filter="hiver" onclick="filter('hiver',this)">Hiver</button>
     </div>
   </div>
 </div>
@@ -206,8 +208,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 <div class="portfolio-section">
   <div class="port-grid">
 
+    <!-- Hiver 2027 Les 2 Alpes -->
+    <a class="port-card hiver reveal d1" href="sejour-2-alpes-2027.html" data-type="hiver">
+      <div class="card-img" style="background-image:url('affiches/affiche-2-alpes-2027.jpg');background-position:center top;aspect-ratio:2/3;">
+        <div class="card-ov"></div>
+        <div class="card-status"><span class="status-pill s-open">Ouvert</span></div>
+        <div class="card-body">
+          <div class="card-type">Hiver 2027</div>
+          <div class="card-line"></div>
+          <div class="card-dest">Les 2 Alpes</div>
+          <div class="card-hotel">Hôtel La Brunerie</div>
+          <div class="card-stars">Piscine & Spa</div>
+          <div class="card-dates">21 – 28 février 2027</div>
+          <span class="card-link">Voir le séjour</span>
+        </div>
+      </div>
+    </a>
+
     <!-- Pessah 2026 Crète -->
-    <a class="port-card pessah reveal d1" href="sejour-crete-2026.html" data-type="pessah">
+    <a class="port-card pessah reveal d2" href="sejour-crete-2026.html" data-type="pessah">
       <div class="card-img" style="background-image:url('affiches/affiche-crete-2026.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>
@@ -224,7 +243,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
     </a>
 
     <!-- Été 2025 Tignes le Lac -->
-    <a class="port-card ete reveal d2" href="sejour-tignes-2025.html" data-type="ete">
+    <a class="port-card ete reveal d3" href="sejour-tignes-2025.html" data-type="ete">
       <div class="card-img" style="background-image:url('affiches/affiche-tignes-2025.jpg');background-position:center;aspect-ratio:2/3;">
         <div class="card-ov"></div>
         <div class="card-status"><span class="status-pill s-archived">Terminé</span></div>
@@ -345,6 +364,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
       <a href="sejour-chypre-2024.html" class="footer-link">Pessah 2024 · Chypre</a>
       <a href="sejour-grece-2025.html" class="footer-link">Pessah 2025 · Grèce</a>
       <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
+      <a href="sejour-2-alpes-2027.html" class="footer-link">Hiver 2027 · Les 2 Alpes</a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
@@ -411,15 +431,15 @@ window.addEventListener('DOMContentLoaded',function(){
   const urlType=new URLSearchParams(location.search).get('type');
   const savedFilter=localStorage.getItem('portfolioFilter');
   const active=urlType||(savedFilter||'all');
-  if(active==='pessah'||active==='ete') filter(active,null);
+  if(active==='pessah'||active==='ete'||active==='hiver') filter(active,null);
   else filter('all',document.querySelector('[data-filter="all"]'));
   const savedLang=localStorage.getItem('odemLang');
   if(savedLang&&savedLang!=='fr') setLang(savedLang);
 });
 let lang='fr';
 const tr={
-  fr:{'ph-label':'ODEM EVENT','ph-title':'Tous nos <em>séjours</em>','ph-sub':'7 séjours d\'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.','fb-all':'Tous','fb-pessah':'Pessah','fb-ete':'Été','nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver'},
-  en:{'ph-label':'ODEM EVENT','ph-title':'All our <em>trips</em>','ph-sub':'7 exceptional trips organised since 2023, between the Mediterranean and the French Alps, for hundreds of families.','fb-all':'All','fb-pessah':'Passover','fb-ete':'Summer','nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book'}
+  fr:{'ph-label':'ODEM EVENT','ph-title':'Tous nos <em>séjours</em>','ph-sub':'8 séjours d\'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.','fb-all':'Tous','fb-pessah':'Pessah','fb-ete':'Été','fb-hiver':'Hiver','nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver'},
+  en:{'ph-label':'ODEM EVENT','ph-title':'All our <em>trips</em>','ph-sub':'8 exceptional trips organised since 2023, between the Mediterranean and the French Alps, for hundreds of families.','fb-all':'All','fb-pessah':'Passover','fb-ete':'Summer','fb-hiver':'Winter','nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book'}
 };
 function setLang(l){
   if(!tr[l])return;
