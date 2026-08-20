@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://odemevent.fr/</loc><priority>1.0</priority></url>
-  <url><loc>https://odemevent.fr/portfolio.html</loc><priority>0.9</priority></url>
-  <url><loc>https://odemevent.fr/classes-de-neige.html</loc><priority>0.8</priority></url>
-  <url><loc>https://odemevent.fr/sejour-2-alpes-2027.html</loc><priority>0.9</priority></url>
-  <url><loc>https://odemevent.fr/sejour-2-alpes-2027/</loc><priority>0.9</priority></url>
-  <url><loc>https://odemevent.fr/sejour-grece-2025.html</loc><priority>0.8</priority></url>
-  <url><loc>https://odemevent.fr/sejour-crete-2026.html</loc><priority>0.8</priority></url>
-  <url><loc>https://odemevent.fr/sejour-tignes-2025.html</loc><priority>0.7</priority></url>
-  <url><loc>https://odemevent.fr/sejour-chypre-2024.html</loc><priority>0.7</priority></url>
-  <url><loc>https://odemevent.fr/sejour-arcs-2024.html</loc><priority>0.7</priority></url>
-  <url><loc>https://odemevent.fr/sejour-espagne-2023.html</loc><priority>0.6</priority></url>
-  <url><loc>https://odemevent.fr/sejour-tignes-2023.html</loc><priority>0.6</priority></url>
-  <url><loc>https://odemevent.fr/mentions-legales.html</loc><priority>0.3</priority></url>
+  <url><loc>https://odemevent.fr/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://odemevent.fr/portfolio.html</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://odemevent.fr/classes-de-neige.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odemevent.fr/sejour-2-alpes-2027.html</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://odemevent.fr/sejour-2-alpes-2027/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://odemevent.fr/sejour-grece-2025.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odemevent.fr/sejour-crete-2026.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odemevent.fr/sejour-tignes-2025.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://odemevent.fr/sejour-chypre-2024.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://odemevent.fr/sejour-arcs-2024.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://odemevent.fr/sejour-espagne-2023.html</loc><lastmod>2026-08-20</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://odemevent.fr/sejour-tignes-2023.html</loc><lastmod>2026-08-20</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://odemevent.fr/mentions-legales.html</loc><lastmod>2026-08-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
