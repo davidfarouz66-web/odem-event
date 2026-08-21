@@ -81,10 +81,10 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
 .btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
 .status-bar{padding:0.9rem 3rem;display:flex;align-items:center;gap:1rem;}
-.status-archived-bar{background:rgba(0,0,0,0.6);border-top:1px solid rgba(201,168,76,0.3);border-bottom:1px solid rgba(201,168,76,0.3);}
+.status-archived-bar{background:linear-gradient(90deg,rgba(0,0,0,0.92),rgba(26,26,26,0.84));border-top:1px solid rgba(201,168,76,0.42);border-bottom:1px solid rgba(201,168,76,0.42);}
 .status-dot{width:7px;height:7px;border-radius:50%;}
 .dot-archived{background:var(--gold);}
-.status-txt{font-size:0.62rem;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;}
+.status-txt{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;text-shadow:0 2px 10px rgba(0,0,0,0.85);}
 .highlights{padding:5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.3fr 0.9fr;gap:5rem;align-items:start;}
 .hl-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
 .hl-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--noir);}
@@ -257,7 +257,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <div class="status-bar status-archived-bar">
   <div class="status-dot dot-archived"></div>
-  <span class="status-txt" id="sj-status">Nouveau séjour hiver — Réservations ouvertes pour février 2027.</span>
+  <span class="status-txt" id="sj-status">Notre prochain séjour hiver — Réservations ouvertes pour février 2027.</span>
 </div>
 
 <div style="background:var(--blanc);">
@@ -409,10 +409,11 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <div class="footer-col-title">Séjours</div>
       <a href="sejour-espagne-2023.html" class="footer-link">Pessah 2023 · Espagne</a>
       <a href="sejour-tignes-2023.html" class="footer-link">Été 2023 · Tignes</a>
-      <a href="sejour-arcs-2024.html" class="footer-link">Été 2024 · Arcs 2000</a>
       <a href="sejour-chypre-2024.html" class="footer-link">Pessah 2024 · Chypre</a>
+      <a href="sejour-arcs-2024.html" class="footer-link">Été 2024 · Arcs 2000</a>
       <a href="sejour-grece-2025.html" class="footer-link">Pessah 2025 · Grèce</a>
       <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
+      <a href="sejour-crete-2026.html" class="footer-link">Pessah 2026 · Crète</a>
       <a href="sejour-2-alpes-2027/" class="footer-link">Hiver 2027 · Les 2 Alpes</a>
     </div>
     <div>
@@ -470,7 +471,7 @@ const tr={
   fr:{
     'sj-back':'← Retour aux séjours',
     'nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige',
-    'sj-status':'Nouveau séjour hiver — Réservations ouvertes pour février 2027.',
+    'sj-status':'Notre prochain séjour hiver — Réservations ouvertes pour février 2027.',
     'sj-gal-label':'Photos de l\'hôtel',
     'sj-detail-label':'Le séjour en détail',
     'sj-incl-title':'Détails du <em>séjour</em>',
@@ -489,7 +490,7 @@ const tr={
   en:{
     'sj-back':'← Back to trips',
     'nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes',
-    'sj-status':'New winter stay — Bookings are open for February 2027.',
+    'sj-status':'Our next winter stay — Bookings are open for February 2027.',
     'sj-gal-label':'Hotel photos',
     'sj-detail-label':'Trip details',
     'sj-incl-title':'Stay <em>details</em>',
