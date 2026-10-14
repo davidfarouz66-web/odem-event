@@ -201,7 +201,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
   <div class="port-hero-inner">
     <div class="port-hero-label" id="ph-label">ODEM EVENT</div>
     <h1 class="port-hero-title" id="ph-title">Tous nos <em>séjours</em></h1>
-    <p class="port-hero-sub" id="ph-sub">8 séjours d'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.</p>
+    <p class="port-hero-sub" id="ph-sub">9 séjours d'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.</p>
     <div class="filters">
       <button class="filter-btn active" id="fb-all" data-filter="all" onclick="filter('all',this)">Tous</button>
       <button class="filter-btn" id="fb-pessah" data-filter="pessah" onclick="filter('pessah',this)">Pessah</button>
@@ -214,6 +214,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-conten
 <!-- PORTFOLIO GRID -->
 <div class="portfolio-section">
   <div class="port-grid">
+
+    <!-- Pessah 2027 Athènes -->
+    <a class="port-card pessah reveal d1" href="sejour-pessah-athenes-2027/" data-type="pessah">
+      <div class="card-img" style="background-image:url('affiches/affiche-pessah-athenes-2027.jpg');background-position:center top;aspect-ratio:2/3;">
+        <div class="card-ov"></div>
+        <div class="card-status"><span class="status-pill s-open">Ouvert</span></div>
+        <div class="card-body">
+          <div class="card-type">Pessah 2027</div>
+          <div class="card-line"></div>
+          <div class="card-dest">Athènes</div>
+          <div class="card-hotel">Isla Brown Corinthia</div>
+          <div class="card-stars">★★★★★</div>
+          <div class="card-dates">20 avril – 2 mai 2027</div>
+          <span class="card-link">Voir le séjour</span>
+        </div>
+      </div>
+    </a>
 
     <!-- Hiver 2027 Les 2 Alpes -->
     <a class="port-card hiver reveal d1" href="sejour-2-alpes-2027/" data-type="hiver">
@@ -449,6 +466,8 @@ const tr={
   fr:{'ph-label':'ODEM EVENT','ph-title':'Tous nos <em>séjours</em>','ph-sub':'8 séjours d\'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.','fb-all':'Tous','fb-pessah':'Pessah','fb-ete':'Été','fb-hiver':'Hiver','nav-home':'Accueil','nav-port':'Nos séjours','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver'},
   en:{'ph-label':'ODEM EVENT','ph-title':'All our <em>trips</em>','ph-sub':'8 exceptional trips organised since 2023, between the Mediterranean and the French Alps, for hundreds of families.','fb-all':'All','fb-pessah':'Passover','fb-ete':'Summer','fb-hiver':'Winter','nav-home':'Home','nav-port':'Our trips','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book'}
 };
+tr.fr['ph-sub']='9 séjours d\'exception organisés depuis 2023, entre Méditerranée et Alpes françaises, pour des centaines de familles.';
+tr.en['ph-sub']='9 exceptional trips organised since 2023, between the Mediterranean and the French Alps, for hundreds of families.';
 function setLang(l){
   if(!tr[l])return;
   lang=l;localStorage.setItem('odemLang',l);
