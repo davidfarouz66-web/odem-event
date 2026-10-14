@@ -1,6 +1,9 @@
 [build]
   base = "site odem event avec claude"
   publish = "."
+  # Always deploy commits: Netlify's automatic base-directory check was
+  # incorrectly canceling valid changes as "no content change".
+  ignore = "false"
 
 [[headers]]
   for = "/*"
