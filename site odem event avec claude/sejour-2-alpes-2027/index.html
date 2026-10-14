@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://odemevent.fr/og-odem-event.png">
 <meta property="og:site_name" content="ODEM EVENT">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://odemevent.fr/sejour-2-alpes-2027.html">
+<link rel="canonical" href="https://odemevent.fr/sejour-2-alpes-2027/">
 <link rel="icon" href="logo-odem.png" type="image/png">
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
   "@type": "TouristTrip",
   "name": "Séjour ski casher Les 2 Alpes 2027",
   "description": "Séjour hiver casher aux 2 Alpes avec ODEM EVENT, Hôtel La Brunerie, pension complète, piscine, spa et enfants pris en charge.",
-  "url": "https://odemevent.fr/sejour-2-alpes-2027.html",
+  "url": "https://odemevent.fr/sejour-2-alpes-2027/",
   "image": "https://odemevent.fr/affiches/affiche-2-alpes-2027.jpg",
   "provider": {
     "@type": "TravelAgency",
@@ -81,7 +81,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:0.9rem 2.4rem;font-family:'Montserrat',sans-serif;font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block;}
 .btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
 .status-bar{padding:0.9rem 3rem;display:flex;align-items:center;gap:1rem;}
-.status-archived-bar{background:linear-gradient(90deg,rgba(0,0,0,0.92),rgba(26,26,26,0.84));border-top:1px solid rgba(201,168,76,0.42);border-bottom:1px solid rgba(201,168,76,0.42);}
+.status-open-bar{background:linear-gradient(90deg,rgba(0,0,0,0.92),rgba(26,26,26,0.84));border-top:1px solid rgba(201,168,76,0.42);border-bottom:1px solid rgba(201,168,76,0.42);}
 .status-dot{width:7px;height:7px;border-radius:50%;}
 .dot-archived{background:var(--gold);}
 .status-txt{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;color:#fff;font-family:'Cinzel',serif;text-shadow:0 2px 10px rgba(0,0,0,0.85);}
@@ -100,8 +100,8 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .gallery-label{font-size:0.52rem;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
 .gal-item{overflow:hidden;cursor:pointer;border-radius:32px;}
-.gal-item.r1{aspect-ratio:4/3;}
-.gal-item.large{grid-column:span 2;aspect-ratio:16/9;}
+.gal-item.r1,.gal-item.large{aspect-ratio:4/3;}
+.gal-item.large{grid-column:auto;}
 .gal-ph{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
 .gal-item:hover .gal-ph{transform:scale(1.07);}
 .info-sec{padding:5rem;max-width:1100px;margin:0 auto;}
@@ -138,6 +138,25 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .contact-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0.85rem 1.4rem;border:1px solid rgba(201,168,76,0.4);background:#fff;color:var(--noir);text-decoration:none;font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:all 0.3s;}
 .contact-action.primary{background:var(--noir);color:#fff;border-color:var(--noir);}
 .contact-action:hover{background:var(--gold);border-color:var(--gold);color:var(--noir);}
+.lead-form{max-width:760px;margin:2.5rem auto 0;background:#fff;border:1px solid rgba(201,168,76,0.18);padding:2rem;text-align:left;box-shadow:0 18px 55px rgba(0,0,0,0.08);}
+.lead-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+.lead-field{display:flex;flex-direction:column;gap:0.45rem;}
+.lead-field.full{grid-column:1/-1;}
+.lead-label{font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:#6b6251;font-weight:600;}
+.lead-input,.lead-select,.lead-textarea{width:100%;border:1px solid rgba(0,0,0,0.12);background:#fff;color:var(--noir);font-family:'Montserrat',sans-serif;font-size:0.78rem;padding:0.85rem 1rem;outline:none;transition:border-color 0.3s,box-shadow 0.3s;}
+.lead-input:focus,.lead-select:focus,.lead-textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,0.12);}
+.lead-textarea{min-height:92px;resize:vertical;}
+.lead-rgpd{display:flex;align-items:flex-start;gap:0.7rem;margin:1rem 0;font-size:0.68rem;line-height:1.6;color:#555;}
+.lead-rgpd input{margin-top:0.2rem;accent-color:var(--gold);}
+.lead-submit{width:100%;background:var(--noir);color:#fff;border:none;padding:1rem 1.4rem;font-family:'Montserrat',sans-serif;font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
+.lead-submit:hover{background:var(--gold);color:var(--noir);}
+.proof-sec{padding:0 5rem 5rem;max-width:1100px;margin:0 auto;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem;}
+.proof-card{background:#fff;border:1px solid rgba(201,168,76,0.14);padding:1.6rem;min-height:210px;display:flex;flex-direction:column;}
+.proof-stars{color:var(--gold);font-size:0.65rem;margin-bottom:0.8rem;}
+.proof-text{font-size:0.74rem;color:#555;line-height:1.8;font-style:italic;margin-bottom:1.2rem;}
+.proof-name{margin-top:auto;font-size:0.68rem;font-weight:600;color:var(--noir);}
+.proof-trip{font-size:0.58rem;color:var(--gris);margin-top:0.25rem;}
 .ft-bar{background:rgba(0,0,0,0.95);border-top:1px solid rgba(201,168,76,0.1);padding:1.5rem 5rem;display:flex;justify-content:space-between;align-items:center;}
 .ft-brand{font-family:'Cinzel',serif;font-size:0.9rem;letter-spacing:0.2em;color:#fff;}
 .ft-brand span{color:var(--gold);}
@@ -179,9 +198,11 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .highlights,.gallery,.info-sec,.tarifs-sec,.waitlist-sec,.ft-bar{padding-left:1.5rem;padding-right:1.5rem;}
   .highlights{grid-template-columns:1fr;}
   .info-grid{grid-template-columns:1fr;}
+  .lead-grid,.proof-grid{grid-template-columns:1fr;}
+  .proof-sec{padding-left:1.5rem;padding-right:1.5rem;}
   .affiche-side{position:static;}
   .gal-grid{grid-template-columns:1fr 1fr;}
-  .gal-item.large{grid-column:span 2;}
+  .gal-item.large{grid-column:auto;}
   .info-grid{grid-template-columns:1fr;}
   .ft-bar{flex-direction:column;gap:0.5rem;text-align:center;}
   .gal-item{border-radius:16px;}
@@ -255,7 +276,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   </div>
 </section>
 
-<div class="status-bar status-archived-bar">
+<div class="status-bar status-open-bar">
   <div class="status-dot dot-archived"></div>
   <span class="status-txt" id="sj-status">Notre prochain séjour hiver — Réservations ouvertes pour février 2027.</span>
 </div>
@@ -371,6 +392,31 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 </div>
 
+<div class="proof-sec">
+  <div class="hl-label" id="sj-proof-label">Avis familles</div>
+  <h2 class="hl-title" id="sj-proof-title">Ils nous ont fait <em>confiance</em></h2>
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="proof-stars">★★★★★</div>
+      <p class="proof-text" data-fr="Merci de nous avoir accueillis comme votre famille. Toujours un mot doux, une attention de chaque instant, un séjour que l'on n'oubliera pas." data-en="Thank you for welcoming us like family. Always a kind word, attention at every moment, a trip we will never forget.">Merci de nous avoir accueillis comme votre famille. Toujours un mot doux, une attention de chaque instant, un séjour que l'on n'oubliera pas.</p>
+      <div class="proof-name">Famille ODEM</div>
+      <div class="proof-trip">Pessah 2025 · Grèce</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-stars">★★★★★</div>
+      <p class="proof-text" data-fr="Vous étiez à l'écoute de tous, présents avec nous à chaque instant. Vous avez répondu à chacune de nos demandes." data-en="You listened to everyone and were present with us at every moment. You answered every request.">Vous étiez à l'écoute de tous, présents avec nous à chaque instant. Vous avez répondu à chacune de nos demandes.</p>
+      <div class="proof-name">Cliente</div>
+      <div class="proof-trip">Pessah 2025 · Grèce</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-stars">★★★★★</div>
+      <p class="proof-text" data-fr="Tout était magnifique, de l'organisation générale aux moindres détails, et surtout votre sourire à tout moment." data-en="Everything was magnificent, from the overall organisation to the smallest details, and above all your smile at every moment.">Tout était magnifique, de l'organisation générale aux moindres détails, et surtout votre sourire à tout moment.</p>
+      <div class="proof-name">Miko Julia et les enfants</div>
+      <div class="proof-trip">Pessah 2025 · Grèce</div>
+    </div>
+  </div>
+</div>
+
 <div class="tarifs-sec">
   <div class="tarifs-inner">
     <div class="tarifs-label" id="tarifs-label">Informations tarifaires</div>
@@ -382,13 +428,56 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <tr><td><div class="t-name" data-fr="Enfant de 0 à 3 ans*" data-en="Child aged 0 to 3*">Enfant de 0 à 3 ans*</div><div class="t-size" data-fr="Si l'enfant partage la chambre de deux adultes payants" data-en="When sharing a room with two paying adults">Si l'enfant partage la chambre de deux adultes payants</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
       <tr><td><div class="t-name" data-fr="Bébé de moins de 1 an*" data-en="Baby under 1 year*">Bébé de moins de 1 an*</div><div class="t-size" data-fr="Sous réserve des conditions du séjour" data-en="Subject to stay conditions">Sous réserve des conditions du séjour</div></td><td class="t-price" data-fr="Nous contacter" data-en="Contact us">Nous contacter</td></tr>
     </table>
-    <p class="tarifs-note" data-fr="* Contactez-nous pour recevoir la grille tarifaire et les conditions du séjour." data-en="* Contact us to receive the price list and stay conditions.">* Contactez-nous pour recevoir la grille tarifaire et les conditions du séjour.</p>
+    <p class="tarifs-note" data-fr="Formules famille, enfants et options ski disponibles. Demandez la brochure pour recevoir la grille tarifaire complète et les disponibilités." data-en="Family packages, children rates and ski options are available. Request the brochure to receive the full price list and availability.">Formules famille, enfants et options ski disponibles. Demandez la brochure pour recevoir la grille tarifaire complète et les disponibilités.</p>
   </div>
 </div>
 
 <div class="waitlist-sec">
-  <h2 class="wl-title" id="sj-wl-title">Réserver votre <em>séjour</em></h2>
-  <p class="wl-sub" id="sj-wl-sub">Contactez ODEM EVENT pour recevoir les informations et disponibilités du séjour Aux 2 Alpes 2027.</p>
+  <h2 class="wl-title" id="sj-wl-title">Recevoir la <em>brochure</em></h2>
+  <p class="wl-sub" id="sj-wl-sub">Laissez vos coordonnées pour recevoir les tarifs, disponibilités et conditions du séjour Aux 2 Alpes 2027.</p>
+  <form class="lead-form" id="leadForm">
+    <div class="lead-grid">
+      <div class="lead-field">
+        <label class="lead-label" for="leadFirst" id="lead-first-label">Prénom</label>
+        <input class="lead-input" id="leadFirst" name="prenom" autocomplete="given-name" required>
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="leadLast" id="lead-last-label">Nom</label>
+        <input class="lead-input" id="leadLast" name="nom" autocomplete="family-name" required>
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="leadPhone" id="lead-phone-label">Téléphone</label>
+        <input class="lead-input" id="leadPhone" name="telephone" type="tel" autocomplete="tel" required>
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="leadEmail" id="lead-email-label">Email</label>
+        <input class="lead-input" id="leadEmail" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="leadPeople" id="lead-people-label">Nombre de personnes</label>
+        <select class="lead-select" id="leadPeople" name="personnes" required>
+          <option value="">Sélectionner</option>
+          <option>1-2</option>
+          <option>3-4</option>
+          <option>5-6</option>
+          <option>7+</option>
+        </select>
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="leadKids" id="lead-kids-label">Âge des enfants</label>
+        <input class="lead-input" id="leadKids" name="age_enfants" placeholder="Ex : 4, 8, 12 ans">
+      </div>
+      <div class="lead-field full">
+        <label class="lead-label" for="leadMessage" id="lead-message-label">Message</label>
+        <textarea class="lead-textarea" id="leadMessage" name="message" placeholder="Chambre souhaitée, options ski, questions..."></textarea>
+      </div>
+    </div>
+    <label class="lead-rgpd">
+      <input type="checkbox" id="leadConsent" required>
+      <span id="lead-consent">J'accepte que mes données soient utilisées pour répondre à ma demande concernant le séjour ODEM EVENT.</span>
+    </label>
+    <button class="lead-submit" id="lead-submit" type="submit">Recevoir les tarifs</button>
+  </form>
   <div class="contact-actions">
     <a class="contact-action primary" id="sj-call-btn" href="tel:+33766036380">Appeler</a>
     <a class="contact-action" id="sj-mail-btn" href="mailto:odemevent@gmail.com?subject=Séjour Aux 2 Alpes 2027">Envoyer un mail</a>
@@ -439,7 +528,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <span>@odemevent</span>
     </a>
   </div>
-  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a></div>
+  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Confidentialité</a></div>
 </div>
 <a class="wa-btn" href="https://wa.me/33766036380?text=Bonjour%20ODEM%20EVENT%2C%20je%20souhaite%20des%20informations%20sur%20le%20s%C3%A9jour%20Aux%202%20Alpes%202027" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -450,7 +539,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-txt" data-fr="Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href='mentions-legales.html'>politique de confidentialité</a>." data-en="We use cookies to improve your experience. By continuing, you accept our <a href='mentions-legales.html'>privacy policy</a>.">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="mentions-legales.html">politique de confidentialité</a>.</p>
+  <p class="cookie-txt" data-fr="Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href='politique-confidentialite.html'>politique de confidentialité</a>." data-en="We use cookies to improve your experience. By continuing, you accept our <a href='politique-confidentialite.html'>privacy policy</a>.">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-btn decline" onclick="closeCookie()">Refuser</button>
     <button class="cookie-btn accept" onclick="acceptCookie()">Accepter</button>
@@ -481,8 +570,19 @@ const tr={
     'sj-act-label':'Ski',
     'tarifs-label':'Informations tarifaires',
     'tarifs-title':'Tarifs <em>sur demande</em>',
-    'sj-wl-title':'Réserver votre <em>séjour</em>',
-    'sj-wl-sub':'Contactez ODEM EVENT pour recevoir les informations et disponibilités du séjour Aux 2 Alpes 2027.',
+    'sj-proof-label':'Avis familles',
+    'sj-proof-title':'Ils nous ont fait <em>confiance</em>',
+    'sj-wl-title':'Recevoir la <em>brochure</em>',
+    'sj-wl-sub':'Laissez vos coordonnées pour recevoir les tarifs, disponibilités et conditions du séjour Aux 2 Alpes 2027.',
+    'lead-first-label':'Prénom',
+    'lead-last-label':'Nom',
+    'lead-phone-label':'Téléphone',
+    'lead-email-label':'Email',
+    'lead-people-label':'Nombre de personnes',
+    'lead-kids-label':'Âge des enfants',
+    'lead-message-label':'Message',
+    'lead-consent':'J\'accepte que mes données soient utilisées pour répondre à ma demande concernant le séjour ODEM EVENT.',
+    'lead-submit':'Recevoir les tarifs',
     'sj-call-btn':'Appeler',
     'sj-mail-btn':'Envoyer un mail',
     'sj-wa-btn':'WhatsApp'
@@ -500,8 +600,19 @@ const tr={
     'sj-act-label':'Ski',
     'tarifs-label':'Pricing information',
     'tarifs-title':'Rates <em>on request</em>',
-    'sj-wl-title':'Book your <em>stay</em>',
-    'sj-wl-sub':'Contact ODEM EVENT to receive details and availability for the Les 2 Alpes 2027 stay.',
+    'sj-proof-label':'Family reviews',
+    'sj-proof-title':'They trusted <em>ODEM</em>',
+    'sj-wl-title':'Receive the <em>brochure</em>',
+    'sj-wl-sub':'Leave your details to receive prices, availability and conditions for the Les 2 Alpes 2027 stay.',
+    'lead-first-label':'First name',
+    'lead-last-label':'Last name',
+    'lead-phone-label':'Phone',
+    'lead-email-label':'Email',
+    'lead-people-label':'Number of guests',
+    'lead-kids-label':'Children ages',
+    'lead-message-label':'Message',
+    'lead-consent':'I agree that my data may be used to answer my request about the ODEM EVENT stay.',
+    'lead-submit':'Receive prices',
     'sj-call-btn':'Call',
     'sj-mail-btn':'Send an email',
     'sj-wa-btn':'WhatsApp'
@@ -527,6 +638,38 @@ function toggleMenu(){
   const m=document.getElementById('mobileMenu');
   m.classList.toggle('open');
   document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+}
+const leadForm=document.getElementById('leadForm');
+if(leadForm){
+  leadForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    const btn=document.getElementById('lead-submit');
+    const old=btn.innerHTML;
+    btn.innerHTML=lang==='en'?'Sending...':'Envoi...';
+    btn.disabled=true;
+    const data=Object.fromEntries(new FormData(leadForm).entries());
+    data.type='demande-brochure-2-alpes-2027';
+    data.sejour='Les 2 Alpes 2027';
+    fetch('https://formspree.io/f/xnjwrobj',{
+      method:'POST',
+      headers:{'Accept':'application/json','Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    }).then(function(r){
+      if(r.ok){
+        btn.innerHTML=lang==='en'?'Request sent':'Demande envoyée';
+        btn.style.background='#3a7a50';
+        leadForm.reset();
+      }else{
+        btn.innerHTML=lang==='en'?'Please try again':'Erreur — réessayez';
+        btn.style.background='#c0392b';
+      }
+      setTimeout(function(){btn.innerHTML=old;btn.style.background='';btn.disabled=false;},3500);
+    }).catch(function(){
+      btn.innerHTML=lang==='en'?'Please try again':'Erreur — réessayez';
+      btn.style.background='#c0392b';
+      setTimeout(function(){btn.innerHTML=old;btn.style.background='';btn.disabled=false;},3500);
+    });
+  });
 }
 </script>
 </body>

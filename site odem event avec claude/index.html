@@ -50,7 +50,45 @@
     ]
   },
   "sameAs": [
-    "https://www.instagram.com/odem.event/"
+    "https://www.instagram.com/odemevent/",
+    "https://odemeventete2025.com/"
+  ],
+  "subjectOf": [
+    {
+      "@type": "WebPage",
+      "name": "Odem Event Tignes-le-Lac sur AlloJ",
+      "url": "https://www.alloj.com/fr/voyages-cacher/odem-event-ete-tignes-le-lac.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Odem Events Chypre 2024 sur GoKosher",
+      "url": "https://www.gokosher.com/en/h96710"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Odem Espagne 2023 sur GoKosher",
+      "url": "https://www.gokosher.com/en/h97464"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Odem Events Arcs 2000 2024 sur GoKosher",
+      "url": "https://www.gokosher.com/fr/h96612"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Odem Events Grèce 2025 sur GoKosher",
+      "url": "https://www.gokosher.com/en/h96168"
+    },
+    {
+      "@type": "WebPage",
+      "name": "ODEM EVENT sur Societe.com",
+      "url": "https://www.societe.com/societe/odem-event-908768112.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "ODEM EVENT sur Hoodspot",
+      "url": "https://hoodspot.fr/foires-salons-congres/odem-event-90876811200025/"
+    }
   ]
 }
 </script>
@@ -163,14 +201,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .cacherout-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 .cacherout-sep{color:rgba(201,168,76,0.3);font-size:0.8rem;}
 
-/* SEJOUR MIS EN AVANT */
-#winter-feature{background:var(--blanc);padding:5rem 1.5rem 0;}
-.winter-feature-inner{max-width:640px;margin:0 auto;text-align:center;}
-.winter-feature-label{font-size:0.68rem;font-weight:600;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-d);margin-bottom:1rem;text-shadow:0 1px 0 rgba(255,255,255,0.9);}
-.winter-feature-link{display:block;text-decoration:none;color:inherit;}
-.winter-feature-img{display:block;width:100%;max-width:520px;margin:0 auto;border:1px solid rgba(201,168,76,0.32);box-shadow:0 22px 70px rgba(0,0,0,0.16);background:#fff;transition:transform 0.35s ease,box-shadow 0.35s ease;}
-.winter-feature-link:hover .winter-feature-img{transform:translateY(-4px);box-shadow:0 30px 80px rgba(0,0,0,0.2);}
-.winter-feature-cta{display:inline-block;margin-top:1.4rem;font-size:0.64rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--noir);}
+/* PROCHAINS SEJOURS */
+#upcoming{background:var(--blanc);padding:5rem 2rem 0;}
+.upcoming-inner{max-width:960px;margin:0 auto;text-align:center;}
+.upcoming-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1;color:var(--noir);margin-bottom:2.5rem;}
+.upcoming-title em{font-style:italic;color:var(--gold-d);}
+.upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem;align-items:start;}
+.upcoming-card{display:block;text-decoration:none;transition:transform 0.35s ease;}
+.upcoming-card:hover{transform:translateY(-6px);}
+.upcoming-card img{display:block;width:100%;height:auto;border:1px solid rgba(201,168,76,0.32);box-shadow:0 20px 55px rgba(0,0,0,0.14);background:#fff;}
 
 /* 3 TYPES */
 #types{padding:6rem 2rem;max-width:1200px;margin:0 auto;}
@@ -312,9 +351,9 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   .hero-title{font-size:clamp(2.35rem,9vw,3.45rem);line-height:1;}
   .hero-btns{flex-direction:column;align-items:center;}
   .btn-gold,.btn-white{width:100%;max-width:280px;text-align:center;}
-  #winter-feature{padding:3rem 1.2rem 0;}
-  .winter-feature-img{max-width:330px;}
-  .winter-feature-label{font-size:0.52rem;line-height:1.8;}
+  #upcoming{padding:3.5rem 1.2rem 0;}
+  .upcoming-title{margin-bottom:2rem;}
+  .upcoming-grid{grid-template-columns:1fr;gap:2rem;max-width:360px;margin:0 auto;}
   .types-grid{grid-template-columns:1fr;}
   .type-card{height:300px;border-radius:16px;}
   #seo-content{padding:0 1.2rem 3.5rem;}
@@ -414,14 +453,18 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
   </div>
 </div>
 
-<!-- SEJOUR HIVER MIS EN AVANT -->
-<section id="winter-feature">
-  <div class="winter-feature-inner reveal">
-    <div class="winter-feature-label" id="winter-label">Notre prochain séjour hiver 2027</div>
-    <a class="winter-feature-link" href="sejour-2-alpes-2027/" aria-label="Voir le séjour ski aux 2 Alpes 2027">
-      <img class="winter-feature-img" src="affiches/affiche-2-alpes-2027.jpg" alt="Séjour ski aux 2 Alpes 2027">
-      <span class="winter-feature-cta" id="winter-cta">Voir la fiche</span>
-    </a>
+<!-- PROCHAINS SEJOURS -->
+<section id="upcoming" aria-labelledby="upcoming-title">
+  <div class="upcoming-inner reveal">
+    <h2 class="upcoming-title" id="upcoming-title">Nos prochains <em>séjours</em></h2>
+    <div class="upcoming-grid">
+      <a class="upcoming-card" href="sejour-2-alpes-2027/" aria-label="Découvrir le séjour hiver 2027 aux 2 Alpes">
+        <img src="affiches/affiche-2-alpes-2027.jpg" alt="Séjour aux 2 Alpes du 21 au 28 février 2027">
+      </a>
+      <a class="upcoming-card" href="sejour-pessah-athenes-2027/" aria-label="Découvrir le séjour Pessa'h 2027 à Athènes">
+        <img src="affiches/affiche-pessah-athenes-2027.jpg" alt="Séjour Pessa'h à Athènes du 20 avril au 2 mai 2027" loading="lazy">
+      </a>
+    </div>
   </div>
 </section>
 
@@ -433,15 +476,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <h2 class="sec-title" id="tp-title">Nos <em>séjours</em></h2>
   </div>
   <div class="types-grid">
-    <a class="type-card reveal d1" href="portfolio.html?type=pessah">
-      <div class="type-bg" style="background-image:url('fond-mer.jpg');background-position:center 60%;"></div>
+    <a class="type-card reveal d1" href="sejour-pessah-athenes-2027/">
+      <div class="type-bg" style="background-image:url('photos/pessah-athenes-2027/isla-brown-nuit.jpg');background-position:center 55%;"></div>
       <div class="type-ov"></div>
       <div class="type-body">
         <div class="type-tag" id="tt1">Pessah en Europe</div>
         <div class="type-line"></div>
         <div class="type-name">Séjours<br>Pessah</div>
-        <div class="type-dest" id="td1">Espagne · Chypre · Grèce · Crète</div>
-        <span class="type-link" id="tl1">Voir les séjours</span>
+        <div class="type-dest" id="td1">Athènes · 20 avril au 2 mai 2027</div>
+        <span class="type-link" id="tl1">Voir le séjour</span>
       </div>
     </a>
     <a class="type-card reveal d2" href="portfolio.html?type=ete">
@@ -455,17 +498,6 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         <span class="type-link" id="tl2">Voir les séjours</span>
       </div>
     </a>
-    <a class="type-card reveal d3" href="classes-de-neige.html">
-      <div class="type-bg" style="background-image:url('fond-neige-enfant.jpg');"></div>
-      <div class="type-ov"></div>
-      <div class="type-body">
-        <div class="type-tag" id="tt3">Groupes & écoles</div>
-        <div class="type-line"></div>
-        <div class="type-name">Classes<br>de neige</div>
-        <div class="type-dest" id="td3">Tignes · Les Arcs 2000</div>
-        <span class="type-link" id="tl3">En savoir plus</span>
-      </div>
-    </a>
     <a class="type-card reveal d3" href="sejour-2-alpes-2027/">
       <div class="type-bg" style="background-image:url('fond-neige-panorama.jpg');background-position:center 38%;"></div>
       <div class="type-ov"></div>
@@ -475,6 +507,17 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         <div class="type-name">Séjours<br>d'hiver</div>
         <div class="type-dest" id="td4">Les 2 Alpes · Février 2027</div>
         <span class="type-link" id="tl4">Voir le séjour</span>
+      </div>
+    </a>
+    <a class="type-card reveal d3" href="classes-de-neige.html">
+      <div class="type-bg" style="background-image:url('fond-neige-enfant.jpg');"></div>
+      <div class="type-ov"></div>
+      <div class="type-body">
+        <div class="type-tag" id="tt3">Groupes & écoles</div>
+        <div class="type-line"></div>
+        <div class="type-name">Classes<br>de neige</div>
+        <div class="type-dest" id="td3">Tignes · Les Arcs 2000</div>
+        <span class="type-link" id="tl3">En savoir plus</span>
       </div>
     </a>
   </div>
@@ -645,6 +688,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
       <a href="sejour-crete-2026.html" class="footer-link">Pessah 2026 · Crète</a>
       <a href="sejour-2-alpes-2027/" class="footer-link">Hiver 2027 · Les 2 Alpes</a>
+      <a href="sejour-pessah-athenes-2027/" class="footer-link">Pessah 2027 · Athènes</a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
@@ -674,7 +718,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <span>@odemevent</span>
     </a>
   </div>
-  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a></div>
+  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Confidentialité</a></div>
 </div>
 
 <!-- SCROLL TO TOP -->
@@ -682,7 +726,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-txt">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="mentions-legales.html">politique de confidentialité</a>.</p>
+  <p class="cookie-txt">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-btn decline" onclick="closeCookie()">Refuser</button>
     <button class="cookie-btn accept" onclick="acceptCookie()">Accepter</button>
@@ -873,6 +917,24 @@ const tr={
   fr:{'h-tag':'Séjours d\'exception','h-t1':'L\'art de voyager','h-t2':'ensemble','h-sub':'Pessah en Europe · Séjours d\'été · Classes de neige','ht-label':'Prochain séjour','ht-txt':'Destination en cours de sélection — Été 2026','h-b1':'Découvrir nos séjours','h-b2':'Nous contacter','h-scroll':'Découvrir','winter-label':'Notre prochain séjour hiver 2027','winter-cta':'Voir la fiche','nav-port':'Portfolio','nav-neige':'Classes de neige','nav-avis':'Avis','nav-cta':'Réserver','tp-label':'Ce que nous organisons','tp-title':'Nos <em>séjours</em>','tt1':'Pessah en Europe','td1':'Espagne · Chypre · Grèce · Crète','tl1':'Voir les séjours','tt2':'Été en montagne','td2':'Tignes · Les Arcs 2000','tl2':'Voir les séjours','tt3':'Groupes & écoles','td3':'Tignes · Les Arcs 2000','tl3':'En savoir plus','tt4':'Vacances au ski','td4':'Les 2 Alpes · Février 2027','tl4':'Voir le séjour','c1':'Séjours organisés','c2':'Familles accompagnées','c3':'Pays visités','c4':'Hôtels partenaires','av-label':'Ce qu\'ils disent','av-title':'Avis de nos <em>familles</em>','av1':'Ce Pessah était vraiment hors du commun. Tout ne suffirait pas pour vous dire ma gratitude. Merci à vous deux pour tout ce que vous faites — c\'était exceptionnel.','av2':'Merci de nous avoir accueillis comme votre famille. Toujours un mot doux, une attention de chaque instant — un séjour que l\'on n\'oubliera pas. À très vite !','av3':'Ce séjour était plus que super ! Vous étiez à l\'écoute de tous, présents avec nous à chaque instant. Vous avez répondu à chacune de nos demandes. Encore merci, c\'était incroyable !','av4':'Moi qui ne voulais pas partir d\'Israël pour Pessah, je n\'ai pas été déçue. Des retrouvailles familiales magiques, zéro fausse note. Vous avez permis des moments inoubliables. Longue vie à ODEM !','av5':'Un séjour vraiment inoubliable, familial et convivial. La nourriture excellente et en quantité, les chants de Chabbat, les cours de Torah... Nous avons vraiment beaucoup apprécié.','av6':'Tout était magnifique, de l\'organisation générale aux moindres détails, et surtout votre sourire à tout moment malgré la fatigue. On vous souhaite encore beaucoup d\'événements comme celui-là !','av7':'Chaque détail a été pris en charge de manière personnelle — impeccable tant dans le matériel que dans le spirituel. Le Rav, l\'ambiance, tout était merveilleux. Vous nous avez vraiment rempli le cœur.','av8':'David et Osnat ont été remarquables du début à la fin. La nourriture, de l\'apéritif au dîner, était délicieuse et en grande quantité. Nos amis dans d\'autres organisations ont fini par nous rejoindre ! Nous recommandons chaleureusement.','av9':'Merci mille fois pour ce Pessah hors du commun. Tout ne suffirait pas pour exprimer ma gratitude. Merci à toi et Menahem pour tout ce que vous faites — qu\'Hachem vous ouvre les portes et vous envoie la joie et le bonheur.','f-label':'Soyez informé en priorité','f-title':'Prochain <em>séjour</em>','f-desc':'Recevez les prochaines dates avant l\'ouverture publique.','fl1':'Prénom','fl2':'Nom','fl3':'Email','fl4':'Téléphone','fl5':'Séjour souhaité','fl6':'Nombre de personnes','fl7':'Message (optionnel)','fl8':'J\'accepte que mes données soient utilisées pour traiter ma demande et m\'informer des prochains séjours ODEM EVENT.','f-sub':'Être informé en priorité →','ft-col':'Séjours','ft-tag':'Séjours d\'exception'},
   en:{'h-tag':'Exceptional trips since 2023','h-t1':'The art of traveling','h-t2':'together','h-sub':'Passover in Europe · Summer trips · Snow classes','ht-label':'Next trip','ht-txt':'Destination being selected — Summer 2026','h-b1':'Discover our trips','h-b2':'Contact us','h-scroll':'Discover','winter-label':'Our next winter stay 2027','winter-cta':'View stay','nav-port':'Portfolio','nav-neige':'Snow classes','nav-avis':'Reviews','nav-cta':'Book','tp-label':'What we organise','tp-title':'Our <em>trips</em>','tt1':'Passover in Europe','td1':'Spain · Cyprus · Greece · Crete','tl1':'View trips','tt2':'Summer in the mountains','td2':'Tignes · Les Arcs 2000','tl2':'View trips','tt3':'Groups & schools','td3':'Tignes · Les Arcs 2000','tl3':'Learn more','tt4':'Ski holidays','td4':'Les 2 Alpes · February 2027','tl4':'View stay','c1':'Trips organised','c2':'Families accompanied','c3':'Countries visited','c4':'Partner hotels','av-label':'What they say','av-title':'Reviews from our <em>families</em>','av1':'This Passover was truly exceptional. Words cannot express my gratitude. Thank you both for everything you do — it was incredible.','av2':'Thank you for welcoming us like family. Always a kind word, constant attention — a trip we will never forget. See you soon!','av3':'This trip was more than wonderful! You were attentive to everyone, present at every moment. You answered our every request. Thank you — it was incredible!','av4':'I who did not want to leave Israel for Passover was not disappointed. Magical family reunion, zero false notes. You made unforgettable moments. Long live ODEM!','av5':'A truly unforgettable, family-friendly trip. Excellent food in abundance, Shabbat songs, Torah classes... We truly appreciated every moment.','av6':'Everything was magnificent, from the overall organisation to the smallest details, and above all your smile at every moment despite the fatigue. We wish you many more events like this!','av7':'Every detail was handled personally — impeccable on both the material and spiritual level. The Rabbi, the atmosphere, everything was wonderful. You truly filled our hearts.','av8':'David and Osnat were remarkable throughout. The food, from appetiser to dinner, was delicious and plentiful. Our friends in other organisations ended up joining us! Highly recommended.','av9':'A thousand thanks for this extraordinary Passover. Words cannot express my gratitude. Thank you and Menahem for everything — may Hashem open doors for you and send you joy and happiness.','f-label':'Be informed first','f-title':'Next <em>trip</em>','f-desc':'Receive the next dates before public opening.','fl1':'First name','fl2':'Last name','fl3':'Email','fl4':'Phone','fl5':'Desired trip','fl6':'Number of people','fl7':'Message (optional)','fl8':'I agree that my data will be used to process my request and inform me about upcoming ODEM EVENT trips.','f-sub':'Be informed first →','ft-col':'Trips','ft-tag':'Exceptional trips since 2023'}
 };
+Object.assign(tr.fr,{
+  'upcoming-title':'Nos prochains <em>séjours</em>',
+  'pessah-kicker':'Nouveau · Printemps 2027',
+  'pessah-title':'Pessa’h à Athènes',
+  'pessah-date':'Du 20 avril au 2 mai 2027',
+  'pessah-cta':'Découvrir le séjour →',
+  'td1':'Athènes · 20 avril au 2 mai 2027',
+  'tl1':'Voir le séjour'
+});
+Object.assign(tr.en,{
+  'upcoming-title':'Our upcoming <em>trips</em>',
+  'pessah-kicker':'New · Spring 2027',
+  'pessah-title':'Passover in Athens',
+  'pessah-date':'20 April to 2 May 2027',
+  'pessah-cta':'Discover the stay →',
+  'td1':'Athens · 20 April to 2 May 2027',
+  'tl1':'View stay'
+});
 function setLang(l){
   if(!tr[l])return;
   lang=l;localStorage.setItem('odemLang',l);
