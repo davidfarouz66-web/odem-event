@@ -243,6 +243,8 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 .seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
 .seo-item{border-left:1px solid rgba(201,168,76,0.35);padding-left:1.2rem;}
 .seo-item h3{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--noir);margin-bottom:0.7rem;}
+.seo-item h3 a{color:inherit;text-decoration:none;}
+.seo-item h3 a:hover{color:var(--gold-d);}
 .seo-item p{font-size:0.75rem;line-height:1.9;color:#5b5750;}
 
 /* CHIFFRES */
@@ -382,13 +384,14 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 <body>
 
 <nav id="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="logo-odem.png" alt="ODEM EVENT" style="height:48px;width:auto;">
   </a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="portfolio.html" id="nav-port">Portfolio</a></li>
-      <li><a href="classes-de-neige.html" id="nav-neige">Classes de neige</a></li>
+      <li><a href="/sejour-casher">Séjours casher</a></li>
+      <li><a href="/portfolio" id="nav-port">Portfolio</a></li>
+      <li><a href="/classes-de-neige" id="nav-neige">Classes de neige</a></li>
       <li><a href="#avis" id="nav-avis">Avis</a></li>
       <li><a href="#contact" class="nav-cta" id="nav-cta">Réserver</a></li>
     </ul>
@@ -406,8 +409,9 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMenu()">✕</button>
-  <a href="portfolio.html" onclick="toggleMenu()">Portfolio</a>
-  <a href="classes-de-neige.html" onclick="toggleMenu()">Classes de neige</a>
+  <a href="/sejour-casher" onclick="toggleMenu()">Séjours casher</a>
+  <a href="/portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="/classes-de-neige" onclick="toggleMenu()">Classes de neige</a>
   <a href="#avis" onclick="toggleMenu()">Avis</a>
   <a href="#contact" onclick="toggleMenu()">Réserver</a>
   <select onchange="setLang(this.value);toggleMenu();" style="margin-top:1rem;background:#222;border:1px solid rgba(201,168,76,0.4);color:#fff;padding:0.5rem 1rem;font-size:0.7rem;font-family:'Montserrat',sans-serif;cursor:pointer;outline:none;">
@@ -433,7 +437,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <p class="hero-sub" id="h-sub">Pessah casher en Europe · Vacances d'été · Séjours ski & classes de neige</p>
 
     <div class="hero-btns">
-      <a href="portfolio.html" class="btn-gold" id="h-b1">Découvrir nos séjours</a>
+      <a href="/portfolio" class="btn-gold" id="h-b1">Découvrir nos séjours</a>
       <a href="#contact" class="btn-white" id="h-b2">Nous contacter</a>
     </div>
   </div>
@@ -477,7 +481,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <h2 class="sec-title" id="tp-title">Nos <em>séjours</em></h2>
   </div>
   <div class="types-grid">
-    <a class="type-card reveal d1" href="portfolio.html?type=pessah">
+    <a class="type-card reveal d1" href="/portfolio?type=pessah">
       <div class="type-bg" style="background-image:url('photos/pessah-athenes-2027/isla-brown-nuit.jpg');background-position:center 55%;"></div>
       <div class="type-ov"></div>
       <div class="type-body">
@@ -488,7 +492,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         <span class="type-link" id="tl1">Voir les séjours</span>
       </div>
     </a>
-    <a class="type-card reveal d2" href="portfolio.html?type=ete">
+    <a class="type-card reveal d2" href="/portfolio?type=ete">
       <div class="type-bg" style="background-image:url('fond-tignes.jpg');"></div>
       <div class="type-ov"></div>
       <div class="type-body">
@@ -510,7 +514,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
         <span class="type-link" id="tl4">Voir le séjour</span>
       </div>
     </a>
-    <a class="type-card reveal d3" href="classes-de-neige.html">
+    <a class="type-card reveal d3" href="/classes-de-neige">
       <div class="type-bg" style="background-image:url('fond-neige-enfant.jpg');"></div>
       <div class="type-ov"></div>
       <div class="type-body">
@@ -530,15 +534,15 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     <p class="seo-lead">ODEM EVENT accompagne les familles dans l'organisation de <em>séjours casher haut de gamme</em>, avec des destinations sélectionnées, une restauration soignée et une présence attentive tout au long du voyage.</p>
     <div class="seo-grid">
       <div class="seo-item">
-        <h3>Pessah casher</h3>
+        <h3><a href="/sejour-pessah-athenes-2027/">Séjour Pessa'h casher</a></h3>
         <p>Des séjours Pessah en Europe dans des hôtels choisis pour leur confort, leur cadre et leur adaptation aux familles.</p>
       </div>
       <div class="seo-item">
-        <h3>Vacances en famille</h3>
+        <h3><a href="/sejour-casher">Séjour casher en famille</a></h3>
         <p>Des vacances casher d'été et d'hiver pensées pour les parents, les enfants et les groupes qui recherchent une ambiance conviviale.</p>
       </div>
       <div class="seo-item">
-        <h3>Ski & neige</h3>
+        <h3><a href="/sejour-2-alpes-2027/">Ski casher & neige</a></h3>
         <p>Des séjours ski casher et classes de neige avec hébergement, restauration, accompagnement et organisation sur place.</p>
       </div>
     </div>
@@ -681,23 +685,23 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
     </div>
     <div>
       <div class="footer-col-title" id="ft-col">Séjours</div>
-      <a href="sejour-espagne-2023.html" class="footer-link">Pessah 2023 · Espagne</a>
-      <a href="sejour-tignes-2023.html" class="footer-link">Été 2023 · Tignes</a>
-      <a href="sejour-chypre-2024.html" class="footer-link">Pessah 2024 · Chypre</a>
-      <a href="sejour-arcs-2024.html" class="footer-link">Été 2024 · Arcs 2000</a>
-      <a href="sejour-grece-2025.html" class="footer-link">Pessah 2025 · Grèce</a>
-      <a href="sejour-tignes-2025.html" class="footer-link">Été 2025 · Tignes le Lac</a>
-      <a href="sejour-crete-2026.html" class="footer-link">Pessah 2026 · Crète</a>
+      <a href="/sejour-espagne-2023" class="footer-link">Pessah 2023 · Espagne</a>
+      <a href="/sejour-tignes-2023" class="footer-link">Été 2023 · Tignes</a>
+      <a href="/sejour-chypre-2024" class="footer-link">Pessah 2024 · Chypre</a>
+      <a href="/sejour-arcs-2024" class="footer-link">Été 2024 · Arcs 2000</a>
+      <a href="/sejour-grece-2025" class="footer-link">Pessah 2025 · Grèce</a>
+      <a href="/sejour-tignes-2025" class="footer-link">Été 2025 · Tignes le Lac</a>
+      <a href="/sejour-crete-2026" class="footer-link">Pessah 2026 · Crète</a>
       <a href="sejour-2-alpes-2027/" class="footer-link">Hiver 2027 · Les 2 Alpes</a>
       <a href="sejour-pessah-athenes-2027/" class="footer-link">Pessah 2027 · Athènes</a>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>
-      <a href="portfolio.html" class="footer-link">Tous les séjours</a>
-      <a href="classes-de-neige.html" class="footer-link">Classes de neige</a>
+      <a href="/portfolio" class="footer-link">Tous les séjours</a>
+      <a href="/classes-de-neige" class="footer-link">Classes de neige</a>
       <a href="#avis" class="footer-link">Avis clients</a>
       <a href="#contact" class="footer-link">Pré-réservation</a>
-      <a href="mentions-legales.html" class="footer-link" style="color:rgba(255,255,255,0.85);">Mentions légales</a>
+      <a href="/mentions-legales" class="footer-link" style="color:rgba(255,255,255,0.85);">Mentions légales</a>
     </div>
   </div>
   <div class="footer-social" style="max-width:1000px;margin:1.5rem auto 0;display:flex;gap:1rem;">
@@ -719,7 +723,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
       <span>@odemevent</span>
     </a>
   </div>
-  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:rgba(255,255,255,0.85);text-decoration:none;">Confidentialité</a></div>
+  <div class="footer-copy">© 2026 <strong>ODEM EVENT</strong> — Tous droits réservés · <a href="/mentions-legales" style="color:rgba(255,255,255,0.85);text-decoration:none;">Mentions légales</a> · <a href="/politique-confidentialite" style="color:rgba(255,255,255,0.85);text-decoration:none;">Confidentialité</a></div>
 </div>
 
 <!-- SCROLL TO TOP -->
@@ -727,7 +731,7 @@ nav.scrolled{background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bo
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-txt">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+  <p class="cookie-txt">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="/politique-confidentialite">politique de confidentialité</a>.</p>
   <div class="cookie-btns">
     <button class="cookie-btn decline" onclick="closeCookie()">Refuser</button>
     <button class="cookie-btn accept" onclick="acceptCookie()">Accepter</button>

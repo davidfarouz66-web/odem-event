@@ -4,5 +4,23 @@ http://www.odemevent.com/* https://odemevent.fr/:splat 301!
 https://www.odemevent.fr/* https://odemevent.fr/:splat 301!
 https://odemevent.com/* https://odemevent.fr/:splat 301!
 https://www.odemevent.com/* https://odemevent.fr/:splat 301!
+
+# Une seule URL indexable par page : HTTPS, sans www et sans extension .html.
+/index.html / 301!
+/portfolio.html /portfolio 301!
+/classes-de-neige.html /classes-de-neige 301!
+/mentions-legales.html /mentions-legales 301!
+/politique-confidentialite.html /politique-confidentialite 301!
+/sejour-casher.html /sejour-casher 301!
+/sejour-cacher /sejour-casher 301!
+/sejour-cacher.html /sejour-casher 301!
+/sejour-arcs-2024.html /sejour-arcs-2024 301!
+/sejour-chypre-2024.html /sejour-chypre-2024 301!
+/sejour-crete-2026.html /sejour-crete-2026 301!
+/sejour-espagne-2023.html /sejour-espagne-2023 301!
+/sejour-grece-2025.html /sejour-grece-2025 301!
+/sejour-tignes-2023.html /sejour-tignes-2023 301!
+/sejour-tignes-2025.html /sejour-tignes-2025 301!
+/sejour-pessah /sejour-pessah-athenes-2027/ 301!
 /sejour-2-alpes-2027.html /sejour-2-alpes-2027/ 301!
-/sejour-tignes-2026.html /portfolio.html 301!
+/sejour-tignes-2026.html /portfolio 301!
